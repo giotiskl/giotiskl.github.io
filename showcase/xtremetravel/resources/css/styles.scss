@@ -95,7 +95,7 @@ $large-desktop-width: 1200px;
     left: 0;
     width: 100%;
     z-index: 1;
-    height: 40vh;
+    height: 60vh;
     @include tablet-and-desktop { 
         background-attachment: fixed;
         background-size: cover;
@@ -105,10 +105,8 @@ $large-desktop-width: 1200px;
 
 @mixin quote {
     content: '\201c';
-    font-size: 100%;
     font-weight: 100;
     position: absolute;
-    @include tablet-and-desktop { font-size: 250%; }
 }
 
 //////////////////////////////////
@@ -202,6 +200,7 @@ h3 {
 .intro-msg {
     margin: 30px auto 15px auto;
     text-align: justify;
+    line-height: 145%;
     @include tablet-and-desktop { width: 60%; }
 }
 
@@ -237,7 +236,7 @@ h3 {
 }
 
 .box {
-    //padding: 1%;
+    padding: 1%;
     margin: 0;
     
     p {
@@ -451,14 +450,16 @@ header {
                 
                 &:before {
                     @include quote;
+                    font-size: 100%;
                     @include transform(translate(-110%, -10%));
-                    @include tablet-and-desktop { @include transform(translate(-110%, -30%)); }
+                    @include tablet-and-desktop { font-size: 250%; @include transform(translate(-110%, -30%)); }
                 }
 
                 &:after {
                     @include quote;
+                    font-size: 100%;
                     @include transform(rotate(180deg) translate(-35%, -25%));
-                    @include tablet-and-desktop { @include transform(rotate(180deg) translate(-35%, 25%)); }
+                    @include tablet-and-desktop { font-size: 250%; @include transform(rotate(180deg) translate(-35%, 25%)); }
                 }
             }
             
@@ -475,23 +476,21 @@ header {
 //////////////////////////////////
 // FEATURES SECTION             //
 //////////////////////////////////
-.features {
-    
-}
+
 
 //////////////////////////////////
 // PAST-TRIPS SECTION           //
 //////////////////////////////////
 .past-trips {
     padding: 0;
-    margin: 0 auto;
-    height: 40vh;
+    margin: 30px auto 0 auto;
+    height: 60vh;
     @include tablet-and-desktop { height: 100vh; }
     
 }
 .image-slider {
     width: 100%;
-    height: 40vh;
+    height: 60vh;
     @include tablet-and-desktop { height: 100vh; }
     
     #loading-bar {
@@ -610,6 +609,8 @@ header {
 //////////////////////////////////
 .book-trips {
     background-color: $lightGreyColor;
+    padding-bottom: 35px;
+    @include tablet-and-desktop { padding-bottom: 50px;}
     
     .holiday-plan {
         border-top-left-radius: 20px;
@@ -694,3 +695,51 @@ header {
 //////////////////////////////////
 // TESTIMONIALS SECTION         //
 //////////////////////////////////
+.testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.65)), url(../img/testimonials_bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: inset 0 -10px 50px #000;
+    color: white;
+    padding-bottom: 40px;
+    @include tablet-and-desktop { padding-bottom: 60px; }
+    
+    h2 {
+        margin-bottom: 30px;
+        @include tablet-and-desktop { margin-bottom: 60px; }
+    }
+    
+    blockquote {
+        font-size: 90%;
+        font-style: italic;
+        line-height: 160%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 0 10%;
+        &:before {
+            @include quote;
+            @include tablet-and-desktop {
+                font-size: 550%;
+                @include transform(translate(-110%, -45%));
+            }
+        }
+        
+        cite {
+            display: block;
+            margin-top: 10px;
+            
+            img {
+                margin: 15px 15px 0 0;
+                border-radius: 50%;
+                height: 64px;
+                width: 60px;
+            }
+            
+            span {
+                position: absolute;
+                margin-top: 38px;
+            }
+        }
+    }
+}
