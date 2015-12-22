@@ -1,0 +1,583 @@
+@import 'bourbon/bourbon';
+//////////////////////////////////
+// MAIN VARIABLES               //
+//////////////////////////////////
+
+//colors
+$mainColor: #e74c3c;
+$darkColor: #d62c1a;
+$blackColor: #2f2f2f;
+$fbColor: #3b5998;
+$youtubeColor: #bb0000;
+$googlePlusColor: #dd4b39;
+$twitterColor: #00aced;
+
+$iconGreenColor: #2ecc71;
+$iconBlueColor: #3498db;
+$iconOrangeColor: #f39c12;
+
+
+//query sizes & mixin
+$phones-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+$large-desktop-width: 1200px;
+
+@mixin tablet-and-desktop {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: #{$large-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin big-icon($bgColor) {
+    background-color: $bgColor;
+    color: white;
+    border-radius: 50%;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 150%;
+    padding: 10px;
+    margin: 15px auto -20px auto;
+    
+    @include tablet-and-desktop {
+        margin-bottom: 20px;
+        width: 80px;
+        height: 80px;
+        padding: 15px;
+        font-size: 190%;
+    }
+}
+
+@mixin img-frame($imgUrl) {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url($imgUrl);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: inset 0 20px 20px rgba(42,42,42,0.35);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 40vh;
+    @include tablet-and-desktop { 
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh; 
+    }
+}
+
+@mixin quote {
+    content: '\201c';
+    font-size: 100%;
+    font-weight: 100;
+    position: absolute;
+    @include tablet-and-desktop { font-size: 250%; }
+}
+
+//////////////////////////////////
+// BASIC SETTINGS               //
+//////////////////////////////////
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: $blackColor;
+    font-family: 'Lato', 'Arial';
+    font-size: 18px;
+    text-rendering: optimizeLegibility;
+    font-weight: 300;
+    
+    @include tablet-and-desktop { font-size: 20px; }
+}
+
+.container {
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+    
+    @include desktop { width: $desktop-width; }
+    @include large-desktop { width: $large-desktop-width; }    
+}
+
+section {
+    padding: 25px;
+    @include tablet-and-desktop { padding: 1%; }
+}
+
+//////////////////////////////////
+// REUSABLE COMPONENTS          //
+//////////////////////////////////
+
+.clearfix { 
+    zoom: 1;
+    &:after {
+        content: '.';
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 180%;
+    text-transform: uppercase;            
+    @include tablet { font-size: 320%; }
+    @include desktop { font-size: 400%; }
+}
+
+h2, h3 {
+    margin-top: 20px;    
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 15px;
+}
+
+h2 {
+    font-size: 178%;
+    @include desktop { margin-top: 40px; }
+    
+    &:after {
+        display: block;
+        content: " ";
+        height: 2px;
+        width: 250px;
+        background-color: $mainColor;
+        margin: 25px auto 0 auto;
+    }
+}
+
+h3 {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 114%;
+    font-weight: 300;
+    @include desktop { margin-top: 10px; }
+}
+
+.btn {
+    color: white;
+    text-decoration: none;
+    background-color: $mainColor;
+    display: inline-block;
+    margin: 10px 0 10px 55px;
+    padding: 6px 14px;
+    border: 2px solid $mainColor;
+    box-shadow: 0 2px 5px rgba(18, 18, 18, 0.5);
+    @include transition(all 0.25s);
+    
+    @include tablet-and-desktop {
+        padding: 10px 20px;
+        margin: 0 25px;
+    }
+    
+    &:hover {
+        background-color: $darkColor;
+        border-color: $darkColor;
+    }
+}
+
+.btn-ghost {
+    color: $mainColor;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid $mainColor;
+    
+    &:hover { color: white; }
+}
+
+.box {
+    padding: 1%;
+    
+    p {
+        line-height: 145%;
+        font-size: 90%;
+    }
+}
+
+.blue-big-icon { @include big-icon($iconBlueColor); }
+.red-big-icon { @include big-icon($mainColor); }
+.green-big-icon { @include big-icon($iconGreenColor); }
+.orange-big-icon { @include big-icon($iconOrangeColor); }
+
+.red {
+    color: $mainColor;
+}
+
+//ugly desktop first media query to change col from responsive grid lib
+@media only screen and (max-width: $tablet-width) { .col { width: 100%; } }
+
+//////////////////////////////////
+// HEADER SECTION               //
+//////////////////////////////////
+header {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05)), 
+        url(../img/hp_navbg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    box-shadow: inset 0 -10px 50px #000;
+    
+    //navigation logo
+    .nav-logo {
+        margin-top: 10px;
+        
+        img {
+            float: left;
+            width: 120px;
+            height: auto;
+            
+            @include desktop {
+                margin-top: 30px;
+                width: 250px;
+            }
+        }
+    }
+    
+    //main navigation bar
+    .navbar {
+        .btn-minify {
+            color: white;
+            float: right;
+            margin-right: 5px;
+            font-size: 200%;
+            text-align: center;
+            height: 50px;
+            width: 50px;
+            
+            &:hover { cursor: pointer; }
+            
+            @include tablet-and-desktop { display: none; }
+        }
+    
+        ul {
+            display: none;
+            position: absolute;
+            left: 130px;
+            
+            @include tablet-and-desktop {
+                display: block;
+                position: static;
+            }
+            @include tablet {
+                margin-top: -15px;
+                float: right;
+            }
+            @include desktop {
+                margin-top: 30px;
+                float: right;
+            }
+        }
+
+        li {
+            display: block;
+            padding: 10px;
+            @include tablet-and-desktop {
+                display: inline-block;
+                padding: 15px;
+                margin: 10px 0;
+            }
+        }
+
+        a:link, a:focus, a:visited {
+            border: 2px solid transparent;
+            color: white;
+            font-size: 90%;
+            @include desktop { 
+                letter-spacing: 1px;
+            }
+            padding: 8px 0;
+            text-decoration: none;
+            text-transform:uppercase;
+            @include transition(all 0.2s);
+        }
+
+        &:hover {
+            a:hover, a:active {
+                border-bottom: 2px solid $mainColor;
+            }
+        }
+    }
+    
+    //social navigation bar
+    .social-nav {
+        
+        position: absolute;
+        top: 23%;
+        @include desktop {
+            position: static;
+        }
+        
+        span {
+            color: white;
+            display: block;
+            border: 2px solid white;
+            font-size: 70%;
+            padding: 7px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 15px;
+            
+            &:hover {
+                cursor: pointer;
+            }
+            
+            @include tablet-and-desktop {
+                font-size: 100%;
+                padding: 7px;
+                width: 40px;
+                height: 40px;
+            }
+            
+            @include desktop { 
+                margin-top: 10px;
+                display: inline-block;
+            }
+        }
+        
+        .fb {
+            padding: 7px 11px 0 0;
+            text-align: right;
+            @include transition(all 0.2s);
+            
+            &:hover {
+                background-color: $fbColor;
+                border: 2px solid #2a4580;
+            }
+        }
+        .youtube { @include transition(all 0.2s); }
+        .twitter { @include transition(all 0.2s); }
+        .googleplus { @include transition(all 0.2s); }
+        .youtube:hover { background-color: $youtubeColor; border: 2px solid #7e0000; }
+        .twitter:hover { background-color: $twitterColor; border: 2px solid #0191c7; }
+        .googleplus:hover { background-color: $googlePlusColor; border: 2px solid #a02e20; }
+        
+    }
+    
+    //action buttons
+    .action-buttons {
+        display: none;
+        position: absolute;
+        text-align: center;
+        left: 35%;
+        top: 48%;
+        @include tablet-and-desktop {
+            display: block;
+            left: 35%;
+            top: 52%;
+            @include transform(translate(-35%, -54%));
+        }
+    }
+    
+    //quote-box
+    .quote-box {
+        color: white;
+        text-align: right;
+        position: absolute;
+        bottom: 23%;
+        right: 50%;
+        @include tablet-and-desktop { right: 40%; }
+        @include tablet { bottom: 19%; }
+        @include desktop { bottom: 22%; }
+        @include transform(translate(50%, 50%));
+        
+        blockquote {
+            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+            
+            h1 {
+                margin-bottom: 5px;
+                @include tablet-and-desktop { margin-bottom: 20px; }
+                
+                &:before {
+                    @include quote;
+                    @include transform(translate(-110%, -10%));
+                    @include tablet-and-desktop { @include transform(translate(-110%, -30%)); }
+                }
+
+                &:after {
+                    @include quote;
+                    @include transform(rotate(180deg) translate(-35%, -25%));
+                    @include tablet-and-desktop { @include transform(rotate(180deg) translate(-35%, 25%)); }
+                }
+            }
+            
+            cite {
+                font-size: 80%;
+                @include tablet-and-desktop { font-size: 180%; }
+            }
+        }
+        
+    }
+    
+}
+
+//////////////////////////////////
+// FEATURES SECTION             //
+//////////////////////////////////
+.features {
+    .welcome-message {
+        margin: 30px auto 15px auto;
+        text-align: justify;
+        @include tablet-and-desktop { width: 60%; }
+    }
+}
+
+//////////////////////////////////
+// PAST-TRIPS SECTION           //
+//////////////////////////////////
+.past-trips {
+    padding: 0;
+    margin: 0 auto;
+    height: 40vh;
+    @include tablet-and-desktop { height: 100vh; }
+    
+}
+.image-slider {
+    width: 100%;
+    height: 40vh;
+    @include tablet-and-desktop { height: 100vh; }
+    
+    #loading-bar {
+        background-image: linear-gradient(#077c07, rgba(96, 217, 96, 0.51));
+        box-shadow: 0 2px 2px rgba(0, 108, 37, 0.8);
+        position: absolute;
+        left: 0;
+        width: 0%;
+        height: 5px;
+        z-index: 11;
+    }
+    
+    .pick-btn-container {
+        margin: 10px auto 0 auto;
+        position: absolute;
+        z-index: 12;
+        left: 50%;
+        @include transform(translateX(-50%));
+        @include tablet-and-desktop {
+            margin-top: 45px;
+        }
+    }
+    .pick-frame-btn {
+        width: 10px;
+        height: 10px;
+        opacity: 0.4;
+        cursor: pointer;
+        margin-right: 10px;
+        border: 2px solid white;
+        border-radius: 50%;
+        display: inline-block;
+        @include transition(all 0.2s);
+        
+        @include tablet-and-desktop { 
+            border: 3px solid white;
+            width: 18px;
+            height: 18px;
+        }
+        @include tablet { margin-right: 29px; }
+        @include desktop { margin-right: 50px; }
+        
+        &:hover {
+            background-color: #14c736;
+            opacity: 0.75;
+        }
+    }
+    .active {
+        background-color: #14c736;
+        opacity: 0.75;
+    }
+    
+    .frame-whales { 
+        @include img-frame("../img/hp_diving_whales.jpg");
+        z-index: 8;
+    }
+    .frame-freefalling {
+        @include img-frame("../img/hp_freefalling.jpg");
+        z-index: 7;
+    }
+    .frame-rafting {
+        @include img-frame("../img/hp_rafting.jpg");
+        z-index: 6;
+    }
+    .frame-rainforest {
+        @include img-frame("../img/hp_rainforest.jpg");
+        z-index: 5;
+    }
+    .frame-safari-one {
+        @include img-frame("../img/hp_safari.jpeg");
+        z-index: 4;
+    }
+    .frame-safari-two {
+        @include img-frame("../img/hp_safari2.jpg");
+        z-index: 3;
+    }
+    .frame-skiing {
+        @include img-frame("../img/hp_skiing.jpg");
+        z-index: 2;
+    }
+    .frame-mountain-climbing {
+        @include img-frame("../img/hp_mountain_climbing.jpg");
+        z-index: 1;
+    }
+    
+    div {
+        color: white;
+        
+        .pic-description {
+            margin-left: 20px;
+            left: 50%;
+            @include transform(translateX(-50%));
+            bottom: 5%;
+            position: absolute;
+            z-index: 12;
+            width: 80%;
+            
+            h1 {
+                @media only screen and (max-width: $tablet-width - 1) { font-size: 110%; }
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.96);
+            }
+            p {
+                margin-top: -20px;
+                font-size: 90%;
+                font-weight: 300;
+                line-height: 160%;
+                padding: 10px;
+            }
+            @include tablet-and-desktop { p { font-size: 130%; } }
+            @include desktop { bottom: 10%; }
+        }
+    }
+
+}
