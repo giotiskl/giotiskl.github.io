@@ -6,6 +6,8 @@
 //colors
 $mainColor: #e74c3c;
 $darkColor: #d62c1a;
+$lightGreyColor: #f4f4f4;
+$midGreyColor: #f8f8f8;
 $blackColor: #2f2f2f;
 $fbColor: #3b5998;
 $youtubeColor: #bb0000;
@@ -47,24 +49,39 @@ $large-desktop-width: 1200px;
   }
 }
 
-@mixin big-icon($bgColor) {
+@mixin icon($bgColor, $big: true) {
     background-color: $bgColor;
     color: white;
     border-radius: 50%;
-    display: block;
-    width: 60px;
-    height: 60px;
     text-align: center;
-    font-size: 150%;
-    padding: 10px;
-    margin: 15px auto -20px auto;
+    
+    @if $big == true {
+        display: block;
+        width: 60px;
+        height: 60px;
+        font-size: 150%;
+        padding: 10px;
+        margin: 15px auto -20px auto;
+    } 
+    @else {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        margin: 10px 10px 10px 0;
+    }
     
     @include tablet-and-desktop {
-        margin-bottom: 20px;
-        width: 80px;
-        height: 80px;
-        padding: 15px;
-        font-size: 190%;
+        @if $big == true {
+            margin-bottom: 20px;
+            width: 80px;
+            height: 80px;
+            padding: 15px;
+            font-size: 190%;
+        } 
+        @else {
+            
+        }
     }
 }
 
@@ -73,7 +90,7 @@ $large-desktop-width: 1200px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    box-shadow: inset 0 20px 20px rgba(42,42,42,0.35);
+    box-shadow: inset 0 30px 50px rgba(0, 0, 0, 0.75);
     position: absolute;
     left: 0;
     width: 100%;
@@ -127,7 +144,6 @@ body {
 
 section {
     padding: 25px;
-    @include tablet-and-desktop { padding: 1%; }
 }
 
 //////////////////////////////////
@@ -183,6 +199,12 @@ h3 {
     @include desktop { margin-top: 10px; }
 }
 
+.intro-msg {
+    margin: 30px auto 15px auto;
+    text-align: justify;
+    @include tablet-and-desktop { width: 60%; }
+}
+
 .btn {
     color: white;
     text-decoration: none;
@@ -215,7 +237,8 @@ h3 {
 }
 
 .box {
-    padding: 1%;
+    //padding: 1%;
+    margin: 0;
     
     p {
         line-height: 145%;
@@ -223,10 +246,15 @@ h3 {
     }
 }
 
-.blue-big-icon { @include big-icon($iconBlueColor); }
-.red-big-icon { @include big-icon($mainColor); }
-.green-big-icon { @include big-icon($iconGreenColor); }
-.orange-big-icon { @include big-icon($iconOrangeColor); }
+.blue-big-icon { @include icon($iconBlueColor); }
+.red-big-icon { @include icon($mainColor); }
+.green-big-icon { @include icon($iconGreenColor); }
+.orange-big-icon { @include icon($iconOrangeColor); }
+
+.blue-small-icon { @include icon($iconBlueColor, false); }
+.red-small-icon { @include icon($mainColor, false); }
+.green-small-icon { @include icon($iconGreenColor, false); }
+.orange-small-icon { @include icon($iconOrangeColor, false); }
 
 .red {
     color: $mainColor;
@@ -448,11 +476,7 @@ header {
 // FEATURES SECTION             //
 //////////////////////////////////
 .features {
-    .welcome-message {
-        margin: 30px auto 15px auto;
-        text-align: justify;
-        @include tablet-and-desktop { width: 60%; }
-    }
+    
 }
 
 //////////////////////////////////
@@ -579,5 +603,94 @@ header {
             @include desktop { bottom: 10%; }
         }
     }
-
 }
+
+//////////////////////////////////
+// BOOK-TRIPS SECTION           //
+//////////////////////////////////
+.book-trips {
+    background-color: $lightGreyColor;
+    
+    .holiday-plan {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.15);
+        
+        h3 {
+            font-size: 120%;
+            margin-top: 0;
+            background-color: $midGreyColor;
+        }
+        
+        p {
+            padding: 3px 15px;
+            font-size: 80%;
+            &:nth-child(odd) { background-color: white; }
+        }
+    }
+    
+    .book {
+        font-size: 120%;
+        text-align: center;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    .ghost {
+        background-color: white;
+        color: $mainColor;
+        border: 1px solid white;
+        @include transition(all 0.2s);
+        
+        &:hover {
+            background-color: $mainColor;
+            color: white;
+            border: 1px solid $mainColor;
+        }
+    }
+    
+    .planimg-wrapper {
+        margin-top: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 200px;
+        overflow: hidden;
+        
+        #tokyo-img {
+            margin-top: -220px;
+            @include tablet-and-desktop {
+                margin-top: -50px;
+                margin-left: -150px;
+            }
+        }
+        #arctic-img {
+            margin-left: -150px;
+            @include desktop { margin-left: -280px; }
+            width: 880px;
+            height: auto;
+        }
+        #sahara-img {
+            @include desktop { margin-left: -250px; }
+        }
+        #swamp-img { 
+            @include desktop { margin-left: -250px; }
+        }
+        
+        @include tablet-and-desktop { 
+            height: 450px;
+            margin-top: 40px;
+        }
+    }
+    
+    .fix {
+        width: 98%;
+        @include desktop { width: 100%; }
+    }
+}
+
+//////////////////////////////////
+// TESTIMONIALS SECTION         //
+//////////////////////////////////
