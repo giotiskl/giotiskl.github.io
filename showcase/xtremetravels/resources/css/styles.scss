@@ -359,6 +359,51 @@ header {
         }
     }
     
+    //sticky navigation bar
+    .sticky {
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 3px 3px rgba(149, 149, 149, 0.15);
+        position: fixed;
+        left: 0;
+        z-index: 15;
+        width: 100%;
+        
+        .nav-container { 
+            max-width: $large-desktop-width;
+            margin: 0 auto;
+            position: relative; 
+            top: -10px;
+            @include tablet-and-desktop { top: 0; }
+        }
+        
+        a {
+            @include tablet-and-desktop { padding-bottom: 24px !important }
+            color: black !important;
+        }
+        
+        .main-nav {
+            position: static;
+            margin: 0 0 0 115px;
+            padding: 0;
+        }
+        
+        span {
+            margin-top: 10px;
+            padding-right: 5px;
+            color: $blackColor !important; 
+        }
+    }
+    
+    #black-logo {
+        display: none;
+        width: 85px;
+        height: auto;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        @include desktop { top: -20px; }
+    }
+    
     //social navigation bar
     .social-nav {
         
@@ -871,3 +916,9 @@ footer {
         text-align: center;
     }
 }
+
+//////////////////////////////////
+// ANIMATIONS SECTION           //
+//////////////////////////////////
+.to-fade-in { opacity: 0; }
+.to-fade-in.animated { opacity: 1; }

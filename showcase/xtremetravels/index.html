@@ -3,14 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Xtreme Travels is the top travelling agency when it comes to extreme sports and trips, live your life on the edge right now">
         
         <title>Xtreme Travels</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300italic,100,300' rel='stylesheet' type='text/css'>
-        <link href="vendors/css/normalize.css" rel="stylesheet">
-        <link href="vendors/css/ionicons.min.css" rel="stylesheet">
-        <link href="vendors/css/grid.css" rel="stylesheet">
+        <link href="external/css/normalize.css" rel="stylesheet">
+        <link href="external/css/ionicons.min.css" rel="stylesheet">
+        <link href="external/css/animate.css" rel="stylesheet">
+        <link href="external/css/grid.css" rel="stylesheet">
         <link href="resources/css/styles.css" rel="stylesheet">
 
 
@@ -26,18 +28,21 @@
             <header>
                 <div class="row">
                     <nav class="navbar">
-                        <div class="nav-logo">
-                            <img src="resources/img/hp_logo_white.png" alt="Navigation logo">
+                        <div class="nav-container clearfix">
+                            <div class="nav-logo">
+                                <img id="white-logo" src="resources/img/hp_logo_white.png" alt="Navigation logo">
+                                <img id="black-logo" src="resources/img/hp_logo_black.png" alt="Sticky navigation logo">
+                            </div>
+                            <span class="ion-navicon-round btn-minify"></span>
+                            <ul class="main-nav">
+                                <li><a id="link-about-us" href="#features">About us</a></li>
+                                <li><a id="link-past-trips" href="#pasttrips">Past trips</a></li>
+                                <li><a id="link-book-trip" href="#booktrips">Book a trip</a></li>
+                                <li><a id="link-contact" href="#contact">Contact</a></li>
+                            </ul>
                         </div>
-                        <span class="ion-navicon-round btn-minify"></span>
-                        <ul class="main-nav">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Past trips</a></li>
-                            <li><a href="#">Book a trip</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+                        <div class="clearfix"></div>
                     </nav>
-                    <div class="clearfix"></div>
                     <nav class="social-nav">
                         <span class="ion-social-facebook fb"></span>
                         <span class="ion-social-twitter twitter"></span>
@@ -45,8 +50,8 @@
                         <span class="ion-social-googleplus googleplus"></span>
                     </nav>
                     <div class="action-buttons">
-                        <a href="#" class="btn">I'm extreme!</a>
-                        <a href="#" class="btn btn-ghost">Tell me more</a>
+                        <a href="#booktrips" class="btn">I'm extreme!</a>
+                        <a href="#features" class="btn btn-ghost">Tell me more</a>
                     </div>
                     <div class="quote-box">
                         <blockquote>
@@ -58,12 +63,12 @@
                 </div>
             </header>
             
-            <section class="features">
+            <section id="features" class="features">
                 <div class="row">
                     <h2>live on the edge!</h2>
                     <p class="intro-msg">Welcome to <span class="red">X</span>treme Travels, the top travel agency when it comes to extreme travelling! Let us stand by your side, while realizing your dreams. Hunt treasures, skydive, go sandboarding or swim with whales. Stop wasting time, live now! </p>
                 </div>
-                <div class="row">
+                <div class="row to-fade-in">
                     <div class="col span-1-of-4 box">
                         <span class="green-big-icon ion-map"></span>
                         <h3>Off the beaten track</h3>
@@ -87,7 +92,7 @@
                 </div>
             </section>
             
-            <section class="past-trips">
+            <section id="pasttrips" class="past-trips">
                     <div class="image-slider">
                         <div class="frame-whales">
                             <div class="pic-description">
@@ -140,13 +145,13 @@
                     </div>
             </section>
             
-            <section class="book-trips">
+            <section id="booktrips" class="book-trips">
                 <div class="row">
                     <h2>be <span class="red">x</span>treme &mdash; book a trip!</h2>
                     <p class="intro-msg">Trips planned for the next three months! Don't waste any time as prices might go up. Book for 5 and take a 6th person with you 100% for <span class="red">free</span>.</p>
                 </div>
                 <div class="row">
-                    <div class="col span-1-of-4">
+                    <div id="latest-package" class="col span-1-of-4">
                         <div class="holiday-plan">
                             <div class="planimg-wrapper">
                                 <img id="tokyo-img" src="resources/img/book_samurai.jpg" alt="Holidays in Tokyo, Japan. Learn the art of the Samurais">
@@ -208,11 +213,11 @@
                 </div>
             </section>
             
-            <section class="testimonials">
+            <section id="testimonials" class="testimonials">
                 <div class="row">
                     <h2>Clients first &mdash; always</h2>
                 </div>
-                <div class="row">
+                <div class="row to-fade-in">
                     <div class="col span-1-of-3">
                         <blockquote>
                             I've had the best time of my life thanks to you <span class="red">X</span>treme Travels! I never imagined I would see a shark up close. Not only did I see it, but I actually got to feed it behind the titanium bars of the cage we were in with my diving instructor. Thank you very much, I'm already saving up for my next trip!
@@ -234,7 +239,7 @@
                 </div>
             </section>
             
-            <section class="contact">
+            <section id="contact" class="contact">
                 <div class="row">
                     <h2>Get in touch!</h2>
                 </div>
@@ -266,9 +271,9 @@
                 <div class="row">
                     <nav class="footer-nav">
                         <ul>
-                            <li><a href="#">About us</a></li> -
+                            <li><a href="#features">About us</a></li> -
                             <li><a href="#">Latest News</a></li> -
-                            <li><a href="#">Coming up</a></li> -
+                            <li><a href="#booktrips">Coming up</a></li> -
                             <li><a href="#">Partners</a></li>
                         </ul>
                     </nav>
@@ -289,7 +294,8 @@
         <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js"></script>
-        <script src="vendors/js/gmaps.js"></script>
+        <script src="external/js/gmaps.js"></script>
+        <script src="external/js/jquery.waypoints.min.js"></script>
         <script src="resources/js/app.js"></script>
         <script src="resources/js/imgslider.js"></script>
     </body>

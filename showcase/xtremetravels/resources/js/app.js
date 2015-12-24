@@ -3,7 +3,32 @@ $(document).ready(function() {
     //cache nav open status
     var navIsOpen = false;
     
-    //mobile nav
+    /////////////////////////////////////
+    //          NAVIGATION             //
+    /////////////////////////////////////
+    //sticky navigation    
+    $('.features').waypoint(function(dir) {
+        var nav = $('.navbar');
+        if (dir === "down") {
+            nav.hide();
+            $('#white-logo').hide();
+            $('#black-logo').show();
+            nav.addClass('sticky').fadeIn(500);
+        }
+        else { 
+            
+            nav.fadeOut(500, function() {
+                $('#black-logo').hide();
+                $('#white-logo').show();
+                nav.removeClass('sticky');
+                nav.show();
+            });
+        }
+    }, {
+        offset: '10%'
+    });
+    
+    //mobile navigation
     $(".btn-minify").click(function() {
         var nav = $(".main-nav");
         
@@ -27,6 +52,22 @@ $(document).ready(function() {
         } 
     });
     
+    //Navigation Scroll
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+    
     /////////////////////////////////////
     //          GOOGLE MAPS            //
     /////////////////////////////////////
@@ -46,6 +87,20 @@ $(document).ready(function() {
         }
     });
     
+    /////////////////////////////////////
+    //          ANIMATIONS             //
+    /////////////////////////////////////
+    $('.features').waypoint(function(dir) {
+        $('#features .to-fade-in').addClass('animated fadeIn');
+    }, { offset: '40%' });
+    
+    $('.book-trips').waypoint(function(dir) {
+        $('#latest-package').addClass('animated pulse');
+    });
+    
+    $('.testimonials').waypoint(function(dir) {
+        $('#testimonials .to-fade-in').addClass('animated fadeIn');
+    }, { offset: '40%' });
 });
 
 
