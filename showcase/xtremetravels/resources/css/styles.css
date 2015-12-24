@@ -1,46 +1,49 @@
-/* line 115, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 116, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+  /* line 121, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  *:focus {
+    outline: none; }
 
-/* line 121, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 124, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 body {
-  color: #2f2f2f;
+  color: #383838;
   font-family: 'Lato', 'Arial';
   font-size: 18px;
   text-rendering: optimizeLegibility;
   font-weight: 300; }
   @media (min-width: 768px) {
-    /* line 121, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 124, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     body {
       font-size: 20px; } }
 
-/* line 131, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 134, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .container {
   width: 100%; }
 
-/* line 135, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 138, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .row {
   width: 100%;
   margin: 0 auto; }
   @media (min-width: 992px) {
-    /* line 135, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 138, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .row {
       width: 992px; } }
   @media (min-width: 1200px) {
-    /* line 135, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 138, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .row {
       width: 1200px; } }
 
-/* line 143, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 146, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 section {
   padding: 25px; }
 
-/* line 151, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 154, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .clearfix {
   zoom: 1; }
-  /* line 153, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 156, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .clearfix:after {
     content: '.';
     clear: both;
@@ -48,21 +51,21 @@ section {
     height: 0;
     visibility: hidden; }
 
-/* line 162, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 165, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 h1 {
   font-weight: 100;
   font-size: 180%;
   text-transform: uppercase; }
   @media (min-width: 768px) and (max-width: 991px) {
-    /* line 162, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 165, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    h1 {
+      font-size: 250%; } }
+  @media (min-width: 992px) {
+    /* line 165, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     h1 {
       font-size: 320%; } }
-  @media (min-width: 992px) {
-    /* line 162, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
-    h1 {
-      font-size: 400%; } }
 
-/* line 170, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 173, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 h2, h3 {
   margin-top: 20px;
   text-align: center;
@@ -70,14 +73,14 @@ h2, h3 {
   font-weight: 300;
   padding: 15px; }
 
-/* line 178, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 181, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 h2 {
   font-size: 178%; }
   @media (min-width: 992px) {
-    /* line 178, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 181, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     h2 {
       margin-top: 40px; } }
-  /* line 182, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 185, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   h2:after {
     display: block;
     content: " ";
@@ -86,28 +89,28 @@ h2 {
     background-color: #e74c3c;
     margin: 25px auto 0 auto; }
 
-/* line 192, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 195, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 h3 {
   padding-left: 0;
   padding-right: 0;
   font-size: 114%;
   font-weight: 300; }
   @media (min-width: 992px) {
-    /* line 192, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 195, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     h3 {
       margin-top: 10px; } }
 
-/* line 200, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 203, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .intro-msg {
   margin: 30px auto 15px auto;
   text-align: justify;
   line-height: 145%; }
   @media (min-width: 768px) {
-    /* line 200, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 203, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .intro-msg {
       width: 60%; } }
 
-/* line 207, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 210, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .btn {
   color: white;
   text-decoration: none;
@@ -121,35 +124,35 @@ h3 {
   -moz-transition: all 0.25s;
   transition: all 0.25s; }
   @media (min-width: 768px) {
-    /* line 207, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 210, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .btn {
       padding: 10px 20px;
       margin: 0 25px; } }
-  /* line 223, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 226, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .btn:hover {
     background-color: #d62c1a;
     border-color: #d62c1a; }
 
-/* line 229, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 232, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .btn-ghost {
   color: #e74c3c;
   text-decoration: none;
   background-color: transparent;
   border: 2px solid #e74c3c; }
-  /* line 235, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 238, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .btn-ghost:hover {
     color: white; }
 
-/* line 238, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 241, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .box {
   padding: 1%;
   margin: 0; }
-  /* line 242, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 245, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .box p {
     line-height: 145%;
     font-size: 90%; }
 
-/* line 248, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 251, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .blue-big-icon {
   background-color: #3498db;
   color: white;
@@ -162,7 +165,7 @@ h3 {
   padding: 10px;
   margin: 15px auto -20px auto; }
   @media (min-width: 768px) {
-    /* line 248, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 251, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .blue-big-icon {
       margin-bottom: 20px;
       width: 80px;
@@ -170,7 +173,7 @@ h3 {
       padding: 15px;
       font-size: 190%; } }
 
-/* line 249, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 252, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .red-big-icon {
   background-color: #e74c3c;
   color: white;
@@ -183,7 +186,7 @@ h3 {
   padding: 10px;
   margin: 15px auto -20px auto; }
   @media (min-width: 768px) {
-    /* line 249, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 252, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .red-big-icon {
       margin-bottom: 20px;
       width: 80px;
@@ -191,7 +194,7 @@ h3 {
       padding: 15px;
       font-size: 190%; } }
 
-/* line 250, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 253, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .green-big-icon {
   background-color: #2ecc71;
   color: white;
@@ -204,7 +207,7 @@ h3 {
   padding: 10px;
   margin: 15px auto -20px auto; }
   @media (min-width: 768px) {
-    /* line 250, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 253, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .green-big-icon {
       margin-bottom: 20px;
       width: 80px;
@@ -212,7 +215,7 @@ h3 {
       padding: 15px;
       font-size: 190%; } }
 
-/* line 251, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 254, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .orange-big-icon {
   background-color: #f39c12;
   color: white;
@@ -225,7 +228,7 @@ h3 {
   padding: 10px;
   margin: 15px auto -20px auto; }
   @media (min-width: 768px) {
-    /* line 251, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 254, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .orange-big-icon {
       margin-bottom: 20px;
       width: 80px;
@@ -233,7 +236,7 @@ h3 {
       padding: 15px;
       font-size: 190%; } }
 
-/* line 253, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 256, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .blue-small-icon {
   background-color: #3498db;
   color: white;
@@ -245,7 +248,7 @@ h3 {
   padding: 5px;
   margin: 10px 10px 10px 0; }
 
-/* line 254, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 257, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .red-small-icon {
   background-color: #e74c3c;
   color: white;
@@ -257,7 +260,7 @@ h3 {
   padding: 5px;
   margin: 10px 10px 10px 0; }
 
-/* line 255, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 258, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .green-small-icon {
   background-color: #2ecc71;
   color: white;
@@ -269,7 +272,7 @@ h3 {
   padding: 5px;
   margin: 10px 10px 10px 0; }
 
-/* line 256, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 259, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .orange-small-icon {
   background-color: #f39c12;
   color: white;
@@ -281,16 +284,16 @@ h3 {
   padding: 5px;
   margin: 10px 10px 10px 0; }
 
-/* line 258, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 261, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .red {
   color: #e74c3c; }
 
 @media only screen and (max-width: 768px) {
-  /* line 263, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 266, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .col {
     width: 100%; } }
 
-/* line 268, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 271, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05)), url(../img/hp_navbg.jpg);
   background-attachment: fixed;
@@ -298,20 +301,20 @@ header {
   background-position: center;
   height: 100vh;
   box-shadow: inset 0 -10px 50px #000; }
-  /* line 279, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 282, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   header .nav-logo {
     margin-top: 10px; }
-    /* line 282, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 285, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     header .nav-logo img {
       float: left;
       width: 120px;
       height: auto; }
       @media (min-width: 992px) {
-        /* line 282, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        /* line 285, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
         header .nav-logo img {
           margin-top: 30px;
           width: 250px; } }
-  /* line 296, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 299, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   header .navbar .btn-minify {
     color: white;
     float: right;
@@ -320,44 +323,44 @@ header {
     text-align: center;
     height: 50px;
     width: 50px; }
-    /* line 305, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 308, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     header .navbar .btn-minify:hover {
       cursor: pointer; }
     @media (min-width: 768px) {
-      /* line 296, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 299, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .navbar .btn-minify {
         display: none; } }
-  /* line 310, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 313, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   header .navbar ul {
     display: none;
     position: absolute;
     left: 130px; }
     @media (min-width: 768px) {
-      /* line 310, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 313, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .navbar ul {
         display: block;
         position: static; } }
     @media (min-width: 768px) and (max-width: 991px) {
-      /* line 310, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 313, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .navbar ul {
         margin-top: -15px;
         float: right; } }
     @media (min-width: 992px) {
-      /* line 310, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 313, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .navbar ul {
         margin-top: 30px;
         float: right; } }
-  /* line 329, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 332, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   header .navbar li {
     display: block;
     padding: 10px; }
     @media (min-width: 768px) {
-      /* line 329, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 332, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .navbar li {
         display: inline-block;
         padding: 15px;
         margin: 10px 0; } }
-  /* line 339, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 342, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   header .navbar a:link, header .navbar a:focus, header .navbar a:visited {
     border: 2px solid transparent;
     color: white;
@@ -369,21 +372,21 @@ header {
     -moz-transition: all 0.2s;
     transition: all 0.2s; }
     @media (min-width: 992px) {
-      /* line 339, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 342, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .navbar a:link, header .navbar a:focus, header .navbar a:visited {
         letter-spacing: 1px; } }
-  /* line 353, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 356, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   header .navbar:hover a:hover, header .navbar:hover a:active {
     border-bottom: 2px solid #e74c3c; }
-  /* line 360, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 363, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   header .social-nav {
     position: absolute;
     top: 23%; }
     @media (min-width: 992px) {
-      /* line 360, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 363, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .social-nav {
         position: static; } }
-    /* line 368, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 371, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     header .social-nav span {
       color: white;
       display: block;
@@ -396,60 +399,60 @@ header {
       text-align: center;
       margin-top: 20px;
       margin-left: 15px; }
-      /* line 381, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 384, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .social-nav span:hover {
         cursor: pointer; }
       @media (min-width: 768px) {
-        /* line 368, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        /* line 371, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
         header .social-nav span {
           font-size: 100%;
           padding: 7px;
           width: 40px;
           height: 40px; } }
       @media (min-width: 992px) {
-        /* line 368, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        /* line 371, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
         header .social-nav span {
           margin-top: 10px;
           display: inline-block; } }
-    /* line 398, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 401, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     header .social-nav .fb {
       padding: 7px 11px 0 0;
       text-align: right;
       -webkit-transition: all 0.2s;
       -moz-transition: all 0.2s;
       transition: all 0.2s; }
-      /* line 403, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 406, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .social-nav .fb:hover {
         background-color: #3b5998;
         border: 2px solid #2a4580; }
-    /* line 408, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 411, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     header .social-nav .youtube {
       -webkit-transition: all 0.2s;
       -moz-transition: all 0.2s;
       transition: all 0.2s; }
-    /* line 409, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 412, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     header .social-nav .twitter {
       -webkit-transition: all 0.2s;
       -moz-transition: all 0.2s;
       transition: all 0.2s; }
-    /* line 410, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 413, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     header .social-nav .googleplus {
       -webkit-transition: all 0.2s;
       -moz-transition: all 0.2s;
       transition: all 0.2s; }
-    /* line 411, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 414, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     header .social-nav .youtube:hover {
       background-color: #bb0000;
       border: 2px solid #7e0000; }
-    /* line 412, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 415, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     header .social-nav .twitter:hover {
       background-color: #00aced;
       border: 2px solid #0191c7; }
-    /* line 413, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 416, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     header .social-nav .googleplus:hover {
       background-color: #dd4b39;
       border: 2px solid #a02e20; }
-  /* line 418, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 421, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   header .action-buttons {
     display: none;
     position: absolute;
@@ -457,7 +460,7 @@ header {
     left: 35%;
     top: 48%; }
     @media (min-width: 768px) {
-      /* line 418, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 421, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .action-buttons {
         display: block;
         left: 35%;
@@ -467,7 +470,7 @@ header {
         -ms-transform: translate(-35%, -54%);
         -o-transform: translate(-35%, -54%);
         transform: translate(-35%, -54%); } }
-  /* line 433, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 436, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   header .quote-box {
     color: white;
     text-align: right;
@@ -480,28 +483,28 @@ header {
     -o-transform: translate(50%, 50%);
     transform: translate(50%, 50%); }
     @media (min-width: 768px) {
-      /* line 433, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 436, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .quote-box {
         right: 40%; } }
     @media (min-width: 768px) and (max-width: 991px) {
-      /* line 433, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 436, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .quote-box {
         bottom: 19%; } }
     @media (min-width: 992px) {
-      /* line 433, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 436, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .quote-box {
         bottom: 22%; } }
-    /* line 444, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 447, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     header .quote-box blockquote {
       text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5); }
-      /* line 447, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 450, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .quote-box blockquote h1 {
         margin-bottom: 5px; }
         @media (min-width: 768px) {
-          /* line 447, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+          /* line 450, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
           header .quote-box blockquote h1 {
             margin-bottom: 20px; } }
-        /* line 451, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        /* line 454, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
         header .quote-box blockquote h1:before {
           content: '\201c';
           font-weight: 100;
@@ -513,7 +516,7 @@ header {
           -o-transform: translate(-110%, -10%);
           transform: translate(-110%, -10%); }
           @media (min-width: 768px) {
-            /* line 451, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+            /* line 454, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
             header .quote-box blockquote h1:before {
               font-size: 250%;
               -webkit-transform: translate(-110%, -30%);
@@ -521,7 +524,7 @@ header {
               -ms-transform: translate(-110%, -30%);
               -o-transform: translate(-110%, -30%);
               transform: translate(-110%, -30%); } }
-        /* line 458, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        /* line 461, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
         header .quote-box blockquote h1:after {
           content: '\201c';
           font-weight: 100;
@@ -533,7 +536,7 @@ header {
           -o-transform: rotate(180deg) translate(-35%, -25%);
           transform: rotate(180deg) translate(-35%, -25%); }
           @media (min-width: 768px) {
-            /* line 458, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+            /* line 461, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
             header .quote-box blockquote h1:after {
               font-size: 250%;
               -webkit-transform: rotate(180deg) translate(-35%, 25%);
@@ -541,33 +544,33 @@ header {
               -ms-transform: rotate(180deg) translate(-35%, 25%);
               -o-transform: rotate(180deg) translate(-35%, 25%);
               transform: rotate(180deg) translate(-35%, 25%); } }
-      /* line 466, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 469, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       header .quote-box blockquote cite {
         font-size: 80%; }
         @media (min-width: 768px) {
-          /* line 466, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+          /* line 469, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
           header .quote-box blockquote cite {
             font-size: 180%; } }
 
-/* line 484, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 487, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .past-trips {
   padding: 0;
   margin: 30px auto 0 auto;
   height: 60vh; }
   @media (min-width: 768px) {
-    /* line 484, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 487, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .past-trips {
       height: 100vh; } }
 
-/* line 491, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 494, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .image-slider {
   width: 100%;
   height: 60vh; }
   @media (min-width: 768px) {
-    /* line 491, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 494, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .image-slider {
       height: 100vh; } }
-  /* line 496, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 499, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider #loading-bar {
     background-image: linear-gradient(#077c07, rgba(96, 217, 96, 0.51));
     box-shadow: 0 2px 2px rgba(0, 108, 37, 0.8);
@@ -576,7 +579,7 @@ header {
     width: 0%;
     height: 5px;
     z-index: 11; }
-  /* line 506, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 509, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .pick-btn-container {
     margin: 10px auto 0 auto;
     position: absolute;
@@ -588,10 +591,10 @@ header {
     -o-transform: translateX(-50%);
     transform: translateX(-50%); }
     @media (min-width: 768px) {
-      /* line 506, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 509, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .pick-btn-container {
         margin-top: 45px; } }
-  /* line 516, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 519, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .pick-frame-btn {
     width: 10px;
     height: 10px;
@@ -605,28 +608,28 @@ header {
     -moz-transition: all 0.2s;
     transition: all 0.2s; }
     @media (min-width: 768px) {
-      /* line 516, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 519, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .pick-frame-btn {
         border: 3px solid white;
         width: 18px;
         height: 18px; } }
     @media (min-width: 768px) and (max-width: 991px) {
-      /* line 516, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 519, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .pick-frame-btn {
         margin-right: 29px; } }
     @media (min-width: 992px) {
-      /* line 516, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 519, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .pick-frame-btn {
         margin-right: 50px; } }
-    /* line 535, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 538, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .image-slider .pick-frame-btn:hover {
       background-color: #14c736;
       opacity: 0.75; }
-  /* line 540, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 543, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .active {
     background-color: #14c736;
     opacity: 0.75; }
-  /* line 545, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 548, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-whales {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_diving_whales.jpg");
     background-repeat: no-repeat;
@@ -640,12 +643,12 @@ header {
     height: 60vh;
     z-index: 8; }
     @media (min-width: 768px) {
-      /* line 545, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 548, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .frame-whales {
         background-attachment: fixed;
         background-size: cover;
         height: 100vh; } }
-  /* line 549, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 552, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-freefalling {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_freefalling.jpg");
     background-repeat: no-repeat;
@@ -659,12 +662,12 @@ header {
     height: 60vh;
     z-index: 7; }
     @media (min-width: 768px) {
-      /* line 549, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 552, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .frame-freefalling {
         background-attachment: fixed;
         background-size: cover;
         height: 100vh; } }
-  /* line 553, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 556, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-rafting {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_rafting.jpg");
     background-repeat: no-repeat;
@@ -678,12 +681,12 @@ header {
     height: 60vh;
     z-index: 6; }
     @media (min-width: 768px) {
-      /* line 553, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 556, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .frame-rafting {
         background-attachment: fixed;
         background-size: cover;
         height: 100vh; } }
-  /* line 557, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 560, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-rainforest {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_rainforest.jpg");
     background-repeat: no-repeat;
@@ -697,12 +700,12 @@ header {
     height: 60vh;
     z-index: 5; }
     @media (min-width: 768px) {
-      /* line 557, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 560, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .frame-rainforest {
         background-attachment: fixed;
         background-size: cover;
         height: 100vh; } }
-  /* line 561, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 564, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-safari-one {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_safari.jpeg");
     background-repeat: no-repeat;
@@ -716,12 +719,12 @@ header {
     height: 60vh;
     z-index: 4; }
     @media (min-width: 768px) {
-      /* line 561, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 564, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .frame-safari-one {
         background-attachment: fixed;
         background-size: cover;
         height: 100vh; } }
-  /* line 565, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 568, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-safari-two {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_safari2.jpg");
     background-repeat: no-repeat;
@@ -735,12 +738,12 @@ header {
     height: 60vh;
     z-index: 3; }
     @media (min-width: 768px) {
-      /* line 565, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 568, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .frame-safari-two {
         background-attachment: fixed;
         background-size: cover;
         height: 100vh; } }
-  /* line 569, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 572, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-skiing {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_skiing.jpg");
     background-repeat: no-repeat;
@@ -754,12 +757,12 @@ header {
     height: 60vh;
     z-index: 2; }
     @media (min-width: 768px) {
-      /* line 569, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 572, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .frame-skiing {
         background-attachment: fixed;
         background-size: cover;
         height: 100vh; } }
-  /* line 573, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 576, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-mountain-climbing {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_mountain_climbing.jpg");
     background-repeat: no-repeat;
@@ -773,15 +776,15 @@ header {
     height: 60vh;
     z-index: 1; }
     @media (min-width: 768px) {
-      /* line 573, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 576, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider .frame-mountain-climbing {
         background-attachment: fixed;
         background-size: cover;
         height: 100vh; } }
-  /* line 578, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 581, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider div {
     color: white; }
-    /* line 581, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 584, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .image-slider div .pic-description {
       margin-left: 20px;
       left: 50%;
@@ -794,14 +797,14 @@ header {
       position: absolute;
       z-index: 12;
       width: 80%; }
-      /* line 590, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 593, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider div .pic-description h1 {
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.96); }
         @media only screen and (max-width: 767px) {
-          /* line 590, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+          /* line 593, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
           .image-slider div .pic-description h1 {
             font-size: 110%; } }
-      /* line 594, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 597, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .image-slider div .pic-description p {
         margin-top: -20px;
         font-size: 90%;
@@ -809,40 +812,40 @@ header {
         line-height: 160%;
         padding: 10px; }
       @media (min-width: 768px) {
-        /* line 601, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        /* line 604, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
         .image-slider div .pic-description p {
           font-size: 130%; } }
       @media (min-width: 992px) {
-        /* line 581, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        /* line 584, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
         .image-slider div .pic-description {
           bottom: 10%; } }
 
-/* line 610, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 613, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .book-trips {
   background-color: #f4f4f4;
   padding-bottom: 35px; }
   @media (min-width: 768px) {
-    /* line 610, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 613, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .book-trips {
       padding-bottom: 50px; } }
-  /* line 615, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 618, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .book-trips .holiday-plan {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.15); }
-    /* line 620, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 623, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .book-trips .holiday-plan h3 {
       font-size: 120%;
       margin-top: 0;
       background-color: #f8f8f8; }
-    /* line 626, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 629, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .book-trips .holiday-plan p {
       padding: 3px 15px;
       font-size: 80%; }
-      /* line 629, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 632, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .book-trips .holiday-plan p:nth-child(odd) {
         background-color: white; }
-  /* line 633, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 636, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .book-trips .book {
     font-size: 120%;
     text-align: center;
@@ -851,7 +854,7 @@ header {
     margin: 0;
     padding: 10px 0;
     width: 100%; }
-  /* line 643, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 646, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .book-trips .ghost {
     background-color: white;
     color: #e74c3c;
@@ -859,57 +862,57 @@ header {
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     transition: all 0.2s; }
-    /* line 649, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 652, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .book-trips .ghost:hover {
       background-color: #e74c3c;
       color: white;
       border: 1px solid #e74c3c; }
-  /* line 656, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 659, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .book-trips .planimg-wrapper {
     margin-top: 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     height: 200px;
     overflow: hidden; }
-    /* line 663, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 666, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .book-trips .planimg-wrapper #tokyo-img {
       margin-top: -220px; }
       @media (min-width: 768px) {
-        /* line 663, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        /* line 666, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
         .book-trips .planimg-wrapper #tokyo-img {
           margin-top: -50px;
           margin-left: -150px; } }
-    /* line 670, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 673, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .book-trips .planimg-wrapper #arctic-img {
       margin-left: -150px;
       width: 880px;
       height: auto; }
       @media (min-width: 992px) {
-        /* line 670, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        /* line 673, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
         .book-trips .planimg-wrapper #arctic-img {
           margin-left: -280px; } }
     @media (min-width: 992px) {
-      /* line 676, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 679, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .book-trips .planimg-wrapper #sahara-img {
         margin-left: -250px; } }
     @media (min-width: 992px) {
-      /* line 679, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 682, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .book-trips .planimg-wrapper #swamp-img {
         margin-left: -250px; } }
     @media (min-width: 768px) {
-      /* line 656, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 659, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .book-trips .planimg-wrapper {
         height: 450px;
         margin-top: 40px; } }
-  /* line 689, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 692, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .book-trips .fix {
     width: 98%; }
     @media (min-width: 992px) {
-      /* line 689, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 692, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .book-trips .fix {
         width: 100%; } }
 
-/* line 698, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 701, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .testimonials {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65)), url(../img/testimonials_bg.jpg);
   background-attachment: fixed;
@@ -919,17 +922,17 @@ header {
   color: white;
   padding-bottom: 40px; }
   @media (min-width: 768px) {
-    /* line 698, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 701, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .testimonials {
       padding-bottom: 60px; } }
-  /* line 708, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 711, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .testimonials h2 {
     margin-bottom: 30px; }
     @media (min-width: 768px) {
-      /* line 708, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 711, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .testimonials h2 {
         margin-bottom: 60px; } }
-  /* line 713, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 716, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .testimonials blockquote {
     font-size: 90%;
     font-style: italic;
@@ -937,13 +940,13 @@ header {
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 0 10%; }
-    /* line 720, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 723, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .testimonials blockquote:before {
       content: '\201c';
       font-weight: 100;
       position: absolute; }
       @media (min-width: 768px) {
-        /* line 720, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        /* line 723, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
         .testimonials blockquote:before {
           font-size: 550%;
           -webkit-transform: translate(-110%, -45%);
@@ -951,19 +954,142 @@ header {
           -ms-transform: translate(-110%, -45%);
           -o-transform: translate(-110%, -45%);
           transform: translate(-110%, -45%); } }
-    /* line 728, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 731, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     .testimonials blockquote cite {
       display: block;
       margin-top: 10px; }
-      /* line 732, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 735, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .testimonials blockquote cite img {
         margin: 15px 15px 0 0;
         border-radius: 50%;
         height: 64px;
         width: 60px; }
-      /* line 739, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      /* line 742, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
       .testimonials blockquote cite span {
         position: absolute;
         margin-top: 38px; }
+
+/* line 753, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+.contact {
+  padding: 0;
+  position: relative; }
+  /* line 757, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  .contact .row {
+    width: 100%; }
+  /* line 759, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  .contact h2 {
+    margin-bottom: -20px; }
+    @media (min-width: 992px) {
+      /* line 759, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      .contact h2 {
+        margin-bottom: 0; } }
+  @media (min-width: 992px) {
+    /* line 764, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    .contact .contact-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      position: absolute;
+      bottom: 0;
+      padding-top: 12px;
+      width: 23%;
+      z-index: 1; } }
+  /* line 776, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  .contact .contact-box #locations p {
+    text-align: center;
+    line-height: 180%;
+    margin: 0 auto; }
+  /* line 783, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  .contact .contact-box #newsletter {
+    margin-top: 20px; }
+    @media (min-width: 992px) {
+      /* line 783, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      .contact .contact-box #newsletter {
+        margin-top: 38px; } }
+    /* line 787, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    .contact .contact-box #newsletter input {
+      box-shadow: none;
+      padding: 10px;
+      display: block;
+      text-align: center;
+      margin: 20px auto 0 auto;
+      width: 50%; }
+      @media (min-width: 992px) {
+        /* line 787, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        .contact .contact-box #newsletter input {
+          width: 100%; } }
+  /* line 799, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  .contact .map-box {
+    height: 200px;
+    margin: 30px 0 0 0; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      /* line 803, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      .contact .map-box .span-1-of-4 {
+        width: 100%; } }
+    @media (min-width: 992px) {
+      /* line 799, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      .contact .map-box {
+        height: 420px;
+        width: 100%;
+        position: relative; } }
+    /* line 811, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    .contact .map-box #gmaps {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0; }
+      @media (min-width: 992px) {
+        /* line 811, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+        .contact .map-box #gmaps {
+          position: relative;
+          z-index: 0; } }
+
+/* line 828, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+footer {
+  display: block;
+  background-color: #383838;
+  color: #7b7b7b;
+  font-size: 80%;
+  height: 150px;
+  padding-top: 40px; }
+  /* line 836, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  footer a {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent; }
+    /* line 841, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    footer a:link, footer a:visited {
+      color: #7b7b7b; }
+    /* line 842, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    footer a:hover, footer a:active {
+      color: white;
+      border-bottom: 1px solid white; }
+  /* line 846, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  footer .footer-nav ul {
+    list-style: none;
+    display: block;
+    float: left; }
+  /* line 851, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  footer .footer-nav li {
+    display: inline-block; }
+  /* line 856, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  footer .footer-social {
+    font-size: 120%;
+    color: #7b7b7b;
+    float: right; }
+    /* line 860, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    footer .footer-social a {
+      border: none; }
+    /* line 861, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    footer .footer-social span {
+      display: inline-block;
+      width: 25px;
+      text-align: center;
+      margin: 0 8px; }
+  /* line 869, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  footer #copyright {
+    margin-top: 25px;
+    text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */

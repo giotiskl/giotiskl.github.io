@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>Xtreme Travels</title>
- 
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300italic,100,300' rel='stylesheet' type='text/css'>
         <link href="vendors/css/normalize.css" rel="stylesheet">
         <link href="vendors/css/ionicons.min.css" rel="stylesheet">
@@ -233,13 +234,63 @@
                 </div>
             </section>
             
+            <section class="contact">
+                <div class="row">
+                    <h2>Get in touch!</h2>
+                </div>
+                <div class="row">
+                    <div class="contact-box">
+                        <h3>locations</h3>
+                        <div id="locations">
+                            <p>
+                                1627 Mount Tabor <br>
+                                New York, NY 10013 <br> 
+                                Tel: 914-012-2148
+                            </p>
+                        </div>
+                        <div id="newsletter">
+                            <h3>Newsletter</h3>
+                            <form method="post" action="#">
+                                <input type="email" id="email" name="email" placeholder="Your e-mail..." required>
+                                <input type="submit" value="Subscribe!" class="btn">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col map-box">
+                        <div id="gmaps"></div>
+                    </div>
+                </div>
+            </section>
             
+            <footer>
+                <div class="row">
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="#">About us</a></li> -
+                            <li><a href="#">Latest News</a></li> -
+                            <li><a href="#">Coming up</a></li> -
+                            <li><a href="#">Partners</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer-social">
+                        <a href="#"><span class="ion-social-facebook"></span></a>
+                        <a href="#"><span class="ion-social-twitter twitter"></span></a>
+                        <a href="#"><span class="ion-social-youtube youtube"></span></a>
+                        <a href="#"><span class="ion-social-googleplus googleplus"></span></a>
+                    </nav>
+                </div>
+                <div class="row">
+                    <p id="copyright">Copyright &copy; 2016 by Xtreme Travels. All rights reserved.</p>
+                </div>
+            </footer>
             
         </div>
 
         <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="resources/js/script.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="vendors/js/gmaps.js"></script>
+        <script src="resources/js/app.js"></script>
         <script src="resources/js/imgslider.js"></script>
     </body>
 </html>
