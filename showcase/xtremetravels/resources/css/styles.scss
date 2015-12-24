@@ -888,10 +888,11 @@ footer {
     }
     
     .footer-nav {
-        ul { 
+        ul {
             list-style: none; 
             display: block; 
-            float: left;
+            text-align: center;
+            @include tablet-and-desktop { float: left; }
         }
         li {
             display: inline-block;
@@ -901,7 +902,10 @@ footer {
     .footer-social {
         font-size: 120%;
         color: $lighterBlackColor;
-        float: right;
+        text-align: center;
+        margin-top: 20px;
+        
+        @include tablet-and-desktop { margin-top: 0; float: right; }
         a { border: none; }
         span {
             display: inline-block;

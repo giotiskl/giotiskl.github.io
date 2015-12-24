@@ -1116,34 +1116,44 @@ footer {
   footer .footer-nav ul {
     list-style: none;
     display: block;
-    float: left; }
-  /* line 896, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    text-align: center; }
+    @media (min-width: 768px) {
+      /* line 891, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      footer .footer-nav ul {
+        float: left; } }
+  /* line 897, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   footer .footer-nav li {
     display: inline-block; }
-  /* line 901, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 902, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   footer .footer-social {
     font-size: 120%;
     color: #7b7b7b;
-    float: right; }
-    /* line 905, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    text-align: center;
+    margin-top: 20px; }
+    @media (min-width: 768px) {
+      /* line 902, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+      footer .footer-social {
+        margin-top: 0;
+        float: right; } }
+    /* line 909, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     footer .footer-social a {
       border: none; }
-    /* line 906, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+    /* line 910, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
     footer .footer-social span {
       display: inline-block;
       width: 25px;
       text-align: center;
       margin: 0 8px; }
-  /* line 914, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+  /* line 918, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   footer #copyright {
     margin-top: 25px;
     text-align: center; }
 
-/* line 923, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 927, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .to-fade-in {
   opacity: 0; }
 
-/* line 924, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
+/* line 928, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
 .to-fade-in.animated {
   opacity: 1; }
 
