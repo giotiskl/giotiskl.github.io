@@ -127,6 +127,7 @@ body {
     font-size: 18px;
     text-rendering: optimizeLegibility;
     font-weight: 300;
+    overflow-x: hidden;
     
     @include tablet-and-desktop { font-size: 20px; }
 }
