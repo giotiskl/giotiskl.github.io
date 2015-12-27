@@ -106,13 +106,12 @@ $(document).ready(function() {
     /////////////////////////////////////
     //          SAFARI FIX             //
     /////////////////////////////////////
-    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    /*if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
         /*$('body').prepend('hello there');
         var browserHeight = $(window).height() + 'px'; //get viewport height
         var browserWidth  = $(window).width() + 'px'; //get viewport height
         $('header').css({'height': browserHeight});
-        $('header').css({'background-size': browserWidth + ' ' + browserHeight});*/
-    }
-    
+        $('header').css({'background-size': browserWidth + ' ' + browserHeight});
+    }*/
     
 });
