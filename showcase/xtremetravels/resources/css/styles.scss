@@ -88,7 +88,7 @@ $large-desktop-width: 1200px;
 
 @mixin img-frame($imgUrl) {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url($imgUrl);
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

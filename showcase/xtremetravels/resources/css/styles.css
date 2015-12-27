@@ -686,7 +686,7 @@ header {
   /* line 598, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-whales {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_diving_whales.jpg");
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -709,7 +709,7 @@ header {
   /* line 602, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-freefalling {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_freefalling.jpg");
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -732,7 +732,7 @@ header {
   /* line 606, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-rafting {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_rafting.jpg");
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -755,7 +755,7 @@ header {
   /* line 610, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-rainforest {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_rainforest.jpg");
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -778,7 +778,7 @@ header {
   /* line 614, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-safari-one {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_safari.jpeg");
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -801,7 +801,7 @@ header {
   /* line 618, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-safari-two {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_safari2.jpg");
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -824,7 +824,7 @@ header {
   /* line 622, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-skiing {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_skiing.jpg");
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -847,7 +847,7 @@ header {
   /* line 626, F:/Web Design/Websites/Portfolio Showcase/XtremeTravel/resources/css/styles.scss */
   .image-slider .frame-mountain-climbing {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url("../img/hp_mountain_climbing.jpg");
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
