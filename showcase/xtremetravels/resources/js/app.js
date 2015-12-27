@@ -101,7 +101,13 @@ $(document).ready(function() {
     $('.testimonials').waypoint(function(dir) {
         $('#testimonials .to-fade-in').addClass('animated fadeIn');
     }, { offset: '40%' });
-});
-
-
     
+    /////////////////////////////////////
+    //          BROWSER ISSUES         //
+    /////////////////////////////////////
+    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+        
+        $('header').css({'background-size': '100% 100%'});
+        
+    }
+});
