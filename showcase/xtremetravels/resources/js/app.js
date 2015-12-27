@@ -103,11 +103,12 @@ $(document).ready(function() {
     }, { offset: '40%' });
     
     /////////////////////////////////////
-    //          BROWSER ISSUES         //
+    //          SAFARI FIX             //
     /////////////////////////////////////
     if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-        
-        $('header').css({'background-size': '100% 100%'});
-        
+        var browserHeight = $(window).height() + 'px'; //get viewport height
+        $('header').css({'height': browserHeight});
+        $('header').css({'background-size': 'cover ' + browserHeight});
     }
+    
 });
