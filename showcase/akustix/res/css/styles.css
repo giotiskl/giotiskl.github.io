@@ -1,0 +1,689 @@
+/* line 51, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+header {
+  background-size: cover;
+  background-position: center center;
+  height: 100vh; }
+
+/* line 57, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+h2, h3 {
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase; }
+
+/* line 63, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.dropdown-search-box:after, .dropdown-search-box:before {
+  content: " ";
+  background-color: lightgrey;
+  width: 1px;
+  position: absolute; }
+
+/* line 70, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.icon-big, .search-button, .dropdown-search-box .searchbox-caret, .social-nav .icon-social, .social-nav-header .icon-social {
+  color: white;
+  font-size: 130%;
+  padding: 8px 16px; }
+
+/* line 76, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.gallery-item .item-name-caption, .gallery-item .item-price-caption {
+  border-radius: 5px;
+  color: white;
+  font-size: 80%;
+  font-weight: 400;
+  padding: 10px;
+  position: absolute;
+  z-index: 2; }
+
+/*---------------------------------------
+                Layout
+----------------------------------------*/
+/* line 90, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+html, body {
+  color: #383838;
+  font-size: 18px;
+  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  text-rendering: optimizeLegibility; }
+  @media (min-width: 768px) {
+    /* line 90, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    html, body {
+      font-size: 20px !important; } }
+
+/* line 100, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+h1 {
+  margin: 0; }
+
+/* line 102, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+h2 {
+  font-size: 180%; }
+  /* line 106, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  h2:after {
+    display: block;
+    content: " ";
+    height: 2px;
+    width: 200px;
+    background-color: #f1c40f;
+    margin: 20px auto 0 auto; }
+
+/* line 116, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+h3 {
+  font-size: 130%; }
+
+/* line 121, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+section {
+  padding: 3% 1%; }
+
+/* line 125, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+input:focus, textarea:focus, button:focus {
+  outline: 0 !important; }
+
+/*---------------------------------------
+           Reusable Components
+----------------------------------------*/
+/* line 130, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.box {
+  margin-top: 2.5rem; }
+
+/* line 134, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.btn {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.35);
+  color: white !important;
+  font-size: 90%;
+  background-color: #f1c40f;
+  border-radius: 5px;
+  border: 2px solid #f1c40f;
+  font-weight: 400;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  transition: all 0.25s; }
+  /* line 148, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .btn:hover, .btn:active {
+    background-color: #d2aa0c;
+    border: 2px solid #d2aa0c; }
+
+/* line 154, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.icon-big {
+  background-color: #f1c40f;
+  border-radius: 50%; }
+
+/* line 160, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.search-button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  position: relative;
+  top: 10px; }
+
+/* line 169, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.dropdown-search-box {
+  border-radius: 0;
+  padding: 10px;
+  margin-top: 21px; }
+  /* line 174, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .dropdown-search-box:after {
+    left: 10px;
+    bottom: 10px;
+    height: 20px; }
+  /* line 180, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .dropdown-search-box:before {
+    right: 10px;
+    bottom: 10px;
+    height: 20px; }
+  /* line 187, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .dropdown-search-box .searchbox-caret {
+    font-size: 160%;
+    position: absolute;
+    top: -26px;
+    left: 5px; }
+  /* line 195, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .dropdown-search-box .search-box, .dropdown-search-box .search-box:focus {
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    background-color: transparent;
+    color: #f1c40f;
+    font-weight: 400;
+    font-size: 100%;
+    padding: 5px 10px;
+    position: relative; }
+    @media (min-width: 768px) {
+      /* line 195, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .dropdown-search-box .search-box, .dropdown-search-box .search-box:focus {
+        font-size: 130%; } }
+
+/* line 211, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.social-nav a, .social-nav-header a, .social-nav a:hover, .social-nav-header a:hover, .social-nav a:focus, .social-nav-header a:focus {
+  background-color: transparent !important; }
+
+/* line 215, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.social-nav .icon-social, .social-nav-header .icon-social {
+  transition: all 0.25s; }
+  /* line 219, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .social-nav .icon-social:hover, .social-nav-header .icon-social:hover, .social-nav .icon-social:active, .social-nav-header .icon-social:active {
+    color: #f1c40f; }
+
+/* line 225, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.section-description {
+  margin: 1rem auto 0 auto;
+  width: 75%; }
+
+/* line 230, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.pattern {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.45)), url(../img/retina_wood.png); }
+
+/* line 236, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.pattern-dark {
+  background-image: url(../img/dark_embroidery.png); }
+
+/*---------------------------------------
+                Header
+----------------------------------------*/
+/* line 244, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.15)), url(../img/nav_bg.jpg);
+  box-shadow: inset 0 -10px 70px rgba(0, 0, 0, 0.75);
+  height: 100vh; }
+  @media (min-width: 1200px) {
+    /* line 244, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    header {
+      background-attachment: fixed; } }
+
+/* line 254, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.big-logo {
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  -webkit-transform: translate(-50%, -90%);
+  -moz-transform: translate(-50%, -90%);
+  -ms-transform: translate(-50%, -90%);
+  -o-transform: translate(-50%, -90%);
+  transform: translate(-50%, -90%);
+  width: 300px;
+  z-index: 0; }
+  @media (min-width: 768px) {
+    /* line 254, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .big-logo {
+      width: 520px;
+      top: 65%;
+      -webkit-transform: translate(-50%, -65%);
+      -moz-transform: translate(-50%, -65%);
+      -ms-transform: translate(-50%, -65%);
+      -o-transform: translate(-50%, -65%);
+      transform: translate(-50%, -65%); } }
+
+/* line 271, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.social-nav-header {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 55px;
+  display: none;
+  position: absolute; }
+  @media (min-width: 768px) {
+    /* line 271, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .social-nav-header {
+      display: block; } }
+
+/* line 282, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.navbar-custom {
+  background-color: rgba(34, 34, 34, 0.75);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 3; }
+
+/* line 288, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.nav-logo {
+  width: 64px;
+  height: auto; }
+
+/* line 293, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.custom-toggle-btn {
+  background-color: rgba(255, 255, 255, 0) !important;
+  border: none;
+  right: 5px;
+  top: -1px;
+  position: absolute; }
+  /* line 300, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .custom-toggle-btn .icon-bar {
+    margin: 10px 0 6px 0;
+    height: 3px;
+    width: 28px; }
+
+/* line 307, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+#main-nav ul {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/* line 312, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.plain-link {
+  text-transform: uppercase !important;
+  margin: 0 auto;
+  padding: 5px 10px 5px 10px;
+  transition: all 0.25s; }
+  @media (min-width: 768px) {
+    /* line 312, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .plain-link {
+      padding: 15px 10px 10px 10px; } }
+  /* line 319, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .plain-link a {
+    color: #f1c40f !important;
+    font-size: 80%; }
+    @media (min-width: 768px) {
+      /* line 319, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .plain-link a {
+        font-size: 100%; } }
+    @media (min-width: 992px) {
+      /* line 319, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .plain-link a {
+        font-size: 115%; } }
+  /* line 326, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .plain-link:hover {
+    background-color: #f1c40f; }
+    /* line 328, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .plain-link:hover a {
+      color: white !important; }
+
+/* line 333, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.plain-link.active {
+  background-color: #f1c40f; }
+  /* line 335, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .plain-link.active a {
+    background-color: transparent !important;
+    color: white !important; }
+
+/* line 342, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.collapsing .plain-link a, .in .plain-link a {
+  text-align: center; }
+
+/*---------------------------------------
+                Features
+----------------------------------------*/
+/* line 347, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.features {
+  padding-top: 20px; }
+
+/*---------------------------------------
+                Gallery
+----------------------------------------*/
+/* line 354, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.gallery {
+  color: white;
+  padding: 3% 0 0 0;
+  box-shadow: inset 0 10px 50px black;
+  overflow: hidden; }
+  @media (min-width: 1200px) {
+    /* line 354, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .gallery {
+      padding: 1.5% 0; } }
+  /* line 361, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .gallery h2 {
+    margin-bottom: 40px; }
+  /* line 363, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .gallery #akustix-carousel {
+    border: 0;
+    width: 100%; }
+    @media (min-width: 1200px) {
+      /* line 363, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .gallery #akustix-carousel {
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.65);
+        margin: 0 auto;
+        width: 1200px; } }
+    /* line 373, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .gallery #akustix-carousel img {
+      width: 100%; }
+  /* line 378, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .gallery .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 80%;
+    margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      /* line 378, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .gallery .carousel-caption {
+        padding: 20px;
+        font-size: 140%;
+        margin-bottom: 55px; } }
+
+/* line 393, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.slider-arrow {
+  font-size: 200%;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  -webkit-transform: positionY(-40%);
+  -moz-transform: positionY(-40%);
+  -ms-transform: positionY(-40%);
+  -o-transform: positionY(-40%);
+  transform: positionY(-40%); }
+  @media (min-width: 768px) {
+    /* line 393, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .slider-arrow {
+      font-size: 400%; } }
+  @media (min-width: 992px) {
+    /* line 393, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .slider-arrow {
+      font-size: 600%; } }
+
+/*---------------------------------------
+                Store
+----------------------------------------*/
+/* line 406, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.store {
+  padding-top: 1.5%;
+  margin-bottom: 1.25rem; }
+  @media (min-width: 768px) {
+    /* line 406, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .store {
+      margin-bottom: 0.25rem; } }
+  /* line 411, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .store .items-container {
+    padding: 0 10%;
+    text-align: center; }
+    @media (min-width: 768px) {
+      /* line 411, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .store .items-container {
+        padding: 0 0 0 5%;
+        margin-top: 30px;
+        text-align: left; } }
+
+/* line 423, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.gallery-item {
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+  /* line 431, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .gallery-item mq-tablet {
+    margin-top: 0;
+    margin-bottom: 0; }
+  /* line 433, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .gallery-item img {
+    border-radius: inherit;
+    width: 100%;
+    height: auto; }
+  /* line 439, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .gallery-item .item-name-caption {
+    background-color: #f1c40f;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-transform: translate(-30%, -50%);
+    -moz-transform: translate(-30%, -50%);
+    -ms-transform: translate(-30%, -50%);
+    -o-transform: translate(-30%, -50%);
+    transform: translate(-30%, -50%); }
+  /* line 446, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .gallery-item .item-price-caption {
+    background-color: #2ecc71;
+    box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.25);
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translate(30%, 50%);
+    -moz-transform: translate(30%, 50%);
+    -ms-transform: translate(30%, 50%);
+    -o-transform: translate(30%, 50%);
+    transform: translate(30%, 50%); }
+  /* line 455, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .gallery-item .icon-caption {
+    border: 3px solid transparent;
+    border-radius: 50%;
+    display: block;
+    color: transparent;
+    position: absolute;
+    text-align: center;
+    transition: all 0.25s;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 150%;
+    padding: 5px 15px; }
+    @media (min-width: 768px) {
+      /* line 455, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .gallery-item .icon-caption {
+        font-size: 200%;
+        padding: 5px 20px; } }
+    @media (min-width: 992px) {
+      /* line 455, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .gallery-item .icon-caption {
+        font-size: 300%;
+        padding: 15px 35px; } }
+  /* line 480, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .gallery-item:after {
+    content: " ";
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.25s; }
+  /* line 493, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .gallery-item:hover:after {
+    background-color: rgba(255, 255, 255, 0.65); }
+  /* line 497, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .gallery-item:hover .icon-caption {
+    color: rgba(255, 255, 255, 0.85);
+    border: 3px solid white; }
+
+/* line 506, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.modal .modal-header {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
+
+/* line 511, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.modal .modal-footer {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+
+/* line 516, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.modal .modal-body {
+  color: white;
+  font-size: 90%; }
+
+/* line 521, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.modal img {
+  width: 30%;
+  height: auto;
+  margin-bottom: 15px; }
+
+/* line 527, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.modal #modal-price-tag {
+  border: none;
+  cursor: auto;
+  background-color: #2ecc71; }
+
+/*---------------------------------------
+                Testimonials
+----------------------------------------*/
+/* line 537, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.1)), url(../img/testimonials_bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  box-shadow: inset 0 -10px 50px black;
+  color: white; }
+  @media (min-width: 1200px) {
+    /* line 537, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .testimonials {
+      background-attachment: fixed; } }
+  /* line 547, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .testimonials blockquote {
+    border: none;
+    font-size: 90%;
+    font-style: italic;
+    line-height: 160%; }
+    /* line 552, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .testimonials blockquote:before {
+      content: '\201c';
+      font-weight: 100;
+      position: absolute; }
+      @media (min-width: 768px) {
+        /* line 552, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+        .testimonials blockquote:before {
+          font-size: 550%;
+          -webkit-transform: translate(-150%, 50%);
+          -moz-transform: translate(-150%, 50%);
+          -ms-transform: translate(-150%, 50%);
+          -o-transform: translate(-150%, 50%);
+          transform: translate(-150%, 50%); } }
+    /* line 563, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .testimonials blockquote cite {
+      display: block;
+      margin-top: 10px; }
+      /* line 567, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .testimonials blockquote cite img {
+        margin: 15px 15px 0 0;
+        border-radius: 50%;
+        height: 64px;
+        width: 60px; }
+      /* line 574, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .testimonials blockquote cite span {
+        position: absolute;
+        margin-top: 15px; }
+
+/*---------------------------------------
+                Contact
+----------------------------------------*/
+/* line 585, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.contact {
+  overflow-x: hidden;
+  padding-top: 1rem; }
+  /* line 588, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .contact h2 {
+    margin-bottom: 1.25rem; }
+
+/* line 595, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.contact-form input {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.25rem; }
+
+/* line 602, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.contact-form textarea {
+  border: none;
+  border-radius: 5px;
+  font-size: 80%;
+  padding: 0.25rem;
+  width: 100%; }
+
+/* line 610, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.contact-form .label-container {
+  padding: 0.3rem; }
+  @media (min-width: 992px) {
+    /* line 610, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .contact-form .label-container {
+      text-align: right; } }
+
+/* line 615, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.contact-form label {
+  font-weight: 400; }
+
+/* line 617, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.contact-form #checkbox {
+  margin-top: 5px; }
+
+/* line 620, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.contact-form #newsletter {
+  width: 1rem;
+  height: auto; }
+
+/* line 625, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.contact-form .form-control {
+  font-size: 80%;
+  font-weight: 400;
+  box-shadow: none;
+  border: none; }
+
+/* line 632, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.contact-form .row {
+  padding: 0.25rem 0; }
+
+/* line 637, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+#gmaps {
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+  height: 21rem;
+  margin-top: 1rem; }
+  @media (min-width: 992px) {
+    /* line 637, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    #gmaps {
+      margin-top: 0; } }
+
+/*---------------------------------------
+                Footer
+----------------------------------------*/
+/* line 648, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.footer {
+  color: #afafaf;
+  font-size: 80%;
+  padding-top: 1.5rem;
+  padding-bottom: 0.75rem; }
+  /* line 654, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .footer a {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent; }
+    /* line 659, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .footer a:link, .footer a:visited {
+      color: #afafaf; }
+    /* line 660, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .footer a:hover, .footer a:active {
+      color: white;
+      border-bottom: 1px solid white; }
+  /* line 663, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .footer .footer-nav {
+    text-align: center; }
+    @media (min-width: 768px) {
+      /* line 663, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .footer .footer-nav {
+        text-align: left; } }
+    /* line 667, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .footer .footer-nav ul {
+      list-style: none;
+      padding: 0; }
+    /* line 672, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .footer .footer-nav ul li {
+      display: inline-block; }
+  /* line 675, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .footer .social-nav, .footer .social-nav-header {
+    font-size: 130%;
+    text-align: center;
+    margin-top: 0.5rem; }
+    @media (min-width: 768px) {
+      /* line 675, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+      .footer .social-nav, .footer .social-nav-header {
+        text-align: right;
+        margin-top: 0; } }
+    /* line 681, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+    .footer .social-nav a, .footer .social-nav-header a {
+      padding: 0.5rem;
+      border: none !important; }
+  /* line 687, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+  .footer .copyright {
+    letter-spacing: 0.1rem;
+    text-align: center;
+    margin-top: 1.75rem; }
+
+/* line 697, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.to-fade-in {
+  opacity: 0; }
+
+/* line 698, F:/Web Design/Websites/Portfolio Showcase/akustix/res/css/styles.scss */
+.to-fade-in.animated {
+  opacity: 1; }
+
+/*# sourceMappingURL=styles.css.map */
