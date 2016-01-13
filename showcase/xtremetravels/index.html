@@ -15,11 +15,10 @@
         <link href="external/css/grid.css" rel="stylesheet">
         <link href="resources/css/styles.css" rel="stylesheet">
 
-
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
         <![endif]-->
     </head>
     <body>
@@ -79,6 +78,7 @@
                         <h3><span class="red">X</span>treme activities</h3>
                         <p>Not only are you going to visit wild places, but you're actually going to get wild yourself while at it! During our travels, we've had people dive around blue whales, go sandboarding in the desert and track down cobras in the tropical rainforests of India!</p>
                     </div>
+                    <div class="clearfix visible-tablet"></div>
                     <div class="col span-1-of-4 box">
                         <span class="red-big-icon ion-ios-medkit-outline"></span>
                         <h3>Safety first!</h3>
@@ -167,7 +167,7 @@
                     </div>
                     
                     <div class="col span-1-of-4">
-                        <div class="holiday-plan fix">
+                        <div class="holiday-plan">
                             <div class="planimg-wrapper">
                                 <img id="arctic-img" src="resources/img/book_arctic_cruise.jpg" alt="Visit the Arctic Ocean on a luxurious cruise, dive in frozen waters!">
 
@@ -182,7 +182,7 @@
                     </div>
                     
                     <div class="col span-1-of-4">
-                        <div class="holiday-plan fix">
+                        <div class="holiday-plan">
                             <div class="planimg-wrapper">
                                 <img id="sahara-img" src="resources/img/book_sahara.jpg" alt="Welcome to Sahara desert, live with the nomads!">
                             </div>
@@ -196,7 +196,7 @@
                     </div>
                     
                     <div class="col span-1-of-4">
-                        <div class="holiday-plan fix">
+                        <div class="holiday-plan">
                             <div class="planimg-wrapper">
                                 <img id="swamp-img" src="resources/img/book_swamp.jpg" alt="Visit the Aussie swamp lands">
 
@@ -244,25 +244,25 @@
                     <h2>Get in touch!</h2>
                 </div>
                 <div class="row">
-                    <div class="contact-box">
-                        <h3>locations</h3>
-                        <div id="locations">
-                            <p>
-                                1627 Mount Tabor <br>
-                                New York, NY 10013 <br> 
-                                Tel: 914-012-2148 <br>
-                                support@xtremetravels.com
-                            </p>
-                        </div>
-                        <div id="newsletter">
-                            <h3>Newsletter</h3>
-                            <form method="post" action="#">
-                                <input type="email" id="email" name="email" placeholder="Your e-mail..." required>
-                                <input type="submit" value="Subscribe!" class="btn">
-                            </form>
-                        </div>
-                    </div>
                     <div class="col map-box">
+                        <div class="contact-box">
+                            <h3>locations</h3>
+                            <div id="locations">
+                                <p>
+                                    1627 Mount Tabor <br>
+                                    New York, NY 10013 <br> 
+                                    Tel: 914-012-2148 <br>
+                                    support@xtremetravels.com
+                                </p>
+                            </div>
+                            <div id="newsletter">
+                                <h3>Newsletter</h3>
+                                <form method="post" action="#">
+                                    <input type="email" id="email" name="email" placeholder="Your e-mail..." required>
+                                    <button type="submit" value="Subscribe!" class="btn">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
                         <div id="gmaps"></div>
                     </div>
                 </div>
@@ -293,6 +293,9 @@
         </div>
 
         <!-- Scripts -->
+        <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+	    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+	    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script src="external/js/gmaps.js"></script>

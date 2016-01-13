@@ -210,6 +210,7 @@ h3 {
 }
 
 .btn {
+    border-radius: 0.5rem;
     color: white;
     text-decoration: none;
     background-color: $mainColor;
@@ -529,6 +530,17 @@ header {
 //////////////////////////////////
 // FEATURES SECTION             //
 //////////////////////////////////
+.features {
+    .span-1-of-4 {
+        @include tablet { width: 50%; padding: 0 2.5%; }
+        @include desktop { width: 25%; }
+    }
+    
+    .visible-tablet {
+        display: none;
+        @include tablet { display: block; }
+    }
+}
 
 
 //////////////////////////////////
@@ -665,6 +677,12 @@ header {
     padding-bottom: 35px;
     @include tablet-and-desktop { padding-bottom: 50px;}
     
+    .col {
+        @media all and (max-width: 767px) {
+            margin-left: 0;
+        }
+    }
+    
     .holiday-plan {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
@@ -686,6 +704,8 @@ header {
     .book {
         font-size: 120%;
         text-align: center;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         margin: 0;
@@ -737,11 +757,6 @@ header {
             height: 450px;
             margin-top: 40px;
         }
-    }
-    
-    .fix {
-        width: 98%;
-        @include desktop { width: 100%; }
     }
 }
 
@@ -808,7 +823,7 @@ header {
     .row { width: 100%; }
     
     h2 {
-        margin-bottom: -20px;
+        margin-bottom: -50px;
         @include desktop { margin-bottom: 0; }
     }
     
@@ -817,9 +832,9 @@ header {
         @include desktop {
             background-color: rgba(255, 255, 255, 0.85);
             position: absolute;
-            bottom: 0;
-            padding-top: 12px;
-            width: 23%;
+            
+            height: 100%;
+            width: 20rem;
             z-index: 1;
         }
 
@@ -832,36 +847,37 @@ header {
         }
 
         #newsletter {
-            margin-top: 20px;
-            @include desktop { margin-top: 38px; }
+            text-align: center;
 
             input {
                 box-shadow: none;
                 padding: 10px;
                 display: block;
                 text-align: center;
-                margin: 20px auto 0 auto;
-                width: 50%;
-                @include desktop { width: 100%; }
+                margin: 0.75rem auto;
+            }
+            
+            .btn {
+                margin: 0.5rem auto 1.25rem auto;
+                @include tablet-and-desktop { margin-bottom: 0; }
             }
         }
     }
     
     .map-box {
-        height: 200px;
         margin: 30px 0 0 0;
         
-        @include tablet { .span-1-of-4 { width: 100%; } }
-        
-        @include desktop {
-            height: 420px;
+        @include tablet-and-desktop {
             width: 100%;
             position: relative;
         }
 
         #gmaps {
             width: 100%;
-            height: 100%;
+            height: 20rem;
+            @include tablet-and-desktop { height: 27.2rem; }
+            @include tablet { margin-top: 30px; }
+            
             margin: 0;
             padding: 0;
             
@@ -881,8 +897,8 @@ footer {
     background-color: $blackColor;
     color: $lighterBlackColor;
     font-size: 80%;
-    height: 150px;
-    padding-top: 40px;
+    padding: 1rem;
+    @include tablet-and-desktop { padding: 2rem; padding-bottom: 1rem; }
     
     a {
         @include transition(all 0.2s);
@@ -923,7 +939,8 @@ footer {
     
     #copyright {
         background-color: $blackColor;
-        margin-top: 25px;
+        margin-top: 22px;
+        @include tablet-and-desktop { margin-top: 50px; }
         padding-bottom: 10px;
         text-align: center;
     }
