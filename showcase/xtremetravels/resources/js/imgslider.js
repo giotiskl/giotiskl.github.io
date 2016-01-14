@@ -3,17 +3,15 @@ $(document).ready(function() {
     //Slider settings
     var imageSlider = $('.image-slider');
     var images = [$('.frame-whales'), $('.frame-freefalling'),  //cache images in slider
-                  $('.frame-rafting'), $('.frame-rainforest'),
-                  $('.frame-safari-one'), $('.frame-safari-two'),
-                  $('.frame-skiing'), $('.frame-mountain-climbing')];
+                  $('.frame-safari-two'), $('.frame-mountain-climbing')];
     
     for (var i = 1; i < images.length - 1; i++) $(images[i]).css({opacity: "0"}); //init all imges to zero opacity
     
-    var animationDuration = 2000; //effect duration
+    var animationDuration = 1000; //effect duration
     var currentImg = 0;           //current img
     
     //Add frame pick buttons and cache them into an array
-    imageSlider.append('<div class=\"pick-btn-container\"><div class=\"pick-frame-btn active\"></div><div class=\"pick-frame-btn\"></div><div class=\"pick-frame-btn\"></div><div class=\"pick-frame-btn\"></div><div class=\"pick-frame-btn\"></div><div class=\"pick-frame-btn\"></div><div class=\"pick-frame-btn\"></div><div class=\"pick-frame-btn\"></div></div>');
+    imageSlider.append('<div class=\"pick-btn-container\"><div class=\"pick-frame-btn active\"></div><div class=\"pick-frame-btn\"></div><div class=\"pick-frame-btn\"></div><div class=\"pick-frame-btn\"></div></div>');
     
     var frameButtons = $('.pick-frame-btn');
     
@@ -24,7 +22,7 @@ $(document).ready(function() {
     
     //set up play slider function
     function playSlider() {
-        loadingBar.animate({width: "100%"}, 9000, function() {
+        loadingBar.animate({width: "100%"}, 5000, function() {
             //animate image change, repeat counter if needed
             images[currentImg].animate({opacity: "0"}, animationDuration);
             $(frameButtons[currentImg]).removeClass('active');

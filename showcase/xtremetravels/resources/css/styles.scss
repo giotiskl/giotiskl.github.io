@@ -88,7 +88,6 @@ $large-desktop-width: 1200px;
 
 @mixin img-frame($imgUrl) {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 10, 10, 0.65)), url($imgUrl);
-    background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -102,7 +101,7 @@ $large-desktop-width: 1200px;
         background-size: cover;
         height: 100vh; 
     }
-    @include desktop { background-attachment: fixed; }
+    @include large-desktop { background-attachment: fixed; }
 }
 
 @mixin quote {
@@ -140,9 +139,8 @@ body {
 .row {
     width: 100%;
     margin: 0 auto;
-    
-    @include desktop { width: $desktop-width; }
-    @include large-desktop { width: $large-desktop-width; }    
+
+    @include large-desktop { width: 1100px; }    
 }
 
 section {
@@ -265,6 +263,30 @@ h3 {
     color: $mainColor;
 }
 
+.overlay {
+    @media only screen and (max-width: $tablet-width) {
+        background-color: rgba(0, 0, 0, 0.75);
+        display: none;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.visible-tablet {
+    display: none;
+    @include tablet { display: block; }
+}
+
+.stop-scrolling {
+    @media only screen and (max-width: $tablet-width) {
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
 //ugly desktop first media query to change col from responsive grid lib
 @media only screen and (max-width: $tablet-width) { .col { width: 100%; } }
 
@@ -275,8 +297,7 @@ header {
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05)), 
         url(../img/hp_navbg.jpg);
-    background-attachment: scroll;
-    @include desktop { background-attachment: fixed; }
+    @include large-desktop { background-attachment: fixed; }
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -377,7 +398,7 @@ header {
         .nav-container { 
             max-width: $large-desktop-width;
             margin: 0 auto;
-            position: relative; 
+            position: relative;
             top: -10px;
             @include tablet-and-desktop { top: 0; }
         }
@@ -535,11 +556,6 @@ header {
         @include tablet { width: 50%; padding: 0 2.5%; }
         @include desktop { width: 25%; }
     }
-    
-    .visible-tablet {
-        display: none;
-        @include tablet { display: block; }
-    }
 }
 
 
@@ -561,6 +577,7 @@ header {
     #loading-bar {
         background-image: linear-gradient(#077c07, rgba(96, 217, 96, 0.51));
         box-shadow: 0 2px 2px rgba(0, 108, 37, 0.8);
+        visibility: hidden;
         position: absolute;
         left: 0;
         width: 0%;
@@ -579,6 +596,7 @@ header {
         }
     }
     .pick-frame-btn {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
         width: 10px;
         height: 10px;
         opacity: 0.4;
@@ -677,10 +695,19 @@ header {
     padding-bottom: 35px;
     @include tablet-and-desktop { padding-bottom: 50px;}
     
-    .col {
-        @media all and (max-width: 767px) {
-            margin-left: 0;
+    .span-1-of-4 {
+        width: 100%;
+        padding: 1%;
+        margin: 0;
+        
+        @include tablet {
+            width: 50%;
         }
+        
+        @include desktop {
+            width: 25%;
+        }
+        
     }
     
     .holiday-plan {
@@ -766,7 +793,7 @@ header {
 .testimonials {
     background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.65)), url(../img/testimonials_bg.jpg);
     background-attachment: scroll;
-    @include desktop { background-attachment: fixed; }
+    @include large-desktop { background-attachment: fixed; }
     background-size: cover;
     background-position: center center;
     box-shadow: inset 0 -10px 50px #000;

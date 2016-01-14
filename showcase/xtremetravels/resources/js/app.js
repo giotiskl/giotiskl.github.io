@@ -2,6 +2,7 @@ $(document).ready(function() {
     
     //cache nav open status
     var navIsOpen = false;
+    var onMobile = $(window).width() < 768;
     
     /////////////////////////////////////
     //          NAVIGATION             //
@@ -16,7 +17,6 @@ $(document).ready(function() {
             nav.addClass('sticky').fadeIn(500);
         }
         else { 
-            
             nav.fadeOut(500, function() {
                 $('#black-logo').hide();
                 $('#white-logo').show();
@@ -29,21 +29,12 @@ $(document).ready(function() {
     });
     
     //mobile navigation
-    $(".btn-minify").click(function() {
-        var nav = $(".main-nav");
-        
-        nav.slideToggle(200);
-        
-        var btn = $(".btn-minify");
-        btn.hasClass("ion-navicon-round") ?
-            btn.attr("class", "ion-close-round btn-minify") :
-            btn.attr("class", "ion-navicon-round btn-minify");
-        
-        navIsOpen = !navIsOpen;
-    });
+    $(".btn-minify").click(stickyNavBtnHandler);
     
     //hack-fix for navbar display due to mobile-first
     $(window).resize(function() {
+        onMobile = $(window).width() < 768;
+        
         if ($(document).width() >= 768) {
             $(".main-nav").css({"display": "block"});
         }
@@ -60,6 +51,7 @@ $(document).ready(function() {
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
+            if (onMobile) stickyNavBtnHandler();
             $('html,body').animate({
               scrollTop: target.offset().top
             }, 1000);
@@ -88,6 +80,10 @@ $(document).ready(function() {
         }
     });
     
+    var mapStyles = [{"elementType":"geometry","stylers":[{"hue":"#ff4400"},{"saturation":-68},{"lightness":-4},{"gamma":0.72}]},{"featureType":"road","elementType":"labels.icon"},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"hue":"#0077ff"},{"gamma":3.1}]},{"featureType":"water","stylers":[{"hue":"#00ccff"},{"gamma":0.44},{"saturation":-33}]},{"featureType":"poi.park","stylers":[{"hue":"#44ff00"},{"saturation":-23}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"hue":"#007fff"},{"gamma":0.77},{"saturation":65},{"lightness":99}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"gamma":0.11},{"weight":5.6},{"saturation":99},{"hue":"#0091ff"},{"lightness":-86}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"lightness":-48},{"hue":"#ff5e00"},{"gamma":1.2},{"saturation":-23}]},{"featureType":"transit","elementType":"labels.text.stroke","stylers":[{"saturation":-64},{"hue":"#ff9100"},{"lightness":16},{"gamma":0.47},{"weight":2.7}]}];
+    
+    map.setOptions({styles: mapStyles});
+    
     /////////////////////////////////////
     //          ANIMATIONS             //
     /////////////////////////////////////
@@ -104,14 +100,27 @@ $(document).ready(function() {
     }, { offset: '40%' });
     
     /////////////////////////////////////
-    //          SAFARI FIX             //
+    //          WEBSITE FNS            //
     /////////////////////////////////////
-    /*if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-        /*$('body').prepend('hello there');
-        var browserHeight = $(window).height() + 'px'; //get viewport height
-        var browserWidth  = $(window).width() + 'px'; //get viewport height
-        $('header').css({'height': browserHeight});
-        $('header').css({'background-size': browserWidth + ' ' + browserHeight});
-    }*/
+    function stopScrolling(bool) {
+        bool ? $('body').addClass('stop-scrolling') : $('body').removeClass('stop-scrolling');
+    }
+    
+    function stickyNavBtnHandler() {
+        var nav = $(".main-nav");
+        var overlay = $(".overlay");
+        
+        nav.slideToggle(200);
+        
+        var btn = $(".btn-minify");
+        btn.hasClass("ion-navicon-round") ?
+            btn.attr("class", "ion-close-round btn-minify") :
+            btn.attr("class", "ion-navicon-round btn-minify");
+        
+        navIsOpen = !navIsOpen;
+        
+        stopScrolling(navIsOpen);
+        navIsOpen ? overlay.fadeIn(500) : overlay.fadeOut(500);
+    }
     
 });
