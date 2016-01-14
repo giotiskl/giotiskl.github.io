@@ -323,6 +323,8 @@ header {
     
     //main navigation bar
     .navbar {
+        position: relative;
+        z-index: 15;
         .btn-minify {
             color: white;
             float: right;
@@ -392,7 +394,6 @@ header {
         box-shadow: 0 3px 3px rgba(149, 149, 149, 0.15);
         position: fixed;
         left: 0;
-        z-index: 15;
         width: 100%;
         
         .nav-container { 
