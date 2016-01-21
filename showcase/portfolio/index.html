@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Site description here">
+        <title>Yiotis Kaltsikis | Front End Developer</title>
+        
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap CDN for Production
+        ---------------------------------
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        -->
+        <!-- Bootstrap local for development -->
+        <link href="ext/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+        <link href="ext/css/ionicons.min.css" rel="stylesheet">
+        <link href="ext/css/animate.css" rel="stylesheet">
+        <link href="res/css/styles.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body data-spy="scroll" data-target="#main-nav">
+        
+        <div class="container-fluid">
+            
+            <div class="row">
+                <header class="main-header" id="main-header">
+                    <nav class="navbar">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="nav-toggle-btn collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="ion-navicon nav-open"></span>
+                                    <span class="ion-android-close nav-close"></span>
+                                </button>
+                                <a class="navbar-brand nav-link logo" href="#main-header"><span class="color-main">Yiotis</span>.Designs</a>
+                            </div>
+
+                            <div class="collapse navbar-collapse" id="main-nav">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#about-me" class="nav-link">About me</a></li>
+                                    <li><a href="#tools" class="nav-link">Tools</a></li>
+                                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="overlay"></div>
+                    <div class="welcome-box">
+                        <p>Welcome to my digital home, I'm Yiotis.</p>
+                        <h1>Front end developer</h1>
+                    </div>
+                    <div class="social-nav">
+                        <ul class="nav invisible">
+                            <li><a class="social-btn social-fb" href="https://www.facebook.com/yiotiskal" target="_blank"><span class="ion-social-facebook"></a></span></li>
+                            <li><a class="social-btn social-linkedin" href="https://www.linkedin.com/in/giotis-kaltsikis-846013b7" target="_blank"><span class="ion-social-linkedin"></a></span></li>
+                            <li><a class="social-btn social-github" href="https://github.com/giotiskl" target="_blank"><span class="ion-social-github"></a></span></li>
+                            <li><a class="social-btn social-email" href="mailto:yiotiskal@gmail.com"><span class="ion-ios-email"></a></span></li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+            
+            <!-- About me -->
+            <div class="row">
+                <section class="container about-me" id="about-me">
+                    
+                        <div class="row">
+                             <h2>About me</h2>
+                        </div>
+                        
+                        <div class="row visible-xs visible-sm">
+                            <div class="col-sm-12 bg-me">
+                            </div>
+                        </div>
+                        
+                        <div class="row feats-row">
+                            <div class="col-md-6 feats-container">
+                                <section>
+                                    <h3><span class="ion-ios-glasses-outline icon-header"></span>Who I am</h3>
+                                    <p>Hello, my name is Yiotis Kaltsikis. I am 26 years old and I was born in Greece. I hold a Bachelors degree in English Language and Literature. After finishing my University studies, I worked as an English teacher for three years. However, my lifelong passion for development, coding and design took me over. Since the age of 13, I have delved into numerous programming languages and paradigms. I am interested in designing sleek, functional interfaces, which is what drove me to specialise in Front End Development.</p>
+                                </section>
+                            </div>
+                            <div class="col-md-6 feat-bg bg-me hidden-xs hidden-sm invisible"></div>
+                        </div>
+                        
+                        <div class="row feats-row">
+                            <div class="col-md-6 feat-bg bg-whatido hidden-xs hidden-sm invisible">
+                            </div>
+                            <div class="col-md-6 feats-container">
+                                <section>
+                                   <h3><span class="ion-ios-color-wand-outline icon-header"></span>What I do</h3>
+                                    <p>I design websites, just like the one you're browsing through right now and do graphics in GIMP. I like mobile-first responsive design, progressive enhancement and single page applications. I find the process of shaping an online identity fascinating, it is in its own right a form of art. Since an image is worth a thousand words, scroll down to my portfolio for a few thousands words worth of images.</p>
+                                </section>
+                            </div>
+                        </div>
+                        
+                        <div class="row feats-row">
+                            <div class="col-md-6 feats-container">
+                                <section>
+                                    <h3><span class="ion-ios-list-outline icon-header"></span>Neat facts</h3>
+                                    <ul class="list-unstyled">
+                                        <li><span class="color-main">Coding:</span> <span>Apart from HTML, CSS and JS at times I've worked with Node.JS, C/C++, C#, Java (samples on GitHub) and a bit of native Android.</li>
+                                        <li><span class="color-main">Education:</span> My Bachelors grade is 8.46/10. My final paper was on <em>The Dying Animal</em> by Philip Roth.</li>
+                                        <li><span class="color-main">Hobbies:</span> I play the guitar, love the blues. I'm a casual gamer, huge RPG fan. I also love literature and philosophy, my favourite author is Philip Roth.</li>
+                                        <li><span class="color-main">Languages:</span> I speak and write Greek, English and German!</li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div class="col-md-6 feat-bg bg-facts hidden-xs hidden-sm invisible"></div>
+                        </div>
+                        
+                </section>
+            </div>
+        
+            <!-- Tools -->
+            <section class="row dark-container tools-row">
+                <div class="container tools" id="tools">
+                    <div class="row">
+                        <h2>My tools</h2>
+                    </div>
+                    <div class="row">
+                        <section class="col-sm-4 skill-box">
+                            <div class="row">
+                                <h3><span class="ion-social-html5-outline icon-header"></span>HTML5</h3>
+                                <p>HTML is the foundation of a good website. I make use of HTML semantics to improve screen-reader accessibility and SEO.</p>
+                            </div>
+                        </section>
+                        <section class="col-sm-4 skill-box">
+                            <div class="row">
+                                <h3><span class="ion-social-css3-outline icon-header"></span>CSS3</h3>
+                                <p>I use SASS for my CSS. I aim for well-organized non-repetitive stylesheets. I use Bootstrap, as the starting point for my designs.</p>
+                            </div>
+                        </section>
+                        <section class="col-sm-4 skill-box">
+                            <div class="row">
+                                <h3><span class="ion-social-javascript-outline icon-header"></span>JavaScript</h3>
+                                <p>JS is a language of many quirks, my knowledge in lower-level languages has greatly helped me understand how it works under the hood. I employ jQuery and AngularJS on top of that to deliver interactive websites.</p>
+                            </div>
+                        </section>
+                    </div>
+                    
+                    <div class="row">
+                        <ul class="libs-showcase clearfix">
+                            <li><img class="js-tool-logo invisible" id="angular-logo" src="res/img/angular-logo.png" alt="AngularJS logo"></li>
+                            <li><img class="js-tool-logo invisible" id="sass-logo" src="res/img/sass-logo.png" alt="Sass logo"></li>
+                            <li><img class="js-tool-logo invisible" id="jquery-logo" src="res/img/jquery-logo.png" alt="jQuery logo"></li>
+                            <li><img class="js-tool-logo invisible" id="bootstrap-logo" src="res/img/bootstrap-logo.png" alt="Bootstrap logo"></li>
+                            <li><img class="js-tool-logo invisible" id="gimp-logo" src="res/img/gimp-logo.png" alt="Gimp logo"></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Portfolio -->
+            <div class="row">
+                <section class="container portfolio" id="portfolio">
+                    <div class="row">
+                        <h2>Portfolio</h2>
+                    </div>
+                    
+                    <div class="row">
+                        <ul class="nav nav-pills portfolio-nav" role="navigation">
+                            <li class="filter active-tab" data-filter="all">All</li>
+                            <li class="filter" data-filter=".category-1">Sites</li>
+                            <li class="filter" data-filter=".category-2">Code</li>
+                            <li class="filter" data-filter=".category-3">Graphics</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="showcase-container clearfix" id="showcase-container">
+                            <section class="col-sm-6 mix showcase-item category-1">
+                                <img class="img-responsive showcase-img" src="res/img/showcase_xtremetravels.jpg" alt="XtremeTravels website">
+                                <div class="item-desc">
+                                    <h4>Xtreme Travels</h4>
+                                    <p>A single-pager developed for a fictitious travel agency specializing in organizing trips to wild destinations.</p>
+                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
+                                </div>
+                            </section>
+                            <section class="col-sm-6 mix showcase-item category-1">
+                                <img class="img-responsive showcase-img" src="res/img/showcase_akustix.jpg" alt="Akustix website">
+                                <div class="item-desc">
+                                    <h4>Akustix</h4>
+                                    <p>A single-pager developed for a fictitious guitar manufacturer, producing handcrafted eco-friendly guitars.</p>
+                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
+                                </div>
+                            </section>
+                            
+                            <section class="col-sm-6 mix showcase-item category-1">
+                                <img class="img-responsive showcase-img" src="res/img/showcase_xtremetravels.jpg" alt="XtremeTravels website">
+                                <div class="item-desc">
+                                    <h4>Xtreme Travels</h4>
+                                    <p>A single-pager developed for a fictitious travel agency specializing in organizing trips to wild destinations.</p>
+                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
+                                </div>
+                            </section>
+                            <section class="col-sm-6 mix showcase-item category-3">
+                                <img class="img-responsive showcase-img" src="res/img/showcase_akustix.jpg" alt="Akustix website">
+                                <div class="item-desc">
+                                    <h4>Akustix</h4>
+                                    <p>A single-pager developed for a fictitious guitar manufacturer, producing handcrafted eco-friendly guitars.</p>
+                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
+                                </div>
+                            </section>
+                            <section class="col-sm-6 mix showcase-item category-2">
+                                <img class="img-responsive showcase-img" src="res/img/showcase_xtremetravels.jpg" alt="XtremeTravels website">
+                                <div class="item-desc">
+                                    <h4>Xtreme Travels</h4>
+                                    <p>A single-pager developed for a fictitious travel agency specializing in organizing trips to wild destinations.</p>
+                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
+                                </div>
+                            </section>
+                            <section class="col-sm-6 mix showcase-item category-3">
+                                <img class="img-responsive showcase-img" src="res/img/showcase_akustix.jpg" alt="Akustix website">
+                                <div class="item-desc">
+                                    <h4>Akustix</h4>
+                                    <p>A single-pager developed for a fictitious guitar manufacturer, producing handcrafted eco-friendly guitars.</p>
+                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
+                                </div>
+                            </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </section>
+            </div>
+            
+            <!-- Contact -->
+            <div class="row contact-row dark-container">
+                <section class="container contact" id="contact">
+                    <div class="row">
+                        <h2>Get in touch</h2>
+                    </div>
+                    <div class="row">
+                        <form id="contact-form" method="post" action="#">
+                            <div class="row">
+                                <input name="form-name" id="form-name" type="text" placeholder="your name" required>
+                            </div>
+                            <div class="row">
+                                <input name="form-email" id="form-email" type="email" placeholder="your email" required>
+                            </div>
+                            <div class="row">
+                                <textarea name="form-msg" id="form-msg" placeholder="your message" required></textarea>
+                            </div>
+                            <div class="row">
+                                <button type="submit" class="button">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Footer -->
+            <div class="row dark-container">
+                <footer class="footer-main">
+                    <p>Designed by Yiotis Kaltsikis &mdash; 2016 &copy;</p>
+                </footer>
+            </div>
+        
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+        <!-- Bootstrap CDN for Production
+        ---------------------------------
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        -->
+        <!-- Bootstrap local for development -->
+        <script src="ext/css/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+        <script src="ext/js/particlesjs/particles.min.js"></script>
+        <script src="res/js/typewriter.js"></script>
+        <script src="res/js/app.js"></script>
+    
+    </body>
+</html>
