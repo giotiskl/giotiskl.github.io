@@ -167,9 +167,7 @@
     global.jQuery.prototype.type = function(callback, speed, offset, caretOn) {
         
         //if non-existent create internal TypeWriter
-        console.log(this.hiddenTypeWriter);
         this.hiddenTypeWriter = this.hiddenTypeWriter || new TypeWriter(this.selector, speed, caretOn);
-        console.log(this.hiddenTypeWriter);
         
         this.hiddenTypeWriter.type(callback, offset);
         

@@ -76,7 +76,7 @@ $(function() {
                     EFX
     *******************************************/
     //particles
-    particlesJS.load('main-header', 'ext/js/particlesjs/particleconfignasa.json');
+    particlesJS.load('main-header', 'ext/js/particleconfignasa.json');
     
     //MixItUp
     $('.portfolio-nav li').click(function() {
