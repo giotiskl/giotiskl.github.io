@@ -80,6 +80,7 @@ $(function() {
     
     //Portfolio Shuffle-Plugin Config
     var shuffleGrid = $('#showcase-container');
+    shuffleGrid.shuffle('shuffle', 'all');
     
     shuffleGrid.shuffle({
       itemSelector: '.showcase-item',
