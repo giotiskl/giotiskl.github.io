@@ -80,11 +80,12 @@ $(function() {
     
     //Portfolio Shuffle-Plugin Config
     var shuffleGrid = $('#showcase-container');
-    shuffleGrid.shuffle('shuffle', 'all');
     
     shuffleGrid.shuffle({
       itemSelector: '.showcase-item',
     });
+    
+    shuffleGrid.shuffle('shuffle', 'all'); //initial shuffle
     
     $('.portfolio-nav li').click(function() {
         var item = $(this);
@@ -94,6 +95,8 @@ $(function() {
         
         // Filter elements
         var filter = item.data('group');
+        
+        console.log(filter);
         shuffleGrid.shuffle('shuffle', filter);
             
     });
