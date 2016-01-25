@@ -78,29 +78,34 @@ $(function() {
     //particles
     particlesJS.load('main-header', 'ext/js/particleconfignasa.json');
     
-    //Portfolio Shuffle-Plugin Config
-    var shuffleGrid = $('#showcase-container');
-    var shuffleSizer = $('.shuffle__sizer');
-    
-    shuffleGrid.shuffle({
-        group: 'all',
-        itemSelector: '.showcase-item',
-        sizer: shuffleSizer
+    //Portfolio Shuffle-Plugin Config use DeSandro's plugin to make sure
+    //images have loaded before instantiating shuffle to avoid height bugs
+    $('#showcase-container').imagesLoaded(function() {
+        
+        var shuffleGrid = $('#showcase-container');
+        var shuffleSizer = $('.shuffle__sizer');
+
+        shuffleGrid.shuffle({
+            group: 'all',
+            itemSelector: '.showcase-item',
+            sizer: shuffleSizer
+        });
+
+        $('.portfolio-nav li').click(function() {
+            var item = $(this);
+
+            $('.portfolio-nav li').removeClass('active-tab');
+            item.addClass('active-tab');
+
+            // Filter elements
+            var filter = item.data('group');
+
+            shuffleGrid.shuffle('shuffle', filter);
+
+        });
+        
     });
     
-    $('.portfolio-nav li').click(function() {
-        var item = $(this);
-        
-        $('.portfolio-nav li').removeClass('active-tab');
-        item.addClass('active-tab');
-        
-        // Filter elements
-        var filter = item.data('group');
-        
-        console.log(filter);
-        shuffleGrid.shuffle('shuffle', filter);
-            
-    });
     
     //typewriter
     $('.welcome-box p').type(function() {
