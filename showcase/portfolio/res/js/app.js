@@ -1,5 +1,14 @@
 $(function() {
+    $('body').css({overflow: 'hidden'});
+})
+
+$(window).load(function() {
     
+    //Deactivate loader
+    $('.loader-screen').fadeOut();
+    $('body').css({overflow: 'auto'}); //restore scrollability
+    
+    //BEGIN APP    
     var onMobile = $(window).width() < 768;
     
     /*******************************************
