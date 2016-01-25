@@ -80,12 +80,13 @@ $(function() {
     
     //Portfolio Shuffle-Plugin Config
     var shuffleGrid = $('#showcase-container');
+    var shuffleSizer = $('.shuffle__sizer');
     
     shuffleGrid.shuffle({
-      itemSelector: '.showcase-item'
+        group: 'all',
+        itemSelector: '.showcase-item',
+        sizer: shuffleSizer
     });
-    
-    shuffleGrid.shuffle('shuffle', 'all'); //initial shuffle
     
     $('.portfolio-nav li').click(function() {
         var item = $(this);
