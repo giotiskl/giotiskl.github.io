@@ -82,7 +82,7 @@ $(function() {
     var shuffleGrid = $('#showcase-container');
     
     shuffleGrid.shuffle({
-      itemSelector: '.showcase-item',
+      itemSelector: '.showcase-item'
     });
     
     shuffleGrid.shuffle('shuffle', 'all'); //initial shuffle
