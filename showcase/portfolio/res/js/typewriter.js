@@ -15,7 +15,7 @@
     function TypeWriter(selector, speed, caretOn) {
         
         //Get the containining element based on selector to set it up for TypeWriter
-        this.container    = $(selector);
+        this.container = $(selector);
         
         //Cache the contents of the container, whether multiple paragraphs or plain text
         var containerParagraphs = this.container.find('p');

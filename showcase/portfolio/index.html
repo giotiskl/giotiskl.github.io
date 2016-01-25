@@ -19,9 +19,7 @@
         <link href="ext/css/animate.css" rel="stylesheet">
         <link href="res/css/styles.css" rel="stylesheet">
         
-        <!--[if lt IE 9]>
-          <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-        <![endif]-->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     </head>
     
     <body data-spy="scroll" data-target="#main-nav">
@@ -150,8 +148,8 @@
                         <ul class="libs-showcase clearfix">
                             <li><img class="js-tool-logo invisible" id="angular-logo" src="res/img/angular-logo.png" alt="AngularJS logo"></li>
                             <li><img class="js-tool-logo invisible" id="sass-logo" src="res/img/sass-logo.png" alt="Sass logo"></li>
-                            <li><img class="js-tool-logo invisible" id="jquery-logo" src="res/img/jquery-logo.png" alt="jQuery logo"></li>
-                            <li><img class="js-tool-logo invisible" id="bootstrap-logo" src="res/img/bootstrap-logo.png" alt="Bootstrap logo"></li>
+                            <li><img class="js-tool-logo invisible" id="jquery-logo" src="res/img/jquery-logo.svg" alt="jQuery logo"></li>
+                            <li><img class="js-tool-logo invisible" id="bootstrap-logo" src="res/img/bootstrap-logo.svg" alt="Bootstrap logo"></li>
                             <li><img class="js-tool-logo invisible" id="gimp-logo" src="res/img/gimp-logo.png" alt="Gimp logo"></li>
                         </ul>
                     </div>
@@ -166,17 +164,17 @@
                     </div>
                     
                     <div class="row">
-                        <ul class="nav nav-pills portfolio-nav" role="navigation">
-                            <li class="filter active-tab" data-filter="all">All</li>
-                            <li class="filter" data-filter=".category-1">Sites</li>
-                            <li class="filter" data-filter=".category-2">Code</li>
-                            <li class="filter" data-filter=".category-3">Graphics</li>
+                        <ul class="nav nav-pills portfolio-nav filter-options" role="navigation">
+                            <li class="active-tab" data-group="all">All</li>
+                            <li data-group="sites">Sites</li>
+                            <li data-group="code">Code</li>
+                            <li data-group="graphics">Graphics</li>
                         </ul>
                     </div>
                     
                     <div class="row">
                         <div class="showcase-container clearfix" id="showcase-container">
-                            <section class="col-sm-6 mix showcase-item category-1">
+                            <section class="col-sm-6 showcase-item" data-groups='["all", "sites"]'>
                                 <img class="img-responsive showcase-img" src="res/img/showcase_xtremetravels.jpg" alt="XtremeTravels website">
                                 <div class="item-desc">
                                     <h4>Xtreme Travels</h4>
@@ -184,7 +182,7 @@
                                     <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
                                 </div>
                             </section>
-                            <section class="col-sm-6 mix showcase-item category-1">
+                            <section class="col-sm-6 showcase-item" data-groups='["all", "code"]'>
                                 <img class="img-responsive showcase-img" src="res/img/showcase_akustix.jpg" alt="Akustix website">
                                 <div class="item-desc">
                                     <h4>Akustix</h4>
@@ -192,8 +190,7 @@
                                     <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
                                 </div>
                             </section>
-                            
-                            <section class="col-sm-6 mix showcase-item category-1">
+                            <section class="col-sm-6 showcase-item" data-groups='["all", "sites"]'>
                                 <img class="img-responsive showcase-img" src="res/img/showcase_xtremetravels.jpg" alt="XtremeTravels website">
                                 <div class="item-desc">
                                     <h4>Xtreme Travels</h4>
@@ -201,7 +198,7 @@
                                     <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
                                 </div>
                             </section>
-                            <section class="col-sm-6 mix showcase-item category-3">
+                            <section class="col-sm-6 showcase-item" data-groups='["all", "graphics"]'>
                                 <img class="img-responsive showcase-img" src="res/img/showcase_akustix.jpg" alt="Akustix website">
                                 <div class="item-desc">
                                     <h4>Akustix</h4>
@@ -209,7 +206,7 @@
                                     <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
                                 </div>
                             </section>
-                            <section class="col-sm-6 mix showcase-item category-2">
+                            <section class="col-sm-6 showcase-item" data-groups='["all", "code"]'>
                                 <img class="img-responsive showcase-img" src="res/img/showcase_xtremetravels.jpg" alt="XtremeTravels website">
                                 <div class="item-desc">
                                     <h4>Xtreme Travels</h4>
@@ -217,7 +214,7 @@
                                     <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
                                 </div>
                             </section>
-                            <section class="col-sm-6 mix showcase-item category-3">
+                            <section class="col-sm-6 showcase-item" data-groups='["all", "code"]'>
                                 <img class="img-responsive showcase-img" src="res/img/showcase_akustix.jpg" alt="Akustix website">
                                 <div class="item-desc">
                                     <h4>Akustix</h4>
@@ -268,13 +265,8 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
-        <!-- Bootstrap CDN for Production
-        ---------------------------------
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/3.1.1/jquery.shuffle.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        -->
-        <!-- Bootstrap local for development -->
-        <script src="ext/css/bootstrap/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
         <script src="ext/js/particles.min.js"></script>
         <script src="res/js/typewriter.js"></script>

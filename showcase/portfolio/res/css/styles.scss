@@ -565,17 +565,41 @@ div:hover > h3 > .icon-header {
         }
     }
     
+    //Library logos
     .libs-showcase {
+        display: none;
         list-style: none;
         margin: 1rem 0 0 0;
         width: 100%;
         margin-left: -20px;
+        
+        @include mq-tablet {
+            display: block;
+        }
 
         li {
             display: inline-block;
-            width: 20%;
+            width: 17.5%;
             float: left;
         }
+        
+        //jQuery logo positioning
+        li:nth-child(3) {
+            width: 30%;    
+            padding: 1.8rem 0;
+            @include mq-desktop {
+                padding: 2.5rem 0;
+            }
+        } 
+        //Bootstrap logo positioning
+        li:nth-child(4) {
+            padding: 1.25rem;
+        }
+        //Gimp logo positioning
+        li:nth-child(5) {
+            padding-top: 0.7rem;
+        }
+        
         img {
             width: 100%;
             @include mq-tablet {
@@ -634,17 +658,17 @@ div:hover > h3 > .icon-header {
     .showcase-container {
         margin-top: 2rem;
         
-        //css rule for MixItUp plugin
-        .mix {
-            display: none;
-        }
-        
         //showcase-item component
         .showcase-item {
             color: white;
+            font-size: 90%;
             padding: 0 1rem;
             position: relative;
             margin: 1rem 0;
+            
+            @include mq-desktop {
+                font-size: 100%;
+            }
             
             a:link, a:active, a:hover, a:visited {
                 color: white;

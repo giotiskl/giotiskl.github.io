@@ -78,16 +78,26 @@ $(function() {
     //particles
     particlesJS.load('main-header', 'ext/js/particleconfignasa.json');
     
-    //MixItUp
-    $('.portfolio-nav li').click(function() {
-        $('.portfolio-nav li').removeClass('active-tab');
-        $(this).addClass('active-tab');
+    //Portfolio Shuffle-Plugin Config
+    var shuffleGrid = $('#showcase-container');
+    
+    shuffleGrid.shuffle({
+      itemSelector: '.showcase-item',
     });
     
-    $('#showcase-container').mixItUp();
+    $('.portfolio-nav li').click(function() {
+        var item = $(this);
+        
+        $('.portfolio-nav li').removeClass('active-tab');
+        item.addClass('active-tab');
+        
+        // Filter elements
+        var filter = item.data('group');
+        shuffleGrid.shuffle('shuffle', filter);
+            
+    });
     
     //typewriter
-    
     $('.welcome-box p').type(function() {
         $('.welcome-box h1').animate({opacity: 1}, 2000, function() {
             $('.social-nav ul').removeClass('invisible').addClass('animated flipInX');
