@@ -173,12 +173,14 @@ div:hover > h3 > .icon-header {
 
 /* line 238, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .loader-screen {
-  position: absolute;
+  position: fixed;
   background-color: #191B1D;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   z-index: 15; }
-  /* line 245, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 247, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .loader-screen .loading-bar {
     position: absolute;
     top: 50%;
@@ -187,7 +189,7 @@ div:hover > h3 > .icon-header {
     transform: translate(-50%, -50%);
     display: block;
     list-style: none; }
-  /* line 251, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 253, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .loader-screen .loading-line {
     background-color: white;
     display: inline-block;
@@ -203,27 +205,27 @@ div:hover > h3 > .icon-header {
     -webkit-animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     animation-iteration-count: infinite; }
-  /* line 264, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 266, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .loader-screen .loading-line:nth-child(1) {
     -webkit-animation-delay: -0.15s;
     -moz-animation-delay: -0.15s;
     animation-delay: -0.15s; }
-  /* line 264, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 266, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .loader-screen .loading-line:nth-child(2) {
     -webkit-animation-delay: -0.3s;
     -moz-animation-delay: -0.3s;
     animation-delay: -0.3s; }
-  /* line 264, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 266, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .loader-screen .loading-line:nth-child(3) {
     -webkit-animation-delay: -0.45s;
     -moz-animation-delay: -0.45s;
     animation-delay: -0.45s; }
-  /* line 264, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 266, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .loader-screen .loading-line:nth-child(4) {
     -webkit-animation-delay: -0.6s;
     -moz-animation-delay: -0.6s;
     animation-delay: -0.6s; }
-  /* line 264, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 266, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .loader-screen .loading-line:nth-child(5) {
     -webkit-animation-delay: -0.75s;
     -moz-animation-delay: -0.75s;
@@ -262,17 +264,17 @@ div:hover > h3 > .icon-header {
     background-color: #3498db; } }
 
 @media only screen and (max-width: 768px) {
-  /* line 282, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 284, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .stop-scrolling {
     height: 100%;
     overflow: hidden; } }
 
-/* line 290, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 292, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .dark-container {
   background-color: #191B1D;
   color: white; }
 
-/* line 296, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 298, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .absolute-center {
   position: absolute;
   top: 50%;
@@ -280,7 +282,7 @@ div:hover > h3 > .icon-header {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-/* line 303, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 305, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .tw-caret {
   -webkit-animation: caretFade 0.35s ease;
   -moz-animation: caretFade 0.35s ease;
@@ -313,7 +315,7 @@ div:hover > h3 > .icon-header {
 /*******************************************
                NAVIGATIONS
 *******************************************/
-/* line 322, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 324, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .social-nav {
   position: absolute;
   top: 85%;
@@ -325,26 +327,26 @@ div:hover > h3 > .icon-header {
   width: 100%;
   z-index: 3; }
   @media (min-width: 768px) {
-    /* line 322, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 324, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .social-nav {
       position: absolute;
       top: 63%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); } }
-  /* line 333, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 335, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .social-nav li {
     display: inline-block;
     font-size: 150%;
     margin: 0 0.5rem; }
-    /* line 338, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 340, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .social-nav li span {
       position: absolute;
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
-    /* line 342, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 344, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .social-nav li .social-btn, .social-nav li .social-fb, .social-nav li .social-linkedin, .social-nav li .social-github, .social-nav li .social-email, .social-nav li .social-btn:focus, .social-nav li .social-fb:focus, .social-nav li .social-linkedin:focus, .social-nav li .social-github:focus, .social-nav li .social-email:focus {
       background-color: transparent;
       color: white;
@@ -352,22 +354,22 @@ div:hover > h3 > .icon-header {
       width: 2.5rem;
       height: 2.5rem;
       transition: all 0.25s; }
-      /* line 350, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 352, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .social-nav li .social-btn:hover, .social-nav li .social-fb:hover, .social-nav li .social-linkedin:hover, .social-nav li .social-github:hover, .social-nav li .social-email:hover, .social-nav li .social-btn:focus:hover, .social-nav li .social-fb:focus:hover, .social-nav li .social-linkedin:focus:hover, .social-nav li .social-github:focus:hover, .social-nav li .social-email:focus:hover {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
-    /* line 357, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 359, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .social-nav li .social-fb:hover {
       background-color: #3b5998;
       border-color: #3b5998; }
-    /* line 365, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 367, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .social-nav li .social-linkedin:hover {
       background-color: #007bb5;
       border-color: #007bb5; }
-    /* line 373, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 375, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .social-nav li .social-github:hover {
       background-color: #333333;
       border-color: #333333; }
-    /* line 381, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 383, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .social-nav li .social-email:hover {
       background-color: #3498db;
       border-color: #3498db; }
@@ -375,22 +377,22 @@ div:hover > h3 > .icon-header {
 /*******************************************
                 HEADER
 *******************************************/
-/* line 392, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 394, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .main-header {
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../img/header_bg.jpg) center center;
   background-size: cover;
   box-shadow: inset 0 0.5rem 5rem rgba(0, 0, 0, 0.75);
   height: 100vh;
   padding: 1% 0; }
-  /* line 400, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 402, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .main-header .navbar.navbar-sticky {
     background-color: white;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     position: fixed; }
-    /* line 405, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 407, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .main-header .navbar.navbar-sticky .nav-link {
       color: #383838; }
-  /* line 410, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 412, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .main-header .navbar {
     background-color: white;
     border: none !important;
@@ -404,20 +406,20 @@ div:hover > h3 > .icon-header {
     position: relative;
     z-index: 5; }
     @media (min-width: 768px) {
-      /* line 410, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 412, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .main-header .navbar {
         background-color: transparent;
         box-shadow: none;
         color: white;
         margin-top: auto; } }
-    /* line 428, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 430, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .main-header .navbar .logo {
       border: none !important;
       padding-top: 1rem !important; }
-      /* line 431, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 433, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .main-header .navbar .logo:hover {
         color: #383838; }
-    /* line 436, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 438, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .main-header .navbar .nav-link {
       background-color: transparent;
       border-top: 1px solid #fcfcfc;
@@ -428,15 +430,15 @@ div:hover > h3 > .icon-header {
       padding: 0.75rem;
       text-transform: uppercase;
       transition: color 0.25s; }
-      /* line 447, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 449, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .main-header .navbar .nav-link:hover {
         color: #3498db; }
       @media (min-width: 768px) {
-        /* line 436, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+        /* line 438, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
         .main-header .navbar .nav-link {
           border: none;
           color: white; } }
-    /* line 457, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 459, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .main-header .navbar .nav-toggle-btn {
       border-left: 1px solid #fcfcfc;
       float: right;
@@ -444,34 +446,34 @@ div:hover > h3 > .icon-header {
       height: 3.6rem;
       padding: 0 1rem;
       transition: color 0.25s; }
-      /* line 465, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 467, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .main-header .navbar .nav-toggle-btn .nav-open {
         position: absolute; }
-      /* line 469, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 471, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .main-header .navbar .nav-toggle-btn .nav-close {
         opacity: 0; }
-      /* line 473, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 475, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .main-header .navbar .nav-toggle-btn:hover {
         color: #3498db; }
       @media (min-width: 768px) {
-        /* line 457, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+        /* line 459, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
         .main-header .navbar .nav-toggle-btn {
           display: none; } }
-    /* line 481, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 483, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .main-header .navbar ul {
       margin-bottom: 0;
       margin-top: 0; }
       @media (min-width: 768px) {
-        /* line 485, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+        /* line 487, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
         .main-header .navbar ul li {
           margin-top: 6px; } }
-      /* line 486, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 488, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .main-header .navbar ul li.active a {
         color: #3498db !important; }
-    /* line 489, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 491, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .main-header .navbar .collapse, .main-header .navbar .collapsing {
       border: none; }
-  /* line 495, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 497, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .main-header .welcome-box {
     position: absolute;
     top: 50%;
@@ -480,17 +482,17 @@ div:hover > h3 > .icon-header {
     transform: translate(-50%, -50%);
     text-align: center;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35); }
-    /* line 500, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 502, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .main-header .welcome-box h1 {
       opacity: 0;
       padding-top: 0.5rem; }
-    /* line 505, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 507, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .main-header .welcome-box p {
       color: white;
       font-weight: 300;
       font-size: 150%;
       letter-spacing: 0.1rem; }
-  /* line 514, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 516, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .main-header .particles-js-canvas-el {
     position: absolute;
     top: 0; }
@@ -498,52 +500,52 @@ div:hover > h3 > .icon-header {
 /*******************************************
                 ABOUT ME
 *******************************************/
-/* line 526, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 528, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .about-me section {
   padding: 0 1rem; }
   @media (min-width: 992px) {
-    /* line 526, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 528, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .about-me section {
       padding: 1rem; } }
 
-/* line 534, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 536, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .about-me .feats-row {
   overflow: hidden; }
 
-/* line 538, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 540, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .about-me .bg-me {
   background-image: url(../img/yiotis_lgbysea.jpg);
   height: 25rem; }
   @media (min-width: 992px) {
-    /* line 538, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 540, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .about-me .bg-me {
       height: 30rem;
       margin-bottom: -10rem; } }
 
-/* line 548, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 550, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .about-me .bg-whatido {
   background-image: url(../img/what_i_do.jpg);
   height: 25rem;
   margin-bottom: -10rem; }
 
-/* line 555, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 557, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .about-me .bg-facts {
   background-image: url(../img/other_facts.jpg);
   height: 28rem;
   margin-bottom: -10rem; }
 
-/* line 562, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 564, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .about-me .feat-bg {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25); }
 
-/* line 567, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 569, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .about-me .row:hover .feat-bg {
   -webkit-filter: grayscale(0);
   filter: grayscale(0); }
 
-/* line 573, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 575, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .about-me ul li {
   font-size: 120%;
   font-weight: 300; }
@@ -551,33 +553,33 @@ div:hover > h3 > .icon-header {
 /*******************************************
                 MY TOOLS
 *******************************************/
-/* line 583, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 585, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .tools-row {
   margin-top: 2rem; }
   @media (min-width: 992px) {
-    /* line 583, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 585, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .tools-row {
       margin-top: 0; } }
 
-/* line 591, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 593, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .tools {
   padding-bottom: 2rem; }
-  /* line 594, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 596, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .tools .skill-box {
     padding: 0 2.5rem; }
     @media (min-width: 768px) {
-      /* line 594, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 596, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .tools .skill-box {
         margin-top: 1rem;
         padding: 0 2.5rem; } }
-    /* line 602, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 604, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .tools .skill-box h3 {
       margin: 0;
       white-space: nowrap; }
-    /* line 607, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 609, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .tools .skill-box p {
       padding: 1rem 0; }
-  /* line 613, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 615, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .tools .libs-showcase {
     display: none;
     list-style: none;
@@ -585,50 +587,50 @@ div:hover > h3 > .icon-header {
     width: 100%;
     margin-left: -20px; }
     @media (min-width: 768px) {
-      /* line 613, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 615, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .tools .libs-showcase {
         display: block; } }
-    /* line 624, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 626, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .tools .libs-showcase li {
       display: inline-block;
       width: 17.5%;
       float: left; }
-    /* line 631, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 633, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .tools .libs-showcase li:nth-child(3) {
       width: 30%;
       padding: 1.8rem 0; }
       @media (min-width: 992px) {
-        /* line 631, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+        /* line 633, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
         .tools .libs-showcase li:nth-child(3) {
           padding: 2.5rem 0; } }
-    /* line 639, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 641, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .tools .libs-showcase li:nth-child(4) {
       padding: 1.25rem; }
-    /* line 643, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 645, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .tools .libs-showcase li:nth-child(5) {
       padding-top: 0.7rem; }
-    /* line 647, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 649, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .tools .libs-showcase img {
       width: 100%; }
       @media (min-width: 768px) {
-        /* line 647, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+        /* line 649, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
         .tools .libs-showcase img {
           padding: 1rem; } }
 
 /*******************************************
                 PORTFOLIO
 *******************************************/
-/* line 662, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 664, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .portfolio .portfolio-nav {
   display: block;
   width: 22rem;
   margin: 0 auto;
   text-align: center; }
   @media (min-width: 768px) {
-    /* line 662, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 664, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .portfolio .portfolio-nav {
       width: 28rem; } }
-  /* line 671, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 673, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .portfolio .portfolio-nav li {
     border: 1px solid #3498db;
     border-right: 0;
@@ -639,21 +641,21 @@ div:hover > h3 > .icon-header {
     width: 5.5rem;
     transition: all 0.25s; }
     @media (min-width: 768px) {
-      /* line 671, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 673, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .portfolio .portfolio-nav li {
         width: 7rem; } }
-  /* line 690, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 692, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .portfolio .portfolio-nav li:last-child {
     border-right: 1px solid #3498db; }
-  /* line 694, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 696, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .portfolio .portfolio-nav .active-tab, .portfolio .portfolio-nav li:hover {
     background-color: #3498db;
     color: white; }
 
-/* line 701, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 703, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .portfolio .showcase-container {
   margin-top: 2rem; }
-  /* line 705, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 707, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .portfolio .showcase-container .showcase-item {
     color: white;
     font-size: 90%;
@@ -661,16 +663,16 @@ div:hover > h3 > .icon-header {
     position: relative;
     margin: 1rem 0; }
     @media (min-width: 992px) {
-      /* line 705, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 707, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .portfolio .showcase-container .showcase-item {
         font-size: 100%; } }
-    /* line 716, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 718, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .portfolio .showcase-container .showcase-item a:link, .portfolio .showcase-container .showcase-item a:active, .portfolio .showcase-container .showcase-item a:hover, .portfolio .showcase-container .showcase-item a:visited {
       color: white; }
-    /* line 720, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 722, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .portfolio .showcase-container .showcase-item .showcase-img {
       cursor: pointer; }
-    /* line 724, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 726, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .portfolio .showcase-container .showcase-item .item-desc {
       -webkit-transform: scaleY(0);
       -moz-transform: scaleY(0);
@@ -687,10 +689,10 @@ div:hover > h3 > .icon-header {
       transition: all 0.25s;
       top: 0; }
       @media (min-width: 768px) {
-        /* line 724, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+        /* line 726, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
         .portfolio .showcase-container .showcase-item .item-desc {
           padding: 1rem; } }
-    /* line 741, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+    /* line 743, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
     .portfolio .showcase-container .showcase-item .button {
       position: absolute;
       bottom: 0.5rem;
@@ -701,10 +703,10 @@ div:hover > h3 > .icon-header {
       -o-transform: translateX(-50%);
       transform: translateX(-50%); }
       @media (min-width: 768px) {
-        /* line 741, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+        /* line 743, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
         .portfolio .showcase-container .showcase-item .button {
           bottom: auto; } }
-  /* line 752, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 754, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .portfolio .showcase-container .showcase-item:hover .item-desc {
     -webkit-transform: scaleY(1);
     -moz-transform: scaleY(1);
@@ -717,17 +719,17 @@ div:hover > h3 > .icon-header {
 /*******************************************
                 CONTACT ME
 *******************************************/
-/* line 764, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 766, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .contact-row {
   margin-top: 2rem; }
 
-/* line 768, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 770, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .contact {
   text-align: center; }
-  /* line 771, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 773, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .contact form .row {
     margin: 1rem; }
-  /* line 775, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 777, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .contact input, .contact textarea {
     background-color: #202325;
     border: 1px solid #191B1D;
@@ -737,20 +739,20 @@ div:hover > h3 > .icon-header {
     padding: 0.75rem;
     width: 90%; }
     @media (min-width: 768px) {
-      /* line 775, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+      /* line 777, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
       .contact input, .contact textarea {
         width: 60%; } }
-  /* line 789, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 791, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .contact input:focus, .contact textarea:focus {
     border: 1px solid #3498db; }
-  /* line 793, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+  /* line 795, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
   .contact #form-msg {
     height: 8rem; }
 
 /*******************************************
                 FOOTER
 *******************************************/
-/* line 801, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 803, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 .footer-main {
   color: #959595;
   font-size: 85%;
@@ -761,25 +763,25 @@ div:hover > h3 > .icon-header {
 /*******************************************
                 ANIMATIONS
 *******************************************/
-/* line 812, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 814, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 #sass-logo {
   -webkit-animation-delay: 0.25s;
   -moz-animation-delay: 0.25s;
   animation-delay: 0.25s; }
 
-/* line 815, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 817, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 #jquery-logo {
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   animation-delay: 0.5s; }
 
-/* line 818, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 820, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 #bootstrap-logo {
   -webkit-animation-delay: 0.75s;
   -moz-animation-delay: 0.75s;
   animation-delay: 0.75s; }
 
-/* line 821, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
+/* line 823, F:/Web Design/Websites/My Portfolio/res/css/styles.scss */
 #gimp-logo {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
