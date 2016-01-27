@@ -105,7 +105,7 @@ h1, h2, h3 {
 
 h1 {
     color: white;
-    font-size: 300%;
+    font-size: 250%;
     letter-spacing: 0.25rem;
     
     
@@ -119,10 +119,14 @@ h1 {
 }
 
 h2 {
-    font-size: 300%;
+    font-size: 200%;
     font-weight: 300;
     margin: 2rem 0;
     text-align: center;
+    
+    @include mq-tablet {
+        font-size: 300%;
+    }
     
     &:after {
         display: block;
@@ -136,14 +140,22 @@ h2 {
 
 h3 {
     padding-right: 1rem;
-    font-size: 180%;
+    font-size: 150%;
     margin: 1rem 0;
+    
+    @include mq-tablet {
+        font-size: 180%;
+    }
 }
 
 h4 {
-    font-size: 140%;
+    font-size: 120%;
     font-weight: 300;
     text-align: center;
+    
+    @include mq-tablet {
+        font-size: 140%;
+    }
     
     &:after {
         display: block;
@@ -164,7 +176,10 @@ a:link, a:active, a:hover, a:visited, a:focus {
 p {
     line-height: 1.75rem;
     font-weight: 300;
-    font-size: 120%;
+    
+    @include mq-tablet {
+        font-size: 120%;
+    }
 }
 
 //input
@@ -501,14 +516,21 @@ div:hover > h3 > .icon-header {
         
         h1 {
             opacity: 0;
-            padding-top: 0.5rem;
+            
+            @include mq-tablet {
+                padding-top: 0.5rem;
+            }
         }
         
         p {
             color: white;
             font-weight: 300;
-            font-size: 150%;
+            font-size: 115%;
             letter-spacing: 0.1rem;
+            
+            @include mq-tablet {
+                font-size: 150%;
+            }
         }
     }
     
@@ -573,8 +595,11 @@ div:hover > h3 > .icon-header {
     //neat facts list
     ul {
         li {
-            font-size: 120%;
             font-weight: 300;
+            
+            @include mq-tablet {
+                font-size: 120%;
+            }
         }
     }
 }
@@ -806,6 +831,19 @@ div:hover > h3 > .icon-header {
     letter-spacing: 0.075rem;
     padding: 0.25rem 0;
     text-align: center;
+}
+
+/*******************************************
+                404 PAGE
+*******************************************/
+.not-found-msg {
+    @include absolute-center(50%, 50%);
+    color: white;
+    p { 
+        font-size: 120%;
+    }
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
 }
 
 /*******************************************

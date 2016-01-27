@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Site description here">
+        <meta name="description" content="Yiotis Kaltsikis portfolio, Front-end Developer">
+        <meta name="keywords" content="HTML5, CSS3, Jquery, JavaScript, AngularJS, portfolio, responsive, Yiotis Kaltsikis, front end, Giotis">
         <title>Yiotis Kaltsikis | Front End Developer</title>
         
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic' rel='stylesheet' type='text/css'>
         <!-- Bootstrap CDN for Production
-        ---------------------------------
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         -->
         <!-- Bootstrap local for development -->
@@ -39,6 +39,7 @@
             <div class="row">
                 <header class="main-header" id="main-header">
                     <nav class="navbar">
+                        <h6><span class="sr-only">Main navigation</span></h6>
                         <div class="container">
                             <div class="navbar-header">
                                 <button type="button" class="nav-toggle-btn collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
@@ -64,14 +65,15 @@
                         <p>Welcome to my digital home, I'm Yiotis.</p>
                         <h1>Front end developer</h1>
                     </div>
-                    <div class="social-nav">
+                    <nav class="social-nav">
+                        <h6><span class="sr-only">Social navigation</span></h6>
                         <ul class="nav invisible">
-                            <li><a class="social-btn social-fb" href="https://www.facebook.com/yiotiskal" target="_blank"><span class="ion-social-facebook"></a></span></li>
-                            <li><a class="social-btn social-linkedin" href="https://www.linkedin.com/in/giotis-kaltsikis-846013b7" target="_blank"><span class="ion-social-linkedin"></a></span></li>
-                            <li><a class="social-btn social-github" href="https://github.com/giotiskl" target="_blank"><span class="ion-social-github"></a></span></li>
-                            <li><a class="social-btn social-email" href="mailto:yiotiskal@gmail.com"><span class="ion-ios-email"></a></span></li>
+                            <li><a class="social-btn social-fb" href="https://www.facebook.com/yiotiskal" target="_blank"><span class="ion-social-facebook"></span></a></li>
+                            <li><a class="social-btn social-linkedin" href="https://www.linkedin.com/in/giotis-kaltsikis-846013b7" target="_blank"><span class="ion-social-linkedin"></span></a></li>
+                            <li><a class="social-btn social-github" href="https://github.com/giotiskl" target="_blank"><span class="ion-social-github"></span></a></li>
+                            <li><a class="social-btn social-email" href="mailto:yiotiskal@gmail.com"><span class="ion-ios-email"></span></a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </header>
             </div>
             
@@ -114,7 +116,7 @@
                                 <section>
                                     <h3><span class="ion-ios-list-outline icon-header"></span>Neat facts</h3>
                                     <ul class="list-unstyled">
-                                        <li><span class="color-main">Coding:</span> <span>Apart from HTML, CSS and JS at times I've worked with Node.JS, C/C++, C#, Java (samples on GitHub) and a bit of native Android.</li>
+                                        <li><span class="color-main">Coding:</span> Apart from HTML, CSS and JS at times I've worked with Node.JS, C/C++, C#, Java (samples on GitHub) and a bit of native Android.</li>
                                         <li><span class="color-main">Education:</span> My Bachelors grade is 8.46/10. My final paper was on <em>The Dying Animal</em> by Philip Roth.</li>
                                         <li><span class="color-main">Hobbies:</span> I play the guitar, love the blues. I'm a casual gamer, huge RPG fan. I also love literature and philosophy, my favourite author is Philip Roth.</li>
                                         <li><span class="color-main">Languages:</span> I speak and write Greek, English and German!</li>
@@ -174,62 +176,44 @@
                     </div>
                     
                     <div class="row">
-                        <ul class="nav nav-pills portfolio-nav filter-options" role="navigation">
-                            <li class="active-tab" data-group="all">All</li>
-                            <li data-group="sites">Sites</li>
-                            <li data-group="code">Code</li>
-                            <li data-group="graphics">Graphics</li>
-                        </ul>
+                        <nav>
+                            <h6><span class="sr-only">Portfolio navigation</span></h6>
+                            <ul class="nav nav-pills portfolio-nav filter-options">
+                                <li class="active-tab" data-group="all">All</li>
+                                <li data-group="sites">Sites</li>
+                                <li data-group="code">Code</li>
+                                <li data-group="graphics">Graphics</li>
+                            </ul>
+                        </nav>
                     </div>
                     
                     <div class="row">
                         <div class="showcase-container clearfix" id="showcase-container">
-                            <section class="col-sm-6 showcase-item" data-groups='["sites", "graphics"]'>
-                                <img class="img-responsive showcase-img" src="res/img/showcase_xtremetravels.jpg" alt="XtremeTravels website">
-                                <div class="item-desc">
-                                    <h4>Xtreme Travels</h4>
-                                    <p>A single-pager developed for a fictitious travel agency specializing in organizing trips to wild destinations.</p>
-                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
-                                </div>
-                            </section>
-                            <section class="col-sm-6 showcase-item" data-groups='["code"]'>
-                                <img class="img-responsive showcase-img" src="res/img/showcase_akustix.jpg" alt="Akustix website">
-                                <div class="item-desc">
-                                    <h4>Akustix</h4>
-                                    <p>A single-pager developed for a fictitious guitar manufacturer, producing handcrafted eco-friendly guitars.</p>
-                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
-                                </div>
-                            </section>
+                            
                             <section class="col-sm-6 showcase-item" data-groups='["sites"]'>
                                 <img class="img-responsive showcase-img" src="res/img/showcase_xtremetravels.jpg" alt="XtremeTravels website">
                                 <div class="item-desc">
                                     <h4>Xtreme Travels</h4>
                                     <p>A single-pager developed for a fictitious travel agency specializing in organizing trips to wild destinations.</p>
-                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
+                                    <a class="button" href="showcase/xtremetravels/index.html" target="_blank">Visit</a>
                                 </div>
                             </section>
-                            <section class="col-sm-6 showcase-item" data-groups='["graphics", "code"]'>
+                            
+                            <section class="col-sm-6 showcase-item" data-groups='["sites"]'>
                                 <img class="img-responsive showcase-img" src="res/img/showcase_akustix.jpg" alt="Akustix website">
                                 <div class="item-desc">
                                     <h4>Akustix</h4>
                                     <p>A single-pager developed for a fictitious guitar manufacturer, producing handcrafted eco-friendly guitars.</p>
-                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
+                                    <a class="button" href="showcase/xtremetravels/index.html" target="_blank">Visit</a>
                                 </div>
                             </section>
-                            <section class="col-sm-6 showcase-item" data-groups='["code"]'>
-                                <img class="img-responsive showcase-img" src="res/img/showcase_xtremetravels.jpg" alt="XtremeTravels website">
+                            
+                            <section class="col-sm-6 showcase-item" data-groups='["code", "graphics"]'>
+                                <img class="img-responsive showcase-img" src="res/img/showcase_angelsquad.jpg" alt="Angel Squad splash screen">
                                 <div class="item-desc">
-                                    <h4>Xtreme Travels</h4>
-                                    <p>A single-pager developed for a fictitious travel agency specializing in organizing trips to wild destinations.</p>
-                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
-                                </div>
-                            </section>
-                            <section class="col-sm-6 showcase-item" data-groups='["code"]'>
-                                <img class="img-responsive showcase-img" src="res/img/showcase_akustix.jpg" alt="Akustix website">
-                                <div class="item-desc">
-                                    <h4>Akustix</h4>
-                                    <p>A single-pager developed for a fictitious guitar manufacturer, producing handcrafted eco-friendly guitars.</p>
-                                    <a href="showcase/xtremetravels/index.html" target="_blank"><button type="button" class="button">Visit</button></a>
+                                    <h4>Angel Squad</h4>
+                                    <p>I did all of the graphics and some scripts in C# for Android side-scroller Angel Squad, designed in Unity3D.</p>
+                                    <a class="button" href="https://play.google.com/store/apps/details?id=com.Miraculous_Games.Angel_Squad" target="_blank">Visit</a>
                                 </div>
                             </section>
                             
