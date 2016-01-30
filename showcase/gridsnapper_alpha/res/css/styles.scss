@@ -1,0 +1,74 @@
+@import 'bourbon/bourbon';
+
+/*******************************************
+                VARIABLES
+*******************************************/
+
+//colors - site
+$colorMain: #e74c3c;
+$colorMainDark: #d62c1a;
+$colorBlack: #383838;
+
+//colors - media
+$colorFb: #3b5998;
+$colorYouTube: #bb0000;
+$colorGooglePlus: #dd4b39;
+$colorTwitter: #00aced;
+$colorGithub: #333333;
+
+/*******************************************
+                MIXINS
+*******************************************/
+
+//media query mixins
+$tablet-width: 768px;
+$desktop-width: 992px;
+$large-desktop-width: 1200px;
+
+@mixin mq-tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin mq-desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin mq-large-desktop {
+  @media (min-width: #{$large-desktop-width}) {
+    @content;
+  }
+}
+
+//positional mixins
+@mixin absolute-center($top:auto, $left:auto) {
+    position:absolute;
+    top:$top;
+    left:$left;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+}
+
+/*******************************************
+                GRIDSNAPPER
+*******************************************/
+.row {
+    margin: 0;
+}
+
+.snap-container {
+    position: relative;
+}
+
+.snap-item {
+	border-radius: 0.5rem;
+ 	padding: 2rem;
+}
+
+.empty-black-container {
+	background-color: rgb(241, 241, 241);
+	height: 200px;
+}
