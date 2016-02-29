@@ -252,7 +252,7 @@
                     <li>Create your controls, with the markup of your preference. Style them the way you want with your CSS.</li>
                     <li>Make sure to include the appropriate data attributes as below. This is what Filterizr looks for. Use the value <code class="prettyprint">all</code> for an unfiltered gallery.</li>
                 </ol>
-                <pre class="prettyprint code-snippet">&lt;ul&gt;<br>&emsp;&emsp;&emsp;&lt;!-- For filtering controls add --&gt;<br>&emsp;&emsp;&emsp;&lt;li data-fltr="all"&gt; All items &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-fltr="1"&gt; Category 1 &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-fltr="2"&gt; Category 2 &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-fltr="3"&gt; Category 3 &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;!-- For a shuffle control add --&gt;<br>&emsp;&emsp;&emsp;&lt;li data-shuffle&gt; Shuffle items &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;!-- For sorting controls add --&gt;<br>&emsp;&emsp;&emsp;&lt;li data-sortAsc&gt; Ascending &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-sortDesc&gt; Descending &lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;!-- To choose the value by which you want to sort add --&gt;<br />&lt;select data-sortOrder&gt;<br />&emsp;&emsp;&emsp;&lt;option value="domIndex"&gt; Position &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;option value="sortData"&gt; Custom Data &lt;/option&gt;<br />&lt;/select&gt;
+                <pre class="prettyprint code-snippet">&lt;ul&gt;<br>&emsp;&emsp;&emsp;&lt;!-- For filtering controls add --&gt;<br>&emsp;&emsp;&emsp;&lt;li data-filter="all"&gt; All items &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-filter="1"&gt; Category 1 &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-filter="2"&gt; Category 2 &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-filter="3"&gt; Category 3 &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;!-- For a shuffle control add --&gt;<br>&emsp;&emsp;&emsp;&lt;li data-shuffle&gt; Shuffle items &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;!-- For sorting controls add --&gt;<br>&emsp;&emsp;&emsp;&lt;li data-sortAsc&gt; Ascending &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-sortDesc&gt; Descending &lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;!-- To choose the value by which you want to sort add --&gt;<br />&lt;select data-sortOrder&gt;<br />&emsp;&emsp;&emsp;&lt;option value="domIndex"&gt; Position &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;option value="sortData"&gt; Custom Data &lt;/option&gt;<br />&lt;/select&gt;
                 </pre>
             </section>
         </div>
@@ -301,9 +301,9 @@
             </div>
             <div class="col-sm-6 layout-col">
                 <ul class="nav nav-gallery filters-delayModeProgressive" id="delayModeProgressive">
-                    <li class="filtr-button filtr filtr-active" data-fltr="all">All</li><!--
-                    --><li class="filtr-button filtr" data-fltr="1">Odd</li><!--
-                --><li class="filtr-button filtr" data-fltr="2">Even</li>
+                    <li class="filtr-button filtr filtr-active" data-filter="all">All</li><!--
+                    --><li class="filtr-button filtr" data-filter="1">Odd</li><!--
+                --><li class="filtr-button filtr" data-filter="2">Even</li>
             </ul>
             <div class="layout-padding-wrapper">
                 <div class="layout-pane delayModeProgressive">
@@ -334,9 +334,9 @@
         </div>
         <div class="col-sm-6 layout-col">
             <ul class="nav nav-gallery filters-delayModeAlternate" id="delayModeAlternate">
-                <li class="filtr-button filtr filtr-active" data-fltr="all">All</li><!--
-                --><li class="filtr-button filtr" data-fltr="1">Odd</li><!--
-            --><li class="filtr-button filtr" data-fltr="2">Even</li>
+                <li class="filtr-button filtr filtr-active" data-filter="all">All</li><!--
+                --><li class="filtr-button filtr" data-filter="1">Odd</li><!--
+            --><li class="filtr-button filtr" data-filter="2">Even</li>
         </ul>
         <div class="layout-padding-wrapper">
             <div class="layout-pane delayModeAlternate">
@@ -376,9 +376,9 @@
             </div>
             <div class="col-sm-6 layout-col">
                 <ul class="nav nav-gallery filters-sameSize" id="sameSizeNav">
-                    <li class="filtr-button filtr filtr-active" data-fltr="all">All</li><!--
-                    --><li class="filtr-button filtr" data-fltr="1">Odd</li><!--
-                --><li class="filtr-button filtr" data-fltr="2">Even</li>
+                    <li class="filtr-button filtr filtr-active" data-filter="all">All</li><!--
+                    --><li class="filtr-button filtr" data-filter="1">Odd</li><!--
+                --><li class="filtr-button filtr" data-filter="2">Even</li>
             </ul>
             <div class="layout-padding-wrapper">
                 <div class="layout-pane sameSize">
@@ -410,9 +410,9 @@
         </div>
         <div class="col-sm-6 layout-col">
             <ul class="nav nav-gallery filters-packed" id="packedNav">
-                <li class="filtr-button filtr filtr-active" data-fltr="all">All</li><!--
-                --><li class="filtr-button filtr" data-fltr="1">Odd</li><!--
-            --><li class="filtr-button filtr" data-fltr="2">Even</li>
+                <li class="filtr-button filtr filtr-active" data-filter="all">All</li><!--
+                --><li class="filtr-button filtr" data-filter="1">Odd</li><!--
+            --><li class="filtr-button filtr" data-filter="2">Even</li>
         </ul>
         <div class="layout-padding-wrapper">
             <div class="layout-pane packed">
@@ -450,9 +450,9 @@
     </div>
     <div class="col-sm-6 layout-col">
         <ul class="nav nav-gallery filters-sameHeight" id="sameHeightNav">
-            <li class="filtr-button filtr filtr-active" data-fltr="all">All</li><!--
-            --><li class="filtr-button filtr" data-fltr="1">Odd</li><!--
-        --><li class="filtr-button filtr" data-fltr="2">Even</li>
+            <li class="filtr-button filtr filtr-active" data-filter="all">All</li><!--
+            --><li class="filtr-button filtr" data-filter="1">Odd</li><!--
+        --><li class="filtr-button filtr" data-filter="2">Even</li>
     </ul>
     <div class="layout-padding-wrapper">
         <div class="layout-pane sameHeight">
@@ -482,9 +482,9 @@
     </div>
     <div class="col-sm-6 layout-col">
         <ul class="nav nav-gallery filters-sameWidth" id="sameWidthNav">
-            <li class="filtr-button filtr filtr-active" data-fltr="all">All</li><!--
-            --><li class="filtr-button filtr" data-fltr="1">Odd</li><!--
-        --><li class="filtr-button filtr" data-fltr="2">Even</li>
+            <li class="filtr-button filtr filtr-active" data-filter="all">All</li><!--
+            --><li class="filtr-button filtr" data-filter="1">Odd</li><!--
+        --><li class="filtr-button filtr" data-filter="2">Even</li>
     </ul>
     <div class="layout-padding-wrapper">
         <div class="layout-pane sameWidth">
@@ -514,9 +514,9 @@
     </div>
     <div class="col-sm-6 layout-col">
         <ul class="nav nav-gallery filters-horizontalLayout" id="horizontalLayoutNav">
-            <li class="filtr-button filtr filtr-active" data-fltr="all">All</li><!--
-            --><li class="filtr-button filtr" data-fltr="1">Odd</li><!--
-        --><li class="filtr-button filtr" data-fltr="2">Even</li>
+            <li class="filtr-button filtr filtr-active" data-filter="all">All</li><!--
+            --><li class="filtr-button filtr" data-filter="1">Odd</li><!--
+        --><li class="filtr-button filtr" data-filter="2">Even</li>
     </ul>
     <div class="layout-padding-wrapper">
         <div class="layout-pane horizontalLayout">
@@ -542,9 +542,9 @@
     </div>
     <div class="col-sm-6 layout-col">
         <ul class="nav nav-gallery filters-verticalLayout" id="verticalLayoutNav">
-            <li class="filtr-button filtr filtr-active" data-fltr="all">All</li><!--
-            --><li class="filtr-button filtr" data-fltr="1">Odd</li><!--
-        --><li class="filtr-button filtr" data-fltr="2">Even</li>
+            <li class="filtr-button filtr filtr-active" data-filter="all">All</li><!--
+            --><li class="filtr-button filtr" data-filter="1">Odd</li><!--
+        --><li class="filtr-button filtr" data-filter="2">Even</li>
     </ul>
     <div class="layout-padding-wrapper">
         <div class="layout-pane verticalLayout">
