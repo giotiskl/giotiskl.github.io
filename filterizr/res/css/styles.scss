@@ -124,6 +124,9 @@ a:link, a:active, a:visited {
 .main-color {
 	color: $colorMain !important;
 }
+.red {
+    color: red;
+}
 .bg-lightgray {
 	background-color: $colorLightGray;
 }
@@ -445,6 +448,21 @@ a:link, a:active, a:visited {
 }
 .filtr-item:hover img {
 	@include filter(grayscale(0));
+}
+
+/*******************************************
+                SORTING TUT
+*******************************************/
+#sorting {
+    .filtr-item {
+        font-size: 80%;
+        @include mq-tablet {
+            font-size: 120%;
+        }
+    }
+    .select-order {
+        margin-bottom: 1rem;
+    }
 }
 
 /*******************************************

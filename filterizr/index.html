@@ -45,12 +45,13 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tutorials<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="plain-link"><a href="#install">Install</a></li>
+                                        <li class="plain-link"><a href="#sorting">Sorting</a></li>
                                         <li class="plain-link"><a href="#delaymodes">Delay Modes</a></li>
                                         <li class="plain-link"><a href="#layouts">Layouts</a></li>
                                     </ul>
                                 </li>
                                 <li class="plain-link"><a href="#docs">Docs</a></li>
-                                <li class="plain-link"><a href="#faq">FAQ & Caveats</a></li>
+                                <li class="plain-link"><a href="#faq">FAQ &amp; Caveats</a></li>
                             </ul>
                         </div>
 
@@ -74,7 +75,7 @@
                         </div>
                         <div class="row">
                             <ul class="filtr-feats">
-                                <li>Pluggable look & feel (write your CSS effects in the box on the right and hit Filterize!)</li>
+                                <li>Pluggable look &amp; feel (write your CSS effects in the box on the right and hit Filterize!)</li>
                                 <li>Smooth performance &mdash; optimized for smooth experience on mobile devices</li>
                                 <li>Lightweight &mdash; around 8.5kb, jQuery is its only dependency</li>
                                 <li>Responsive &mdash; with your Media Queries (resize the window!)</li>
@@ -178,7 +179,7 @@
                         <div class="item-position">2</div>
                         <span class="item-desc">Luminous night</span>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4" data-sort="City wonders" data-newsort="bc">
+                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4" data-sort="City wonders">
                         <img class="img-responsive" src="res/img/city_3.jpg" alt="sample image">
                         <div class="item-position">3</div>
                         <span class="item-desc">City wonders</span>
@@ -280,6 +281,114 @@
         </div>
     </section>
 </div>
+
+<!-- Delaymode Section -->
+<div class="row content-section-js layout-row" id="sorting">
+    <section class="layouts container">
+        <div class="row">
+            <h1>Filterizr Sorting</h1>
+            <p class="section-desc text-center">
+                Filterizr offers both some preset options for sorting and enables you sort your items with your own data, using data-attributes.
+            </p>
+        </div>
+        <div class="row">
+            <ul class="nav nav-gallery filters-sorting" id="sortingNav">
+                   <li class="filtr-button filtr-sort filtr filtr-active" data-fltrsortorder="asc">Asc</li><!--
+                --><li class="filtr-button filtr-sort filtr" data-fltrsortorder="desc">Desc</li>
+            </ul>
+            <select class="select-order" data-sortSelect>
+                <option value="domIndex">Index</option>
+                <option value="sortData">Color</option>
+                <option value="black">Black letter (Custom)</option>
+                <option value="blue">Blue letter (Custom)</option>
+            </select>
+            <div class="layout-padding-wrapper">
+                <div class="layout-pane sortingFltr">
+                    <div class="col-xs-4 filtr-item" data-sort="orange" data-category="1" data-black="C" data-blue="X">
+                        <div class="item-number">
+                            1-<span style="color: black;">C</span>-<span style="color: blue;">X</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 filtr-item" data-sort="green" data-category="1" data-black="R" data-blue="B">
+                        <div class="item-number">
+                            2-<span style="color: black;">R</span>-<span style="color: blue;">B</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 filtr-item" data-sort="orange" data-category="1" data-black="A" data-blue="D">
+                        <div class="item-number">
+                            3-<span style="color: black;">A</span>-<span style="color: blue;">D</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 filtr-item" data-sort="green" data-category="1" data-black="F" data-blue="J">
+                        <div class="item-number">
+                            4-<span style="color: black;">F</span>-<span style="color: blue;">J</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 filtr-item" data-sort="orange" data-category="1" data-black="N" data-blue="Y">
+                        <div class="item-number">
+                            5-<span style="color: black;">N</span>-<span style="color: blue;">Y</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 filtr-item" data-sort="green" data-category="1" data-black="M" data-blue="Q">
+                        <div class="item-number">
+                            6-<span style="color: black;">M</span>-<span style="color: blue;">Q</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 filtr-item" data-sort="orange" data-category="1" data-black="S" data-blue="I">
+                        <div class="item-number">
+                            7-<span style="color: black;">S</span>-<span style="color: blue;">I</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 filtr-item" data-sort="green" data-category="1" data-black="O" data-blue="P">
+                        <div class="item-number">
+                            8-<span style="color: black;">O</span>-<span style="color: blue;">P</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Basic Sorting</h2>
+                <p>
+                    Filterizr has some preset options for sorting. In the <strong>Install</strong> tutorial, in the preset sorting controls
+                    a select input element is used to determine the value by which Filterizr's elements are order. The full built-in options
+                    are would be as follows:
+                </p>
+                <pre class="prettyprint">&lt;select data-sortOrder&gt;<br />&emsp;&emsp;&emsp;&lt;option value="domIndex"&gt; Position in DOM &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;option value="sortData"&gt; data-sort Attribute &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;!-- Next two can be used for layouts of varying widths/heights --&gt;<br />&emsp;&emsp;&emsp;&lt;option value="w"&gt; Item Width &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;option value="h"&gt; Item Height &lt;/option&gt;<br />&lt;/select&gt;
+                </pre>
+                <p>
+                    Then you can either use Filterizr's preset controls to sort your elements by that value, or call the corresponding public method like this:
+                </p>
+                <pre class="prettyprint"><br />//Example 1: sort by item width, descending.<br />fltr.filterizr('sort', 'w', 'desc');<br />//Example 2: sort by the value of data-sort attribute, ascending.<br />fltr.filterizr('sort', 'sortData', 'asc');
+                </pre>
+            </div>
+            <div class="col-sm-6">
+
+                <div class="row">
+                    <h2>Advanced Sorting</h2>
+                    <p>
+                        In case you want to have a variety of values by which to sort your elements, Filterizr allows you to add data-attributes with custom names and
+                        values to your items and use them for sorting. For example you could have items looking like this:
+                    </p>
+                    <pre class="prettyprint">&lt;div class="filtr-container"&gt;<br>&emsp;&emsp;&emsp; &lt;div class="filtr-item" data-category="1" data-author="John Doe" data-year="1998" data-novel="Cool book 1"&gt;<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &lt;img src="img/sample.jpg" alt="sample"&gt;<br>&emsp;&emsp;&emsp; &lt;/div&gt;<br>&emsp;&emsp;&emsp; &lt;div class="filtr-item" data-category="1" data-author="Jane Doe" data-year="2003" data-novel="Cooler book"&gt;<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &lt;img src="img/sample.jpg" alt="sample"&gt;<br>&emsp;&emsp;&emsp; &lt;/div&gt;<br>&emsp;&emsp;&emsp; &lt;div class="filtr-item" data-category="1" data-author="Jake Doe" data-year="2008" data-novel="Coolest book"&gt;<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &lt;img src="img/sample.jpg" alt="sample"&gt;<br>&emsp;&emsp;&emsp; &lt;/div&gt;<br>&lt;/div&gt;
+                    </pre>
+                    <p>
+                        Then all you have to do is add those private data-attribute names to your <strong>select</strong> input element:
+                    </p>
+                    <pre class="prettyprint">&lt;select data-sortOrder&gt;<br />&emsp;&emsp;&emsp;&lt;option value="domIndex"&gt; Position in DOM &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;!-- Other options and then... --&gt;<br />&emsp;&emsp;&emsp;&lt;option value="author"&gt; Author Name &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;option value="year"&gt; Year Published &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;option value="novel"&gt; Book Title &lt;/option&gt;<br />&lt;/select&gt;
+                    </pre>
+                    <p>
+                        Once again, your sorting controls will take care of the rest. If you wish to use the public API once again you simply pass the value of the <strong>option</strong> elements as the <strong>attr</strong> parameter. Just remember to omit the <strong>data-</strong> part. For example:
+                    </p>
+                    <pre class="prettyprint">//Example 1: sort by author name, descending.<br />fltr.filterizr('sort', 'author', 'desc');<br />//Example 2: sort by book title, ascending.<br />fltr.filterizr('sort', 'novel', 'asc');
+                    </pre>
+                </div>
+            </div>
+    </div>
+</section>
+</div>
+<!-- Delaymode end -->
 
 <!-- Delaymode Section -->
 <div class="row content-section-js layout-row" id="delaymodes">
@@ -909,7 +1018,7 @@
 <div class="row">
     <section class="container content-section-js faq" id="faq">
         <div class="row">
-            <h1>FAQ & Caveats</h1>
+            <h1>FAQ &amp; Caveats</h1>
         </div>
         <div class="row">
             <section class="col-sm-4">

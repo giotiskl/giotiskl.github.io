@@ -26,6 +26,10 @@ $(document).ready(function() {
 		layout: 'sameSize',
 		setupControls: false
 	});
+    var sortingFltr = $('.sortingFltr').filterizr({
+		delay: 25,
+		setupControls: false
+	});
 	var packedFiltr = $('.packed').filterizr({
 		delay: 25,
 		layout: 'packed',
@@ -52,6 +56,14 @@ $(document).ready(function() {
 		delay: 25,
 		layout: 'vertical',
 		setupControls: false
+	});
+    //Sorting section nav
+    $('#sortingNav li').click(function() {
+        var sortBy    = $('#sorting .select-order').val();
+        var sortOrder = $(this).data('fltrsortorder');
+		$('.filters-sorting .filtr').removeClass('filtr-active');
+		$(this).addClass('filtr-active');
+        sortingFltr.filterizr('sort', sortBy, sortOrder);
 	});
 	//Delay mode navs
 	$('#delayModeProgressive li').click(function() {
@@ -230,6 +242,9 @@ $(document).ready(function() {
 			if (activeSection.attr('id') === 'showcase') {
 				filterizr.filterizr('filter', filterizr._fltr.options.filter);
 			}
+            if (activeSection.attr('id') === 'sorting') {
+                sortingFltr.filterizr('filter', sortingFltr._fltr.options.filter);
+            }
 			if (activeSection.attr('id') === 'delaymodes') {
 				progressiveFiltr.filterizr('filter', progressiveFiltr._fltr.options.filter);
 				alternateFiltr.filterizr('filter', alternateFiltr._fltr.options.filter);
@@ -245,7 +260,7 @@ $(document).ready(function() {
 		});
 		$('.plain-link.active').click();
 	});
-	
+
 	$('.navbar-brand').click(function(e) {
 		e.preventDefault();
 		//Scroll to top on logo click
