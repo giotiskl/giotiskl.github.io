@@ -178,7 +178,7 @@
                         <div class="item-position">2</div>
                         <span class="item-desc">Luminous night</span>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4" data-sort="City wonders">
+                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4" data-sort="City wonders" data-newsort="bc">
                         <img class="img-responsive" src="res/img/city_3.jpg" alt="sample image">
                         <div class="item-position">3</div>
                         <span class="item-desc">City wonders</span>
@@ -815,7 +815,7 @@
                                     <strong>attr</strong> (typeof: <strong>String</strong> / Default: <strong>'domIndex'</strong>)
                                 </p>
                                 <p>
-                                    The attribute based on which the elements are sorted. If not provided it defaults to value <code class="prettyprint">'domIndex'</code> and the elements are sorted based on their initial position in the DOM. If its value is set to <code class="prettyprint">'sortData'</code>, the elements are sorted based on the value of the user-defined <code class="prettyprint">data-sort</code> attribute. Other possible values includes <code class="prettyprint">'w'</code> or <code class="prettyprint">'h'</code> if you wish to sort your elements by width or height (used for layouts of items of different size).
+                                    The attribute based on which the elements are sorted. If not provided it defaults to value <code class="prettyprint">'domIndex'</code> and the elements are sorted based on their initial position in the DOM. If its value is set to <code class="prettyprint">'sortData'</code>, the elements are sorted based on the value of the user-defined <code class="prettyprint">data-sort</code> attribute. Other possible values includes <code class="prettyprint">'w'</code> or <code class="prettyprint">'h'</code> if you wish to sort your elements by width or height (used for layouts of items of different size). Moreover, it is possible to sort by any custom data-attribute, see below for more information.
                                 </p>
                             </li>
                             <li class="list-group-item">
@@ -829,7 +829,8 @@
                         </ul>
                     </div>
                     <div class="div row">
-                        <p>If you pass no arguments to this method, then it will sort your elements based on <strong>domOrder</strong> in <strong>ascending</strong> order. If you pass only the first argument, then your elements will be sorted by the attribute value you provided, in <strong>ascending</strong> order.</p>
+                        <p>If you pass no arguments to this method, then it will sort your elements based on <strong>domOrder</strong> in <strong>ascending</strong> order. If you pass only the first argument, then your elements will be sorted by the attribute value you provided, in <strong>ascending</strong> order. If you wish to sort your elements by multiple, custom data-attributes (e.g. <strong>data-myFirstAttr</strong> and <strong>data-mySecondAttr</strong>) then:</p>
+                        <pre class="prettyprint">.filterizr('sort', 'myFirstAttr', 'asc'); //just remember to omit the "data-" part<br />.filterizr('sort', 'mySecondAttr', 'asc');</pre>
                     </div>
                 </article>
                 <!-- end of sort -->
@@ -1025,7 +1026,7 @@
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
-<script src="res/js/jquery.filterizr.min.js"></script>
+<script src="res/js/jquery.filterizr.js"></script>
 <script src="res/js/app.js"></script>
 </body>
 
