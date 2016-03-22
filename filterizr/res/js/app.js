@@ -279,6 +279,16 @@ $(document).ready(function() {
 			if (activeSection.attr('id') === 'showcase') {
 				filterizr.filterizr('filter', filterizr._fltr.options.filter);
 			}
+            if (activeSection.attr('id') === 'filtering') {
+                filteringModeSingle.filterizr('filter', filteringModeSingle._fltr.options.filter);
+                if (filteringModeMulti._fltr._multifilterModeOn()) {
+                    filteringModeMulti.filterizr('toggleFilter');
+                }
+                else {
+                    filteringModeMulti.filterizr('filter', 'all');
+                    filteringModeMulti._fltr._toggledCategories = { };
+                }
+            }
             if (activeSection.attr('id') === 'sorting') {
                 sortingFltr.filterizr('filter', sortingFltr._fltr.options.filter);
             }
