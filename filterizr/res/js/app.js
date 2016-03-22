@@ -57,6 +57,38 @@ $(document).ready(function() {
 		layout: 'vertical',
 		setupControls: false
 	});
+    var filteringModeSingle = $('.filteringModeSingle').filterizr({
+		delay: 25,
+		setupControls: false
+	});
+    var filteringModeMulti = $('.filteringModeMulti').filterizr({
+		delay: 25,
+		setupControls: false
+	});
+    //Filtering section nav
+    $('#filteringModeSingle li').click(function() {
+		$('.filters-filteringModeSingle .filtr').removeClass('filtr-active');
+		$(this).addClass('filtr-active');
+		var filter = $(this).data('fltr');
+		filteringModeSingle.filterizr('filter', filter);
+	});
+    $('#filteringModeMulti li').click(function() {
+        var targetFilter = $(this).data('multifltr');
+        if (targetFilter === 'all') {
+            $('#filteringModeMulti li').removeClass('filtr-active');
+            $(this).addClass('filtr-active');
+            filteringModeMulti.filterizr('filter', 'all');
+            filteringModeMulti._fltr._toggledCategories = { };
+        }
+        else {
+            $('#filteringModeMulti li[data-multifltr="all"]').removeClass('filtr-active');
+            $(this).toggleClass('filtr-active');
+            filteringModeMulti.filterizr('toggleFilter', targetFilter);
+        }
+        if (!filteringModeMulti._fltr._multifilterModeOn()) {
+            $('#filteringModeMulti li[data-multifltr="all"]').addClass('filtr-active');
+        }
+	});
     //Sorting section nav
     $('#sortingNav li').click(function() {
         var sortBy    = $('#sorting .select-order').val();
@@ -164,7 +196,7 @@ $(document).ready(function() {
 			delay: 25,
 			filterOutCss: {
 				opacity: 0,
-				transform: 'scale(0.5)'
+				transform: 'scale(0.75)'
 			},
 			filterInCss: {
 				opacity: 1,
@@ -172,6 +204,11 @@ $(document).ready(function() {
 			}
 		};
 		var filterizr = $('.filtr-container').filterizr(userStyles);
+        $('.filtr-item').click(function(e) {
+            if ($(this).hasClass('filteredOut')) {
+                e.preventDefault();
+            }
+        });
 		//Setup showcase section
 		var styleText = $('#galstyles').val(JSON.stringify(userStyles, undefined, 4)),
 			successMsg = $('#successmsg'),

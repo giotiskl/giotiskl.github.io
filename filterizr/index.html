@@ -45,6 +45,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tutorials<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="plain-link"><a href="#install">Install</a></li>
+                                        <li class="plain-link"><a href="#filtering">Filtering</a></li>
                                         <li class="plain-link"><a href="#sorting">Sorting</a></li>
                                         <li class="plain-link"><a href="#delaymodes">Delay Modes</a></li>
                                         <li class="plain-link"><a href="#layouts">Layouts</a></li>
@@ -77,7 +78,7 @@
                             <ul class="filtr-feats">
                                 <li>Pluggable look &amp; feel (write your CSS effects in the box on the right and hit Filterize!)</li>
                                 <li>Smooth performance &mdash; optimized for smooth experience on mobile devices</li>
-                                <li>Lightweight &mdash; around 8.5kb, jQuery is its only dependency</li>
+                                <li>Lightweight &mdash; around 9.5kb, jQuery is its only dependency</li>
                                 <li>Responsive &mdash; with your Media Queries (resize the window!)</li>
                                 <li>Platform support:
                                     <ul>
@@ -282,11 +283,98 @@
     </section>
 </div>
 
-<!-- Delaymode Section -->
+<!-- Filtering Tutorial Section -->
+<div class="row content-section-js layout-row" id="filtering">
+    <section class="layouts container">
+        <div class="row">
+            <h1>Filtering Tutorial</h1>
+            <p class="section-desc">
+                Filterizr offers two distinct options when it comes to the aesthetics of filtering items. All you have to do is use the appropriate preset Filterizr control for each one of the options and Filterizr will handle the rest for you. In the section below you can find examples of both modes, what they look like as well as how to set them up.
+            </p>
+        </div>
+        <div class="row first-layout-row">
+            <div class="col-sm-6">
+                <h2>Active Filter Mode</h2>
+                <h3>Control setup</h3>
+                <pre class="prettyprint">&lt;ul&gt;<br>&emsp;&emsp;&emsp;&lt;li data-filter="all"&gt; All &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-filter="1"&gt; Green &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-filter="2"&gt; Orange &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-filter="3"&gt; Purple &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-filter="4"&gt; Mix &lt;/li&gt;<br>&lt;/ul&gt;
+                </pre>
+                <h3>Description</h3>
+                <p>
+                    For this filtering mode all you need to do is to include the <code class="prettyprint">data-filter</code> attribute in your controls as depicted above. Each time you switch between filters by clicking a button, items of the corresponding <code class="prettyprint">data-category</code> will be shown. This mode uses the <code class="prettyprint">.filterizr('filter', targetFilter)</code> method in the background to switch between categories.
+                </p>
+            </div>
+            <div class="col-sm-6 layout-col">
+                <ul class="nav nav-gallery filters-filteringModeSingle" id="filteringModeSingle">
+                    <li class="filtr-button filtr filtr-active" data-fltr="all">All</li><!--
+                    --><li class="filtr-button filtr" data-fltr="1">Green</li><!--
+                    --><li class="filtr-button filtr" data-fltr="2">Orange</li><!--
+                    --><li class="filtr-button filtr" data-fltr="3">Purple</li><!--
+                --><li class="filtr-button filtr" data-fltr="4">Mix</li>
+            </ul>
+            <div class="layout-padding-wrapper">
+                <div class="layout-pane filteringModeSingle">
+                    <div class="col-xs-4 filtr-item orange" data-category="2, 4"><div class="item-number">1</div></div>
+                    <div class="col-xs-4 filtr-item green" data-category="1, 4"><div class="item-number">2</div></div>
+                    <div class="col-xs-4 filtr-item purple" data-category="3"><div class="item-number">3</div></div>
+                    <div class="col-xs-4 filtr-item green" data-category="1, 4"><div class="item-number">4</div></div>
+                    <div class="col-xs-4 filtr-item orange" data-category="2, 4"><div class="item-number">5</div></div>
+                    <div class="col-xs-4 filtr-item purple" data-category="3"><div class="item-number">6</div></div>
+                    <div class="col-xs-4 filtr-item orange" data-category="2, 4"><div class="item-number">7</div></div>
+                    <div class="col-xs-4 filtr-item green" data-category="1, 4"><div class="item-number">8</div></div>
+                    <div class="col-xs-4 filtr-item purple" data-category="3"><div class="item-number">9</div></div>
+                    <div class="col-xs-4 filtr-item purple" data-category="3"><div class="item-number">10</div></div>
+                    <div class="col-xs-4 filtr-item orange" data-category="2, 4"><div class="item-number">11</div></div>
+                    <div class="col-xs-4 filtr-item green" data-category="1, 4"><div class="item-number">12</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Toggle Filter Mode</h2>
+            <h3>Control setup</h3>
+            <pre class="prettyprint">&lt;ul&gt;<br>&emsp;&emsp;&emsp;&lt;li data-multifilter="all"&gt; All &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-multifilter="1"&gt; Green &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-multifilter="2"&gt; Orange &lt;/li&gt;<br>&emsp;&emsp;&emsp;&lt;li data-multifilter="3"&gt; Purple &lt;/li&gt;<br>&lt;/ul&gt;
+            </pre>
+            <h3>Description</h3>
+            <p>
+                For this filtering mode you need to include the <code class="prettyprint">data-multifilter</code> attribute in your controls. Each time you toggle a button, items of the corresponding <code class="prettyprint">data-category</code> will be shown or hidden. When all buttons are switched off an unfiltered gallery is shown. This mode uses the <code class="prettyprint">.filterizr('toggleFilter', toggledFilter)</code> method in the background to display or hide categories.
+            </p>
+        </div>
+        <div class="col-sm-6 layout-col">
+            <ul class="nav nav-gallery filters-filteringModeMulti" id="filteringModeMulti">
+                <li class="filtr-button filtr-multi filtr-active" data-multifltr="all">All</li><!--
+            --><li class="filtr-button filtr-multi" data-multifltr="1">Green</li><!--
+            --><li class="filtr-button filtr-multi" data-multifltr="2">Orange</li><!--
+            --><li class="filtr-button filtr-multi" data-multifltr="3">Purple</li>
+        </ul>
+        <div class="layout-padding-wrapper">
+            <div class="layout-pane filteringModeMulti">
+                <div class="col-xs-4 filtr-item orange" data-category="2"><div class="item-number">1</div></div>
+                <div class="col-xs-4 filtr-item green" data-category="1"><div class="item-number">2</div></div>
+                <div class="col-xs-4 filtr-item purple" data-category="3"><div class="item-number">3</div></div>
+                <div class="col-xs-4 filtr-item green" data-category="1"><div class="item-number">4</div></div>
+                <div class="col-xs-4 filtr-item orange" data-category="2"><div class="item-number">5</div></div>
+                <div class="col-xs-4 filtr-item purple" data-category="3"><div class="item-number">6</div></div>
+                <div class="col-xs-4 filtr-item orange" data-category="2"><div class="item-number">7</div></div>
+                <div class="col-xs-4 filtr-item green" data-category="1"><div class="item-number">8</div></div>
+                <div class="col-xs-4 filtr-item purple" data-category="3"><div class="item-number">9</div></div>
+                <div class="col-xs-4 filtr-item purple" data-category="3"><div class="item-number">10</div></div>
+                <div class="col-xs-4 filtr-item orange" data-category="2"><div class="item-number">11</div></div>
+                <div class="col-xs-4 filtr-item green" data-category="1"><div class="item-number">12</div></div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+</div>
+<!--  Filtering Tutorial Section  end -->
+
+<!-- Sorting Tutorial Section -->
 <div class="row content-section-js layout-row" id="sorting">
     <section class="layouts container">
         <div class="row">
-            <h1>Filterizr Sorting</h1>
+            <h1>Sorting Tutorial</h1>
             <p class="section-desc text-center">
                 Filterizr offers both some preset options for sorting and enables you sort your items with your own data, using data-attributes.
             </p>
@@ -364,37 +452,34 @@
                 </pre>
             </div>
             <div class="col-sm-6">
-
-                <div class="row">
-                    <h2>Advanced Sorting</h2>
-                    <p>
-                        In case you want to have a variety of values by which to sort your elements, Filterizr allows you to add data-attributes with custom names and
-                        values to your items and use them for sorting. For example you could have items looking like this:
-                    </p>
-                    <pre class="prettyprint">&lt;div class="filtr-container"&gt;<br>&emsp;&emsp;&emsp; &lt;div class="filtr-item" data-category="1" data-author="John Doe" data-year="1998" data-novel="Cool book 1"&gt;<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &lt;img src="img/sample.jpg" alt="sample"&gt;<br>&emsp;&emsp;&emsp; &lt;/div&gt;<br>&emsp;&emsp;&emsp; &lt;div class="filtr-item" data-category="1" data-author="Jane Doe" data-year="2003" data-novel="Cooler book"&gt;<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &lt;img src="img/sample.jpg" alt="sample"&gt;<br>&emsp;&emsp;&emsp; &lt;/div&gt;<br>&emsp;&emsp;&emsp; &lt;div class="filtr-item" data-category="1" data-author="Jake Doe" data-year="2008" data-novel="Coolest book"&gt;<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &lt;img src="img/sample.jpg" alt="sample"&gt;<br>&emsp;&emsp;&emsp; &lt;/div&gt;<br>&lt;/div&gt;
-                    </pre>
-                    <p>
-                        Then all you have to do is add those private data-attribute names to your <strong>select</strong> input element:
-                    </p>
-                    <pre class="prettyprint">&lt;select data-sortOrder&gt;<br />&emsp;&emsp;&emsp;&lt;option value="domIndex"&gt; Position in DOM &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;!-- Other options and then... --&gt;<br />&emsp;&emsp;&emsp;&lt;option value="author"&gt; Author Name &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;option value="year"&gt; Year Published &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;option value="novel"&gt; Book Title &lt;/option&gt;<br />&lt;/select&gt;
-                    </pre>
-                    <p>
-                        Once again, your sorting controls will take care of the rest. If you wish to use the public API once again you simply pass the value of the <strong>option</strong> elements as the <strong>attr</strong> parameter. Just remember to omit the <strong>data-</strong> part. For example:
-                    </p>
-                    <pre class="prettyprint">//Example 1: sort by author name, descending.<br />fltr.filterizr('sort', 'author', 'desc');<br />//Example 2: sort by book title, ascending.<br />fltr.filterizr('sort', 'novel', 'asc');
-                    </pre>
-                </div>
+                <h2>Advanced Sorting</h2>
+                <p>
+                    In case you want to have a variety of values by which to sort your elements, Filterizr allows you to add data-attributes with custom names and
+                    values to your items and use them for sorting. For example you could have items looking like this:
+                </p>
+                <pre class="prettyprint">&lt;div class="filtr-container"&gt;<br>&emsp;&emsp;&emsp; &lt;div class="filtr-item" data-category="1" data-author="John Doe" data-year="1998" data-novel="Cool book 1"&gt;<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &lt;img src="img/sample.jpg" alt="sample"&gt;<br>&emsp;&emsp;&emsp; &lt;/div&gt;<br>&emsp;&emsp;&emsp; &lt;div class="filtr-item" data-category="1" data-author="Jane Doe" data-year="2003" data-novel="Cooler book"&gt;<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &lt;img src="img/sample.jpg" alt="sample"&gt;<br>&emsp;&emsp;&emsp; &lt;/div&gt;<br>&emsp;&emsp;&emsp; &lt;div class="filtr-item" data-category="1" data-author="Jake Doe" data-year="2008" data-novel="Coolest book"&gt;<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &lt;img src="img/sample.jpg" alt="sample"&gt;<br>&emsp;&emsp;&emsp; &lt;/div&gt;<br>&lt;/div&gt;
+                </pre>
+                <p>
+                    Then all you have to do is add those private data-attribute names to your <strong>select</strong> input element:
+                </p>
+                <pre class="prettyprint">&lt;select data-sortOrder&gt;<br />&emsp;&emsp;&emsp;&lt;option value="domIndex"&gt; Position in DOM &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;!-- Other options and then... --&gt;<br />&emsp;&emsp;&emsp;&lt;option value="author"&gt; Author Name &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;option value="year"&gt; Year Published &lt;/option&gt;<br />&emsp;&emsp;&emsp;&lt;option value="novel"&gt; Book Title &lt;/option&gt;<br />&lt;/select&gt;
+                </pre>
+                <p>
+                    Once again, your sorting controls will take care of the rest. If you wish to use the public API once again you simply pass the value of the <strong>option</strong> elements as the <strong>attr</strong> parameter. Just remember to omit the <strong>data-</strong> part. For example:
+                </p>
+                <pre class="prettyprint">//Example 1: sort by author name, descending.<br />fltr.filterizr('sort', 'author', 'desc');<br />//Example 2: sort by book title, ascending.<br />fltr.filterizr('sort', 'novel', 'asc');
+                </pre>
             </div>
     </div>
 </section>
 </div>
-<!-- Delaymode end -->
+<!--  Sorting Tutorial Section  end -->
 
 <!-- Delaymode Section -->
 <div class="row content-section-js layout-row" id="delaymodes">
     <section class="layouts container">
         <div class="row">
-            <h1>Filterizr Delay modes</h1>
+            <h1>Delay Modes Tutorial</h1>
             <p class="section-desc">
                 If you would like to spice up the effect of your Filterizr by making it less synchronous, you could experiment with adding delays between
                 your gallery's items. Filterizr uses by default <code class="prettyprint">delayMode: 'progressive'</code> but the value of <code class="prettyprint">delay</code> in the options is set to 0. Thus, there is no delay effect by default.
@@ -473,7 +558,7 @@
 <div class="row content-section-js layout-row" id="layouts">
     <section class="layouts container">
         <div class="row">
-            <h1>Filterizr Layouts</h1>
+            <h1>Layouts Tutorial</h1>
         </div>
         <div class="row first-layout-row">
             <div class="col-sm-6">
@@ -692,6 +777,7 @@
                         <li class="api-method api-shuffle">shuffle</li>
                         <li class="api-method api-sort">sort</li>
                         <li class="api-method api-setOptions">setOptions</li>
+                        <li class="api-method api-toggleFilter">toggleFilter</li>
                     </ul>
                 </div>
                 <div class="row">
@@ -971,6 +1057,34 @@
                     </div>
                 </article>
                 <!-- end of setOptions -->
+                <!-- toggleFilter method -->
+                <article class="row method" id="toggleFilter">
+                    <div class="row">
+                        <h3>toggleFilter</h3>
+                    </div>
+                    <div class="row">
+                        <pre class="prettyprint">.filterizr('toggleFilter', toggledFilter)</pre>
+                    </div>
+                    <div class="row">
+                        <p>Filters the visible items based on a collection of filters toggled on. If all filters are toggled off then an unfiltered gallery is rendered.</p>
+                    </div>
+                    <div class="row">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p>
+                                    <strong>toggledFilter</strong> (typeof: <strong>Number</strong>)
+                                </p>
+                                <p>
+                                    The number of the category whose corresponding filter is to be toggled on/off.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="div row">
+                        <p>This method filters the item based on a collection of toggled on filters. If all of the filters are toggled off then an unfiltered gallery is rendered. The default controls that come with this method are the controls with a <code class="prettyprint">data-multifilter</code> attribute. This method also fires the <span class="method-link" data-target="options">onFilteringStart</span> callback if defined.</p>
+                    </div>
+                </article>
+                <!-- end of toggleFilter -->
                 <!-- filteringStart event -->
                 <article class="row method" id="filteringStart">
                     <div class="row">
@@ -1056,7 +1170,7 @@
                     </section>
                     <section id="what-makes-filterizr-different">
                         <h3>What makes filterizr different?</h3>
-                        <p>Filterizr is higly customizable, with a pluggable look and feel, feature-rich and comes with preset controls. It's filesize is around 8.5kb and its only dependency is jQuery. It performs well on mobile as it tries to minimize the amount of repaint events. Overall, I'd say it is quick, responsive and lightweight. It is open-source and licensed under MIT. Nonetheless, if you need a well-tested plugin with lots of options and a rich community I would suggest taking a look at the aforementioned solutions.</p>
+                        <p>Filterizr is higly customizable, with a pluggable look and feel, feature-rich and comes with preset controls. It's filesize is around 9.5kb and its only dependency is jQuery. It performs well on mobile as it tries to minimize the amount of repaint events. Overall, I'd say it is quick, responsive and lightweight. It is open-source and licensed under MIT. Nonetheless, if you need a well-tested plugin with lots of options and a rich community I would suggest taking a look at the aforementioned solutions.</p>
                     </section>
                     <section id="what-if-i-need-support-for-ie-v-7to9">
                         <h3>What if I need support for IE 7-9</h3>
@@ -1064,7 +1178,7 @@
                     </section>
                     <section id="can-i-redistribute-sell-or-alter-filterizr">
                         <h3>Can I redistribute, sell or alter Filterizr?</h3>
-                        <p>As I said Filterizr is licensed under the MIT license. Essentially, this means that you that you can tamper with it to your heart's content, use it for any sort of project and even sell your modified version of it.</p>
+                        <p>As I said Filterizr is licensed under the MIT license. Essentially, this means that you can tamper with it to your heart's content, use it for any sort of project and even sell your modified version of it.</p>
                     </section>
                     <section id="how-can-i-contribute-to-filterizr">
                         <h3>How can I contribute to Filterizr?</h3>

@@ -394,6 +394,20 @@ a:link, a:active, a:visited {
 	}
 }
 
+.filtr-multi {
+	background-color: #3c7be7 !important;
+	border-color: #2b63c1 !important;
+	&:hover {
+		background-color: #2b63c1 !important;
+	}
+}
+.filtr-multi.filtr-active {
+    background-color: #2b63c1 !important;
+}
+.filtr-sort.filtr-active {
+	background-color: #c0392b !important;
+}
+
 .filtr-sort {
 	background-color: #e74c3c !important;
 	border-color: #c0392b !important;
@@ -569,6 +583,19 @@ a:link, a:active, a:visited {
 	overflow-x: scroll;
 }
 
+//filtering tutorial section
+.filteringModeSingle, .filteringModeMulti {
+    .green > .item-number {
+        background-color: $colorMain !important;
+    }
+    .orange > .item-number {
+        background-color: $colorOrange !important;
+    }
+    .purple > .item-number {
+        background-color: purple !important;
+    }
+}
+
 /*******************************************
                 DOCS
 *******************************************/
@@ -693,6 +720,10 @@ a:link, a:active, a:visited {
 
     input:focus, textarea:focus {
         border: 1px solid $colorMain;
+    }
+
+    textarea {
+        resize: none;
     }
 
 	.filtr-button:focus {
