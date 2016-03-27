@@ -330,6 +330,21 @@ a:link, a:active, a:visited {
 	}
 }
 
+.filtr-search {
+    border: 1px solid rgb(85, 85, 85);
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+    @include mq-tablet {
+        margin-top: 0;
+        margin-left: 0.5rem;
+        width: auto;
+    }
+}
+
 .nav-gallery {
 	margin-bottom: 0.5rem;
 	padding: 1rem;
@@ -479,6 +494,12 @@ a:link, a:active, a:visited {
     }
 }
 
+/*******************************************
+                SEARHCHING TUT
+*******************************************/
+#searching {
+    margin-bottom: 3.5rem;
+}
 /*******************************************
                 INSTALL
 *******************************************/

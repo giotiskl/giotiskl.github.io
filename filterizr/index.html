@@ -11,7 +11,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300italic,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="ext/css/ionicons.min.css" rel="stylesheet">
-    <link href="res/css/styles.min.css" rel="stylesheet">
+    <link href="res/css/styles.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <![endif]-->
@@ -47,6 +47,7 @@
                                         <li class="plain-link"><a href="#install">Install</a></li>
                                         <li class="plain-link"><a href="#filtering">Filtering</a></li>
                                         <li class="plain-link"><a href="#sorting">Sorting</a></li>
+                                        <li class="plain-link"><a href="#searching">Searching</a></li>
                                         <li class="plain-link"><a href="#delaymodes">Delay Modes</a></li>
                                         <li class="plain-link"><a href="#layouts">Layouts</a></li>
                                     </ul>
@@ -78,7 +79,7 @@
                             <ul class="filtr-feats">
                                 <li>Pluggable look &amp; feel (write your CSS effects in the box on the right and hit Filterize!)</li>
                                 <li>Smooth performance &mdash; optimized for smooth experience on mobile devices</li>
-                                <li>Lightweight &mdash; around 9.5kb, jQuery is its only dependency</li>
+                                <li>Lightweight &mdash; around 10.5kb, jQuery is its only dependency</li>
                                 <li>Responsive &mdash; with your Media Queries (resize the window!)</li>
                                 <li>Platform support:
                                     <ul>
@@ -165,6 +166,7 @@
                                 Description
                             </option>
                         </select>
+                        <input type="text" name="filtr-search" class="filtr-search" value="" placeholder="Your search" data-search>
                     </div>
                 </div>
 
@@ -475,6 +477,26 @@
 </div>
 <!--  Sorting Tutorial Section  end -->
 
+<!-- Searching Tutorial Section -->
+<div class="row content-section-js layout-row" id="searching">
+    <section class="layouts container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Searching Tutorial</h1>
+                <p class="section-desc text-center">
+                    Apart from filtering between categories, since v1.2.1 Filterizr now offers you the ability to apply a dynamic filter while typing in a search term as exhibited on the demo page of this website. Setting up the search control of Filterizr is a matter of seconds. All you have to do is include the corresponding control if you would like this added functionality as follows:
+                </p>
+                <pre class="prettyprint text-center">&lt;!-- This is what the search control looks like --&gt;<br />&lt;input type="text" name="search" placeholder="Search..." data-search&gt;
+                </pre>
+                <p class="text-center">
+                    Done! Once your search control is added, Filterizr will handle the rest of the magic!
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+<!--  Searching Tutorial Section  end -->
+
 <!-- Delaymode Section -->
 <div class="row content-section-js layout-row" id="delaymodes">
     <section class="layouts container">
@@ -774,6 +796,7 @@
                     <ul class="api-list">
                         <li class="api-method api-filter">filter</li>
                         <li class="api-method api-filterizr">filterizr</li>
+                        <li class="api-method api-search">search</li>
                         <li class="api-method api-shuffle">shuffle</li>
                         <li class="api-method api-sort">sort</li>
                         <li class="api-method api-setOptions">setOptions</li>
@@ -979,6 +1002,34 @@
                     </div>
                 </article>
                 <!-- end of filterizeIt -->
+                <!-- search method -->
+                <article class="row method" id="search">
+                    <div class="row">
+                        <h3>search</h3>
+                    </div>
+                    <div class="row">
+                        <pre class="prettyprint">.filterizr('search', text)</pre>
+                    </div>
+                    <div class="row">
+                        <p>Filter your .filtr-item based on whether the value of the string you define exists in their contents.</p>
+                    </div>
+                    <div class="row">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p>
+                                    <strong>text</strong> (typeof: <strong>String</strong>)
+                                </p>
+                                <p>
+                                    The string for which to search in the contents of .filtr-item elements while filtering them.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="div row">
+                        <p>If you pass an empty string to this method, then it will display an unfiltered gallery.</p>
+                    </div>
+                </article>
+                <!-- end of search -->
                 <!-- shuffle method -->
                 <article class="row method" id="shuffle">
                     <div class="row">
@@ -1001,7 +1052,7 @@
                         <pre class="prettyprint">.filterizr('sort' [,attr] [,sortOrder])</pre>
                     </div>
                     <div class="row">
-                        <p>Sort your elements based on the a certain attribute attribute in ascending or descending order and rearrange them on screen.</p>
+                        <p>Sort your elements based on a certain attribute in ascending or descending order and rearrange them on screen.</p>
                     </div>
                     <div class="row">
                         <ul class="list-group">
@@ -1170,7 +1221,7 @@
                     </section>
                     <section id="what-makes-filterizr-different">
                         <h3>What makes filterizr different?</h3>
-                        <p>Filterizr is higly customizable, with a pluggable look and feel, feature-rich and comes with preset controls. It's filesize is around 9.5kb and its only dependency is jQuery. It performs well on mobile as it tries to minimize the amount of repaint events. Overall, I'd say it is quick, responsive and lightweight. It is open-source and licensed under MIT. Nonetheless, if you need a well-tested plugin with lots of options and a rich community I would suggest taking a look at the aforementioned solutions.</p>
+                        <p>Filterizr is higly customizable, with a pluggable look and feel, feature-rich and comes with preset controls. It's filesize is around 10.5kb and its only dependency is jQuery. It performs well on mobile as it tries to minimize the amount of repaint events. Overall, I'd say it is quick, responsive and lightweight. It is open-source and licensed under MIT. Nonetheless, if you need a well-tested plugin with lots of options and a rich community I would suggest taking a look at the aforementioned solutions.</p>
                     </section>
                     <section id="what-if-i-need-support-for-ie-v-7to9">
                         <h3>What if I need support for IE 7-9</h3>
