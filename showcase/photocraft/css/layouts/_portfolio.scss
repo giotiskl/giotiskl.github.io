@@ -1,0 +1,83 @@
+.portfolio {
+    color: $colorBlack;
+    padding: 4rem 0 0 0;
+
+    @include mq-tablet {
+        padding: 4rem 0 0 0;
+    }
+
+    h1 {
+        margin-bottom: 1rem;
+
+        @include mq-tablet {
+            margin-bottom: 4rem;
+        }
+    }
+
+    .horizontal-nav {
+        margin-bottom: 2rem;
+        padding: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+        }
+
+        .portfolio-btn {
+            margin: 0.75rem;
+            position: relative;
+
+            @include mq-tablet {
+                margin: 0.25rem 2rem 0.25rem 2rem;
+            }
+        }
+    }
+
+    //Filterizr Controls
+    .controls-row {
+        margin: 2rem 0 1rem 0;
+    }
+
+    //Filterizr
+    .filtr-container {
+        overflow: hidden;
+        margin: 0 auto;
+        //max-width: 1400px;
+    }
+
+    .filtr-item {
+        overflow: hidden;
+        width: 25.1%;
+
+        .filtr-img {
+            display: block;
+            width: 100%;
+            min-height: auto;
+            opacity: .65;
+            @include transform(scale(1.25));
+            transition: all .5s ease-out;
+            position: relative;
+
+            &:hover {
+                opacity: 1;
+                @include transform(scale(1));
+            }
+        }
+    }
+
+    .filtr-item:before {
+        background-color: black;
+        content: "";
+        display: block;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .filteredOut {
+        z-index: -1;
+    }
+}

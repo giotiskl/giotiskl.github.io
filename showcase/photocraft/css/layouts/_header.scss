@@ -1,0 +1,94 @@
+.main-header {
+    @include background(linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0)),
+                        url("../../photocraft/img/headerbg.jpg"));
+    background-position: center;
+    background-size: cover;
+    //@include animation(scaleBG 20s);
+    //@include animation-timing-function(ease-out);
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+    height: 100vh;
+    position: relative;
+
+    @include keyframes(scaleBG) {
+        from {
+            background-size: 150% auto;
+        }
+        to {
+            background-size: 100% auto;
+        }
+    }
+
+    //Hero box section
+    .hero-box {
+        margin-top: 5rem;
+
+        h1, h2, h3 {
+            color: rgba(255,255,255,0.25);
+            opacity: 0;
+        }
+        h3 {
+            font-size: 220%;
+            font-weight: 100;
+            margin-left: 1rem;
+            @include mq-tablet {
+                font-size: 320%;
+                margin-left: 2rem;
+            }
+        }
+        h2 {
+            @include animation-delay(0.5s);
+            font-size: 280%;
+            font-weight: 300;
+            margin-left: 3rem;
+            @include mq-tablet {
+                font-size: 420%;
+                margin-left: 6rem;
+            }
+        }
+        h1 {
+            @include animation-delay(1s);
+            font-size: 370%;
+            margin-left: 6rem;
+            @include mq-tablet {
+                font-size: 640%;
+                margin-left: 12rem;
+            }
+        }
+    }
+
+    //Hero button
+    .hero-btn {
+        display: none;
+
+        i {
+            @include absolute-center(50%, 50%);
+            @include animation(bounce 0.5s);
+            @include animation-direction(alternate-reverse);
+            @include animation-iteration-count(infinite);
+            font-size: 140%;
+            color: white !important;
+            position: absolute;
+        }
+
+        @include mq-tablet {
+            background-color: $colorMain;
+            border: 2px solid rgba(255,255,255,.5);
+            display: block !important;
+            cursor: pointer !important;
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            @include absolute-center(95%, 50%);
+            z-index: 3;
+        }
+    }
+
+    @include keyframes(bounce) {
+        from {
+            @include transform(translate(-10px, -15px));
+        }
+        to {
+            @include transform(translate(-10px, -5px));
+        }
+    }
+}
