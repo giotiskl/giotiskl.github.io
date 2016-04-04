@@ -1,4 +1,6 @@
+//compileOnSave
 @import 'bourbon/bourbon';
+@import '../../ext/css/animate';
 
 /*******************************************
                 VARIABLES
@@ -191,6 +193,12 @@ button {
 
 input:focus {
     outline: 0;
+}
+
+.contact, .portfolio, .about-me, .tools {
+    @include mq-tablet {
+        padding: 3rem 0;
+    }
 }
 
 /*******************************************
@@ -579,8 +587,15 @@ div:hover > h3 > .icon-header {
 
     section {
         padding: 0 1rem;
+
         @include mq-desktop {
-            padding: 1rem;
+            padding: 3rem;
+        }
+    }
+
+    h2 {
+        @include mq-desktop {
+            margin-bottom: 3rem;
         }
     }
 
@@ -593,6 +608,8 @@ div:hover > h3 > .icon-header {
         @extend %featBG;
         background-image: url(../img/yiotis_lgbysea.jpg);
         height: 25rem;
+        margin-bottom: 2rem;
+
         @include mq-desktop {
             height: 30rem;
             margin-bottom: -10rem;
@@ -763,6 +780,11 @@ div:hover > h3 > .icon-header {
 			transition: height 0.5s ease-out;
 		}
 
+        //filteredout z-index
+        .filteredOut {
+            z-index: -1;
+        }
+
         //showcase-item component
         .showcase-item {
             color: white;
@@ -805,7 +827,27 @@ div:hover > h3 > .icon-header {
                 @include transform(translateX(-50%));
 
                 @include mq-tablet {
-                    bottom: auto;
+                    bottom: 1rem;
+                }
+            }
+
+            .preview-btn {
+                @include transform(translateX(-15%));
+                left: 15%;
+
+                @include mq-tablet {
+                    @include transform(translateX(-25%));
+                    left: 25%;
+                }
+            }
+
+            .github-btn {
+                @include transform(translateX(-85%));
+                left: 85%;
+
+                @include mq-tablet {
+                    @include transform(translateX(-75%));
+                    left: 75%;
                 }
             }
         }
@@ -864,6 +906,10 @@ div:hover > h3 > .icon-header {
     letter-spacing: 0.075rem;
     padding: 0.25rem 0;
     text-align: center;
+
+    @include mq-tablet {
+        padding: .25rem 0 2rem 0;
+    }
 }
 
 /*******************************************
