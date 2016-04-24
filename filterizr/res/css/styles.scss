@@ -1,3 +1,4 @@
+//compile
 @import 'bourbon/bourbon';
 
 /*******************************************
@@ -448,7 +449,6 @@ a:link, a:active, a:visited {
 	padding: 16px;
 	img {
 		border-radius: 5px;
-		cursor: pointer;
 		@include filter(grayscale(70%));
 	}
 }
@@ -477,6 +477,54 @@ a:link, a:active, a:visited {
 }
 .filtr-item:hover img {
 	@include filter(grayscale(0));
+}
+
+/*******************************************
+            FILTERIZR IN ACTION
+*******************************************/
+.filterizr-in-action {
+    margin: 2rem 0;
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    .in-use-item-wrapper {
+        padding: 0;
+    }
+
+    .in-use-item {
+        text-align: center;
+        position: relative;
+    }
+
+    .in-use-desc {
+        background-color: rgba(0,0,0,.75);
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        padding: .25rem;
+        @include transform(scaleY(0));
+        @include transform-origin(center top);
+        transition: all .25s ease-out;
+    }
+
+    a:hover .in-use-desc {
+        opacity: 1;
+        @include transform(scaleY(1));
+    }
+
+    a {
+        border-color: transparent !important;
+        margin: 0 !important;
+    }
+
+    img {
+        box-shadow: 0 2px 5px rgba(0,0,0,.25);
+    }
 }
 
 /*******************************************
@@ -717,7 +765,7 @@ a:link, a:active, a:visited {
                 CONTACT
 *******************************************/
 .contact {
-	padding: 1rem;
+	padding: 3rem 1rem;
 	text-align: center;
 
     form .row {
