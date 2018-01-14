@@ -332,7 +332,7 @@
                     <li>Pass the options object to any of the constructor methods or...</li>
                     <li>If you have a Filterizr, call its method <code class="prettyprint">setOptions(options)</code>.</li>
                 </ol>
-                <pre class="prettyprint code-snippet">//Default options<br>var options = {<br>&emsp;&emsp;&emsp;animationDuration: 0.5, //in seconds<br>&emsp;&emsp;&emsp;filter: 'all', //Initial filter<br>&emsp;&emsp;&emsp;callbacks: { <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onFilteringStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onFilteringEnd: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onShufflingStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onShufflingEnd: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onSortingStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onSortingEnd: function() { }<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;delay: 0, //Transition delay in ms<br>&emsp;&emsp;&emsp;delayMode: 'progressive', //'progressive' or 'alternate'<br>&emsp;&emsp;&emsp;easing: 'ease-out',<br>&emsp;&emsp;&emsp;filterOutCss: { //Filtering out animation<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;opacity: 0,<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;transform: 'scale(0.5)'<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;filterInCss: { //Filtering in animation<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;opacity: 0,<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;transform: 'scale(1)'<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;layout: 'sameSize', //See layouts<br>&emsp;&emsp;&emsp;selector: '.filtr-container',<br>&emsp;&emsp;&emsp;setupControls: true <br>} <br>//You can override any of these options and then call...<br>var filterizd = $('.filtr-container').filterizr(options);<br>//If you have already instantiated your Filterizr then call...<br>filterizd.filterizr('setOptions', options);
+                <pre class="prettyprint code-snippet">// Default options<br>var options = {<br>&emsp;&emsp;&emsp;animationDuration: 0.5, // in seconds<br>&emsp;&emsp;&emsp;filter: 'all', // Initial filter<br>&emsp;&emsp;&emsp;callbacks: { <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onFilteringStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onFilteringEnd: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onShufflingStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onShufflingEnd: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onSortingStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onSortingEnd: function() { }<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;controlsSelector: '', // Selector for custom controls<br>&emsp;&emsp;&emsp;delay: 0, // Transition delay in ms<br>&emsp;&emsp;&emsp;delayMode: 'progressive', // 'progressive' or 'alternate'<br>&emsp;&emsp;&emsp;easing: 'ease-out',<br>&emsp;&emsp;&emsp;filterOutCss: { // Filtering out animation<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;opacity: 0,<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;transform: 'scale(0.5)'<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;filterInCss: { // Filtering in animation<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;opacity: 0,<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;transform: 'scale(1)'<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;layout: 'sameSize', // See layouts<br>&emsp;&emsp;&emsp;multifilterLogicalOperator: 'or',<br>&emsp;&emsp;&emsp;selector: '.filtr-container',<br>&emsp;&emsp;&emsp;setupControls: true // Should be false if controlsSelector is set <br>} <br>// You can override any of these options and then call...<br>var filterizd = $('.filtr-container').filterizr(options);<br>// If you have already instantiated your Filterizr then call...<br>filterizd.filterizr('setOptions', options);
                 </pre>
             </section>
         </div>
@@ -850,6 +850,8 @@
                     <ul class="api-list">
                         <li class="api-method api-filter">filter</li>
                         <li class="api-method api-filterizr">filterizr</li>
+                        <li class="api-method api-destroy">destroy</li>
+                        <li class="api-method api-insertItem">insertItem</li>
                         <li class="api-method api-search">search</li>
                         <li class="api-method api-shuffle">shuffle</li>
                         <li class="api-method api-sort">sort</li>
@@ -876,7 +878,7 @@
                         <h3>options</h3>
                     </div>
                     <div class="row">
-                        <pre class="prettyprint">//Default options<br>options = {<br>&emsp;&emsp;&emsp;animationDuration: 0.5,<br>&emsp;&emsp;&emsp;callbacks: {<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onFilteringStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onFilteringEnd: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onShufflingStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onShufflingEnd: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onSortingStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onSortingEnd: function() { }<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;delay: 0,<br>&emsp;&emsp;&emsp;delayMode: 'progressive',<br>&emsp;&emsp;&emsp;easing: 'ease-out',<br>&emsp;&emsp;&emsp;filter: 'all',<br>&emsp;&emsp;&emsp;filterOutCss: {<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;opacity: 0,<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;transform: 'scale(0.5)'<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;filterInCss: {<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;opacity: 0,<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;transform: 'scale(1)'<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;layout: 'sameSize',<br>&emsp;&emsp;&emsp;selector: '.filtr-container',<br>&emsp;&emsp;&emsp;setupControls: true<br>}
+                        <pre class="prettyprint">//Default options<br>options = {<br>&emsp;&emsp;&emsp;animationDuration: 0.5,<br>&emsp;&emsp;&emsp;callbacks: {<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onFilteringStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onFilteringEnd: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onShufflingStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onShufflingEnd: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onSortingStart: function() { },<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;onSortingEnd: function() { }<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;controlsSelector: '',<br>&emsp;&emsp;&emsp;delay: 0,<br>&emsp;&emsp;&emsp;delayMode: 'progressive',<br>&emsp;&emsp;&emsp;easing: 'ease-out',<br>&emsp;&emsp;&emsp;filter: 'all',<br>&emsp;&emsp;&emsp;filterOutCss: {<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;opacity: 0,<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;transform: 'scale(0.5)'<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;filterInCss: {<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;opacity: 0,<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;transform: 'scale(1)'<br>&emsp;&emsp;&emsp;},<br>&emsp;&emsp;&emsp;layout: 'sameSize',<br>&emsp;&emsp;&emsp;multifilterLogicalOperator: 'or',<br>&emsp;&emsp;&emsp;selector: '.filtr-container',<br>&emsp;&emsp;&emsp;setupControls: true<br>}
                         </pre>
                     </div>
                     <div class="row">
@@ -915,6 +917,16 @@
                                         </p>
                                     </li>
                                 </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <p>
+                                    <strong>controlsSelector</strong> (typeof: <strong>String</strong> / Default: <strong>''</strong>)
+                                </p>
+                                <p>
+                                  In case there is the need to have more than one Filterizr instance on the same page then you need to set up different controls for them. This is where this option comes in handy. When instantiating your Filterizr you will need to set the following options: <pre class="prettyprint">{ controlsSelector: '.filtr-controls', setupControls: false }</pre>
+                                  Then you will have to set the same class on all of your Filterizr controls, i.e. in this case <code class="prettyprint">.filtr-controls</code>.<br>
+                                  The option <code class="prettyprint">setupControls: false</code> will prevent the default controls from being set up and by defining the <code class="prettyprint">controlsSelector</code> you target a specific set of controls for this Filterizr instance.
+                                </p>
                             </li>
                             <li class="list-group-item">
                                 <p>
@@ -970,6 +982,14 @@
                                 </p>
                                 <p>
                                     By default sets the layout for items with same width and height. Other possible values are: <code class="prettyprint">'packed'</code> for a layout of items of varying width and height, <code class="prettyprint">'sameWidth'</code> for a layout of items with the same width but varying height. <code class="prettyprint">'sameHeight'</code> for a layout of items with the same height but varying width. <code class="prettyprint">'horizontal'</code> for a layout of items laid out horizontally. <code class="prettyprint">'vertical'</code> for a layout of items laid out vertically. To see a demo of each and every layout, check the <strong>Tutorials</strong> section.
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p>
+                                    <strong>multifilterLogicalOperator</strong> (typeof: <strong>String</strong> / Default: <strong>'or'</strong>)
+                                </p>
+                                <p>
+                                    This option defines the logic in which multifiltering will be applied in case it's enabled. If set to <code class="prettyprint">'or'</code> then it will render all items that belong to one of the active categories e.g. 3 or 4. If set to <code class="prettyprint">'and'</code> then it will render all items that belong to both categories i.e. 3 and 4.
                                 </p>
                             </li>
                             <li class="list-group-item">
@@ -1031,7 +1051,7 @@
                     </div>
                 </article>
                 <!-- end of filter -->
-                <!-- filterizeIt method -->
+                <!-- filterizr method -->
                 <article class="row method" id="filterizr">
                     <div class="row">
                         <h3>filterizr</h3>
@@ -1060,6 +1080,47 @@
                     </div>
                 </article>
                 <!-- end of filterizeIt -->
+                <!-- destroy method -->
+                <article class="row method" id="destroy">
+                    <div class="row">
+                        <h3>destroy</h3>
+                    </div>
+                    <div class="row">
+                        <pre class="prettyprint">.filterizr('destroy')</pre>
+                    </div>
+                    <div class="row">
+                        <p>Destroy your Filterizr instance. Resets all inline styles and unbinds all Filterizr related events.</p>
+                    </div>
+                </article>
+                <!-- end of destroy -->
+                <!-- insertItem method -->
+                <article class="row method" id="insertItem">
+                    <div class="row">
+                        <h3>search</h3>
+                    </div>
+                    <div class="row">
+                        <pre class="prettyprint">.filterizr('insertItem', $node)</pre>
+                    </div>
+                    <div class="row">
+                        <p>Insert a new item at the end of Filterizr's grid.</p>
+                    </div>
+                    <div class="row">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p>
+                                    <strong>$node</strong> (typeof: <strong>Object</strong>)
+                                </p>
+                                <p>
+                                    A new <code class="prettyprint">.filtr-item</code> element in the form of a jQuery node.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="div row">
+                        <p>This method can be conveniently used when there is the need to load new items into the grid after an AJAX request.</p>
+                    </div>
+                </article>
+                <!-- end of insertItem -->
                 <!-- search method -->
                 <article class="row method" id="search">
                     <div class="row">
