@@ -489,6 +489,12 @@ a:link, a:active, a:visited {
         margin-bottom: 2rem;
     }
 
+    .new-row {
+      @media only screen and (min-width: 768px) {
+        margin-top: 20px;
+      }
+    }
+
     .in-use-item-wrapper {
         padding: 0;
     }
