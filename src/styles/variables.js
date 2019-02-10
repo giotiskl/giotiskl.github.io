@@ -22,9 +22,9 @@ export const typography = {
   md: "18px",
   sm: "14px",
   xs: "11px",
-  lhXl: "52px",
-  lhLg: "36px",
-  lhMd: "22px",
-  lhSm: "18px",
-  lhXs: "15px"
+  lhXl: "54px",
+  lhLg: "38px",
+  lhMd: "24px",
+  lhSm: "20px",
+  lhXs: "17px"
 };
