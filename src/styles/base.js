@@ -18,31 +18,4 @@ export const GlobalStyles = createGlobalStyle`
     font-size: ${typography.sm};
     line-height: ${typography.lhSm};
   }
-
-  h2 {
-    margin: 0 0 20px 0;
-    font-size: ${typography.lg};
-    line-height: ${typography.hlLg};
-    position: relative;
-
-    &:after {
-      background-color: ${palette.primary};
-      content: '';
-      display: block;
-      width: 80px;
-      height: 2px;
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-
-  section {
-    padding: 80px 0;
-  }
-
-  p {
-    text-align: left;
-  }
 `;

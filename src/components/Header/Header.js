@@ -1,20 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Styled as StyledHeader } from "./Styled";
-import { SocialMediaNav } from '../SocialMediaNav';
-
-const propTypes = {};
+import React from 'react';
+import { Styled as StyledHeader } from './Styled';
+import { Button } from '../Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faSquare } from '@fortawesome/free-regular-svg-icons';
+import { faWindowMinimize } from '@fortawesome/free-regular-svg-icons';
 
 export const Header = props => {
   return (
     <StyledHeader>
-      <div className="titles">
-        <h2>Yiotis Kaltsikis</h2>
-        <h1>JavaScript Developer</h1>
-        <SocialMediaNav />
-      </div>
+      <Button icon={<FontAwesomeIcon icon={faTimes} />} />
+      <Button icon={<FontAwesomeIcon icon={faWindowMinimize} />} secondary />
+      <Button icon={<FontAwesomeIcon icon={faSquare} />} secondary />
+      root@home-pc: ~/workspace/yiotis-website
     </StyledHeader>
   );
 };
-
-Header.propTypes = propTypes;

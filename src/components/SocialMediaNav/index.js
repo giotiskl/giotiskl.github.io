@@ -1,1 +1,0 @@
-export { SocialMediaNav } from "./SocialMediaNav";

@@ -1,17 +1,15 @@
-import React, { Component } from "react";
-import "./App.css";
-import { Header } from "../Header";
-import { About } from "../About";
-import { Resume } from "../Resume";
+import React, { Component } from 'react';
+import { Styled as StyledMain } from './Styled';
+import { Header } from '../Header';
+import { Terminal } from '../Terminal';
 
 export class App extends Component {
   render() {
     return (
-      <div className="App">
+      <StyledMain className="App">
         <Header />
-        <About />
-        <Resume />
-      </div>
+        <Terminal />
+      </StyledMain>
     );
   }
 }
