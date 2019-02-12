@@ -5,6 +5,7 @@ export const Styled = styled.button`
   background: ${(props) => !props.secondary ? 'linear-gradient(to bottom, #ef8161 0%, #e64918 100%)' : 'linear-gradient(to bottom, #8a8a84 0%,#5e5954 100%)'};
   border: 1px solid ${(props) => !props.secondary ? '#82422E' : '#4B4944'};
   border-radius: 50%;
+  cursor: pointer;
   width: 16px;
   height: 16px;
   outline: 0 !important;
